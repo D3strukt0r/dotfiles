@@ -1,0 +1,18 @@
+Host dev
+    HostName 192.168.1.21
+    User manuele
+
+Host prod
+    HostName 159.89.28.69
+    User root
+
+Host prod-web
+    HostName s096.cyon.net
+    User d3strukt
+
+Host *
+    LogLevel INFO
+    Compression yes
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519

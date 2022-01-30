@@ -1,0 +1,23 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim/init.vim:
+        path: config/nvim/init.vim
+        create: true
+    ~/.config/nvim/coc-settings.json:
+        path: config/nvim/coc-settings.json
+        create: true
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.antigenrc: antigenrc
+    ~/.gitconfig: gitconfig
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

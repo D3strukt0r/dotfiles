@@ -1,0 +1,12 @@
+[user]
+	email = dev@d3strukt0r.me
+	name = D3strukt0r
+	signingKey = C9E5AB85364CA764!
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
+[init]
+	defaultBranch = master
