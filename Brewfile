@@ -81,6 +81,7 @@ cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "vlc"
 cask "webex-meetings"
+cask "wireshark"
 cask "zoom"
 mas "Contrast", id: 1254981365
 mas "GIPHY CAPTURE", id: 668208984
