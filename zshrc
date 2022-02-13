@@ -18,7 +18,7 @@ export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 # Make
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 # Yarn Global Bin
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$(yarn global bin):$PATH"
 # Flutter
 export PATH="$HOME/Library/flutter/bin:$PATH"
 # Android

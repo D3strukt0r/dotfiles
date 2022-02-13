@@ -41,7 +41,8 @@
         "json",
         "css",
         "scss",
-        "go"
+        "go",
+        "markdown"
     ],
     "hover.target": "float",
     "snippets.ultisnips.directories": [
