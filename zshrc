@@ -66,6 +66,9 @@ PROJECT_PATHS=(~/Projects ~/Projects-IWF)
 # Load Antigen configurations
 antigen init ~/.antigenrc
 
+# Suppress warning about output during initialization
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
