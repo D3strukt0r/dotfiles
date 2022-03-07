@@ -13,15 +13,15 @@ Host prod-web
 Host ap-buro
     HostName 192.168.1.22
     User D3strukt0r
-    IdentityFile ~/.ssh/id_rsa
+    PreferredAuthentications publickey
 Host ap-stube
     HostName 192.168.1.23
     User D3strukt0r
-    IdentityFile ~/.ssh/id_rsa
+    PreferredAuthentications publickey
 Host ap-manuele
     HostName 192.168.1.24
     User D3strukt0r
-    IdentityFile ~/.ssh/id_rsa
+    PreferredAuthentications publickey
 
 Host gitlab.com
     PreferredAuthentications publickey
