@@ -3,7 +3,7 @@
 	name = D3strukt0r
 	signingKey = C9E5AB85364CA764!
 [gpg]
-	program = gpg
+	program = /usr/local/bin/gpg
 [commit]
 	gpgSign = true
 [tag]
