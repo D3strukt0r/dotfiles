@@ -23,6 +23,8 @@ Host ap-manuele
     User D3strukt0r
     PreferredAuthentications publickey
 
+Host github.com
+    PreferredAuthentications publickey
 Host gitlab.com
     PreferredAuthentications publickey
 Host git.iwf.io
