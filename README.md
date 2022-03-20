@@ -31,31 +31,22 @@ For getting updates
 cd ~/.dotfiles && git pull && ./install
 ```
 
-#### Usage of "Brewfile"
+#### Usage of `packages.config`
 
 Install
-
-```sh
-brew tap homebrew/bundle
-```
 
 Dump currently installed packages
 
 ```sh
-brew bundle dump -f
+choco export
 ```
 
-Install all packages from `Brewfile`
+Install all packages from `packages.config`
 
 ```sh
-brew bundle
+choco install packages.config
 ```
 
-Remove all packages not mentioned in `Brewfile`
-
-```sh
-brew bundle cleanup
-```
 
 ## Built With
 
