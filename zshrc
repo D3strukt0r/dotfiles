@@ -33,6 +33,10 @@ export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# Load SSH Keys
+#ssh-add --apple-use-keychain ~/.ssh/id_rsa
+#ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
