@@ -23,6 +23,9 @@ antigen theme romkatv/powerlevel10k
 # General Plugins
 #
 
+# Adds "opswd" wrapper for finding and copying services' passwords
+antigen bundle 1password
+
 # Autocompletion for "adb" commands
 antigen bundle adb
 

@@ -35,7 +35,9 @@ export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 
 # Load SSH Keys
 #ssh-add --apple-use-keychain ~/.ssh/id_rsa
+#ssh-add --apple-load-keychain ~/.ssh/id_rsa
 #ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+#ssh-add --apple-load-keychain ~/.ssh/id_ed25519
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
