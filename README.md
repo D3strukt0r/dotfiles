@@ -47,6 +47,14 @@ Install all packages from `packages.config`
 choco install packages.config
 ```
 
+#### Link GoXLR (Inside PowerShell as Administrator)
+
+```powershell
+Remove-Item -Recurse -Path "C:\Users\<User>\Documents\GoXLR\MicProfiles"
+Remove-Item -Recurse -Path "C:\Users\<User>\Documents\GoXLR\Profiles"
+New-Item -ItemType SymbolicLink -Force -Path "C:\Users\<User>\Documents\GoXLR\MicProfiles" -Target "C:\Users\<User>\.dotfiles\GoXLR\MicProfiles"
+New-Item -ItemType SymbolicLink -Force -Path "C:\Users\<User>\Documents\GoXLR\Profiles" -Target "C:\Users\<User>\.dotfiles\GoXLR\Profiles"
+```
 
 ## Built With
 
