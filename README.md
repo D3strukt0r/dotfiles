@@ -47,20 +47,29 @@ Install all packages from `packages.config`
 choco install packages.config
 ```
 
-#### Link Git (Inside PowerShell as Administrator)
+#### Link (Inside PowerShell as Administrator)
+
+##### Git
 
 ```powershell
 Remove-Item -Recurse -Path "$HOME\.gitconfig"
 New-Item -ItemType SymbolicLink -Path "$HOME\.gitconfig" -Target "$HOME\.dotfiles\gitconfig"
 ```
 
-#### Link GoXLR (Inside PowerShell as Administrator)
+#### GoXLR
 
 ```powershell
 Remove-Item -Recurse -Path "$HOME\Documents\GoXLR\MicProfiles"
 Remove-Item -Recurse -Path "$HOME\Documents\GoXLR\Profiles"
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\MicProfiles" -Target "$HOME\.dotfiles\GoXLR\MicProfiles"
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\Profiles" -Target "$HOME\.dotfiles\GoXLR\Profiles"
+```
+
+##### Fan Control
+
+```powershell
+Remove-Item -Recurse -Path "C:\Apps\FanControl\userConfig.json"
+New-Item -ItemType SymbolicLink -Path "C:\Apps\FanControl\userConfig.json" -Target "$HOME\.dotfiles\FanControl\userConfig.json"
 ```
 
 ## Built With

@@ -6,8 +6,13 @@
         "Identifier": "/lpc/nct6798d/control/0",
         "IsHidden": true,
         "ManualControl": false,
-        "ManualControlValue": 50,
-        "MatchingFanSensor": null,
+        "ManualControlValue": 12,
+        "MatchingFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/5",
+          "IsHidden": false,
+          "Name": "Fan #6",
+          "NickName": "W_PUMP+"
+        },
         "Name": "Fan Control #1",
         "NickName": "Fan Control #1",
         "SelectedCommandStepDown": 8.0,
@@ -22,12 +27,12 @@
         "Identifier": "/lpc/nct6798d/control/1",
         "IsHidden": false,
         "ManualControl": false,
-        "ManualControlValue": 50,
+        "ManualControlValue": 40,
         "MatchingFanSensor": {
           "Identifier": "/lpc/nct6798d/fan/1",
           "IsHidden": true,
           "Name": "Fan #2",
-          "NickName": "Fan #2"
+          "NickName": "CPU_(OPT/FAN)"
         },
         "Name": "Fan Control #2",
         "NickName": "CPU/Case",
@@ -165,7 +170,7 @@
           "Identifier": "NVApiWrapper/256/fan/0",
           "IsHidden": true,
           "Name": "Fan 1 - NVIDIA GeForce RTX 3080 Ti",
-          "NickName": "Fan 1 - NVIDIA GeForce RTX 3080 Ti"
+          "NickName": "GPU - Fan 1"
         },
         "Name": "Control 1 - NVIDIA GeForce RTX 3080 Ti",
         "NickName": "GPU (Outer)",
@@ -201,7 +206,7 @@
           "Identifier": "NVApiWrapper/256/fan/1",
           "IsHidden": true,
           "Name": "Fan 2 - NVIDIA GeForce RTX 3080 Ti",
-          "NickName": "Fan 2 - NVIDIA GeForce RTX 3080 Ti"
+          "NickName": "GPU - Fan 2"
         },
         "Name": "Control 2 - NVIDIA GeForce RTX 3080 Ti",
         "NickName": "GPU (Middle)",
@@ -300,36 +305,32 @@
           }
         ],
         "SelectedMixFunction": 0
-      },
-      {
-        "Name": "Flat",
-        "Percent": 100
       }
     ],
     "FanSensors": [
       {
-        "Identifier": "/lpc/nct6798d/fan/0",
-        "IsHidden": false,
-        "Name": "Fan #1",
-        "NickName": "Fan #1"
-      },
-      {
         "Identifier": "/lpc/nct6798d/fan/1",
         "IsHidden": true,
         "Name": "Fan #2",
-        "NickName": "Fan #2"
+        "NickName": "CPU_(OPT/FAN)"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/6",
+        "IsHidden": false,
+        "Name": "Fan #7",
+        "NickName": "AIO_PUMP"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/0",
+        "IsHidden": false,
+        "Name": "Fan #1",
+        "NickName": "CHA_FAN1"
       },
       {
         "Identifier": "/lpc/nct6798d/fan/2",
         "IsHidden": false,
         "Name": "Fan #3",
         "NickName": "Fan #3"
-      },
-      {
-        "Identifier": "/lpc/nct6798d/fan/3",
-        "IsHidden": false,
-        "Name": "Fan #4",
-        "NickName": "Fan #4"
       },
       {
         "Identifier": "/lpc/nct6798d/fan/4",
@@ -341,25 +342,25 @@
         "Identifier": "/lpc/nct6798d/fan/5",
         "IsHidden": false,
         "Name": "Fan #6",
-        "NickName": "Fan #6"
+        "NickName": "W_PUMP+"
       },
       {
-        "Identifier": "/lpc/nct6798d/fan/6",
+        "Identifier": "/lpc/nct6798d/fan/3",
         "IsHidden": false,
-        "Name": "Fan #7",
-        "NickName": "Fan #7"
+        "Name": "Fan #4",
+        "NickName": "M.2_FAN"
       },
       {
         "Identifier": "NVApiWrapper/256/fan/0",
         "IsHidden": true,
         "Name": "Fan 1 - NVIDIA GeForce RTX 3080 Ti",
-        "NickName": "Fan 1 - NVIDIA GeForce RTX 3080 Ti"
+        "NickName": "GPU - Fan 1"
       },
       {
         "Identifier": "NVApiWrapper/256/fan/1",
         "IsHidden": true,
         "Name": "Fan 2 - NVIDIA GeForce RTX 3080 Ti",
-        "NickName": "Fan 2 - NVIDIA GeForce RTX 3080 Ti"
+        "NickName": "GPU - Fan 2"
       }
     ],
     "HideFanSpeedCards": false,
