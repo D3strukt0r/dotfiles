@@ -1,0 +1,392 @@
+{
+  "Main": {
+    "Controls": [
+      {
+        "Enable": false,
+        "Identifier": "/lpc/nct6798d/control/0",
+        "IsHidden": true,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": null,
+        "Name": "Fan Control #1",
+        "NickName": "Fan Control #1",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "SelectedStart": 0,
+        "SelectedStop": 0
+      },
+      {
+        "Enable": true,
+        "Identifier": "/lpc/nct6798d/control/1",
+        "IsHidden": false,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/1",
+          "IsHidden": true,
+          "Name": "Fan #2",
+          "NickName": "Fan #2"
+        },
+        "Name": "Fan Control #2",
+        "NickName": "CPU/Case",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": {
+          "Name": "Case",
+          "SelectedFanCurves": [
+            {
+              "MaximumFanSpeed": 70,
+              "MaximumTemperature": 65.0,
+              "MinimumFanSpeed": 20,
+              "MinimumTemperature": 35.0,
+              "Name": "CPU -> Case",
+              "OneWayHysteresis": false,
+              "SelectedHysteresis": 3.0,
+              "SelectedResponseTime": 3,
+              "SelectedTempSource": {
+                "Identifier": "/intelcpu/0/temperature/6",
+                "IsHidden": false,
+                "Name": "CPU Package",
+                "NickName": "CPU Package"
+              }
+            },
+            {
+              "MaximumFanSpeed": 90,
+              "MaximumTemperature": 70.0,
+              "MinimumFanSpeed": 0,
+              "MinimumTemperature": 35.0,
+              "Name": "GPU -> Case",
+              "OneWayHysteresis": false,
+              "SelectedHysteresis": 3.0,
+              "SelectedResponseTime": 3,
+              "SelectedTempSource": {
+                "Identifier": "NVApiWrapper/256/sensor/0",
+                "IsHidden": false,
+                "Name": "GPU",
+                "NickName": "GPU"
+              }
+            }
+          ],
+          "SelectedMixFunction": 0
+        },
+        "SelectedOffset": 0,
+        "SelectedStart": 18,
+        "SelectedStop": 15
+      },
+      {
+        "Enable": false,
+        "Identifier": "/lpc/nct6798d/control/2",
+        "IsHidden": true,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": null,
+        "Name": "Fan Control #3",
+        "NickName": "Fan Control #3",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "SelectedStart": 0,
+        "SelectedStop": 0
+      },
+      {
+        "Enable": false,
+        "Identifier": "/lpc/nct6798d/control/3",
+        "IsHidden": true,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": null,
+        "Name": "Fan Control #4",
+        "NickName": "Fan Control #4",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "SelectedStart": 0,
+        "SelectedStop": 0
+      },
+      {
+        "Enable": false,
+        "Identifier": "/lpc/nct6798d/control/4",
+        "IsHidden": true,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": null,
+        "Name": "Fan Control #5",
+        "NickName": "Fan Control #5",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "SelectedStart": 0,
+        "SelectedStop": 0
+      },
+      {
+        "Enable": false,
+        "Identifier": "/lpc/nct6798d/control/5",
+        "IsHidden": true,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": null,
+        "Name": "Fan Control #6",
+        "NickName": "Fan Control #6",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "SelectedStart": 0,
+        "SelectedStop": 0
+      },
+      {
+        "Enable": false,
+        "Identifier": "/lpc/nct6798d/control/6",
+        "IsHidden": true,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": null,
+        "Name": "Fan Control #7",
+        "NickName": "Fan Control #7",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "SelectedStart": 0,
+        "SelectedStop": 0
+      },
+      {
+        "Enable": true,
+        "Identifier": "NVApiWrapper/256/control/0",
+        "IsHidden": false,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": {
+          "Identifier": "NVApiWrapper/256/fan/0",
+          "IsHidden": true,
+          "Name": "Fan 1 - NVIDIA GeForce RTX 3080 Ti",
+          "NickName": "Fan 1 - NVIDIA GeForce RTX 3080 Ti"
+        },
+        "Name": "Control 1 - NVIDIA GeForce RTX 3080 Ti",
+        "NickName": "GPU (Outer)",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": {
+          "MaximumFanSpeed": 90,
+          "MaximumTemperature": 70.0,
+          "MinimumFanSpeed": 0,
+          "MinimumTemperature": 35.0,
+          "Name": "GPU -> Case",
+          "OneWayHysteresis": false,
+          "SelectedHysteresis": 3.0,
+          "SelectedResponseTime": 3,
+          "SelectedTempSource": {
+            "Identifier": "NVApiWrapper/256/sensor/0",
+            "IsHidden": false,
+            "Name": "GPU",
+            "NickName": "GPU"
+          }
+        },
+        "SelectedOffset": 0,
+        "SelectedStart": 42,
+        "SelectedStop": 39
+      },
+      {
+        "Enable": true,
+        "Identifier": "NVApiWrapper/256/control/1",
+        "IsHidden": false,
+        "ManualControl": false,
+        "ManualControlValue": 50,
+        "MatchingFanSensor": {
+          "Identifier": "NVApiWrapper/256/fan/1",
+          "IsHidden": true,
+          "Name": "Fan 2 - NVIDIA GeForce RTX 3080 Ti",
+          "NickName": "Fan 2 - NVIDIA GeForce RTX 3080 Ti"
+        },
+        "Name": "Control 2 - NVIDIA GeForce RTX 3080 Ti",
+        "NickName": "GPU (Middle)",
+        "SelectedCommandStepDown": 8.0,
+        "SelectedCommandStepUp": 8.0,
+        "SelectedFanCurve": {
+          "MaximumFanSpeed": 90,
+          "MaximumTemperature": 70.0,
+          "MinimumFanSpeed": 0,
+          "MinimumTemperature": 35.0,
+          "Name": "GPU -> Case",
+          "OneWayHysteresis": false,
+          "SelectedHysteresis": 3.0,
+          "SelectedResponseTime": 3,
+          "SelectedTempSource": {
+            "Identifier": "NVApiWrapper/256/sensor/0",
+            "IsHidden": false,
+            "Name": "GPU",
+            "NickName": "GPU"
+          }
+        },
+        "SelectedOffset": 0,
+        "SelectedStart": 45,
+        "SelectedStop": 0
+      }
+    ],
+    "CustomSensors": [],
+    "DisplayTrayIconTemperature": true,
+    "FanCurves": [
+      {
+        "MaximumFanSpeed": 70,
+        "MaximumTemperature": 65.0,
+        "MinimumFanSpeed": 20,
+        "MinimumTemperature": 35.0,
+        "Name": "CPU -> Case",
+        "OneWayHysteresis": false,
+        "SelectedHysteresis": 3.0,
+        "SelectedResponseTime": 3,
+        "SelectedTempSource": {
+          "Identifier": "/intelcpu/0/temperature/6",
+          "IsHidden": false,
+          "Name": "CPU Package",
+          "NickName": "CPU Package"
+        }
+      },
+      {
+        "MaximumFanSpeed": 90,
+        "MaximumTemperature": 70.0,
+        "MinimumFanSpeed": 0,
+        "MinimumTemperature": 35.0,
+        "Name": "GPU -> Case",
+        "OneWayHysteresis": false,
+        "SelectedHysteresis": 3.0,
+        "SelectedResponseTime": 3,
+        "SelectedTempSource": {
+          "Identifier": "NVApiWrapper/256/sensor/0",
+          "IsHidden": false,
+          "Name": "GPU",
+          "NickName": "GPU"
+        }
+      },
+      {
+        "Name": "Case",
+        "SelectedFanCurves": [
+          {
+            "MaximumFanSpeed": 70,
+            "MaximumTemperature": 65.0,
+            "MinimumFanSpeed": 20,
+            "MinimumTemperature": 35.0,
+            "Name": "CPU -> Case",
+            "OneWayHysteresis": false,
+            "SelectedHysteresis": 3.0,
+            "SelectedResponseTime": 3,
+            "SelectedTempSource": {
+              "Identifier": "/intelcpu/0/temperature/6",
+              "IsHidden": false,
+              "Name": "CPU Package",
+              "NickName": "CPU Package"
+            }
+          },
+          {
+            "MaximumFanSpeed": 90,
+            "MaximumTemperature": 70.0,
+            "MinimumFanSpeed": 0,
+            "MinimumTemperature": 35.0,
+            "Name": "GPU -> Case",
+            "OneWayHysteresis": false,
+            "SelectedHysteresis": 3.0,
+            "SelectedResponseTime": 3,
+            "SelectedTempSource": {
+              "Identifier": "NVApiWrapper/256/sensor/0",
+              "IsHidden": false,
+              "Name": "GPU",
+              "NickName": "GPU"
+            }
+          }
+        ],
+        "SelectedMixFunction": 0
+      },
+      {
+        "Name": "Flat",
+        "Percent": 100
+      }
+    ],
+    "FanSensors": [
+      {
+        "Identifier": "/lpc/nct6798d/fan/0",
+        "IsHidden": false,
+        "Name": "Fan #1",
+        "NickName": "Fan #1"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/1",
+        "IsHidden": true,
+        "Name": "Fan #2",
+        "NickName": "Fan #2"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/2",
+        "IsHidden": false,
+        "Name": "Fan #3",
+        "NickName": "Fan #3"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/3",
+        "IsHidden": false,
+        "Name": "Fan #4",
+        "NickName": "Fan #4"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/4",
+        "IsHidden": false,
+        "Name": "Fan #5",
+        "NickName": "Fan #5"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/5",
+        "IsHidden": false,
+        "Name": "Fan #6",
+        "NickName": "Fan #6"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/6",
+        "IsHidden": false,
+        "Name": "Fan #7",
+        "NickName": "Fan #7"
+      },
+      {
+        "Identifier": "NVApiWrapper/256/fan/0",
+        "IsHidden": true,
+        "Name": "Fan 1 - NVIDIA GeForce RTX 3080 Ti",
+        "NickName": "Fan 1 - NVIDIA GeForce RTX 3080 Ti"
+      },
+      {
+        "Identifier": "NVApiWrapper/256/fan/1",
+        "IsHidden": true,
+        "Name": "Fan 2 - NVIDIA GeForce RTX 3080 Ti",
+        "NickName": "Fan 2 - NVIDIA GeForce RTX 3080 Ti"
+      }
+    ],
+    "HideFanSpeedCards": false,
+    "HorizontalUIOrientation": false,
+    "PrimaryColor": "#FF607D8B",
+    "SecondaryColor": "#FFAEEA00",
+    "SelectedTheme": "Dark",
+    "SelectedTrayIconSensor": null,
+    "ShowHiddenCards": true,
+    "StartMinimized": true,
+    "SyncThemeWithWindows": true,
+    "TemperatureSensors": []
+  },
+  "Sensors": {
+    "DisabledPlugins": [],
+    "DisableStorageSensors": false,
+    "LibreHardwareMonitorSettings": {
+      "Controller": false,
+      "CPU": true,
+      "GPU": true,
+      "Memory": true,
+      "Motherboard": true,
+      "PSU": false,
+      "Storage": true
+    },
+    "NvAPIWrapperSettings": {
+      "Enabled": true
+    }
+  }
+}

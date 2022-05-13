@@ -93,3 +93,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows,visualstudiocode
+
+# Generated when chocolatey overwrites backup
+packages.config.backup
