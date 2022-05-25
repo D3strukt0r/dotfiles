@@ -57,6 +57,12 @@ Remove all packages not mentioned in `Brewfile`
 brew bundle cleanup
 ```
 
+#### antigen
+
+```sh
+antigen update
+```
+
 ## Built With
 
 Nothing needed

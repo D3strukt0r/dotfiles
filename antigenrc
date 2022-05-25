@@ -53,7 +53,7 @@ antigen bundle common-aliases
 antigen bundle copybuffer
 
 # Copy current dir ($PWD) to clipboard by executing "copydir"
-antigen bundle copydir
+antigen bundle copypath
 
 # Copy file contents to clipboard by executing "copyfile"
 antigen bundle copyfile
@@ -85,7 +85,7 @@ antigen bundle gpg-agent
 antigen bundle history
 
 # Autocompletion and aliases for "httpie"
-antigen bundle httpie
+#antigen bundle httpie
 
 # Autocompletion for ISO Date and function for common formats
 antigen bundle isodate
