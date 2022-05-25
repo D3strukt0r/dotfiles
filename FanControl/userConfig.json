@@ -150,7 +150,7 @@
           "NickName": "CHA_FAN2 (R)"
         },
         "Name": "Fan Control #3",
-        "NickName": "Case (Front (& Bottom)) (CHA_FAN2)",
+        "NickName": "Case (Front) (CHA_FAN2)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
@@ -192,7 +192,7 @@
           "SelectedMixFunction": 2
         },
         "SelectedOffset": 0,
-        "SelectedStart": 18,
+        "SelectedStart": 15,
         "SelectedStop": 15
       },
       {
@@ -250,13 +250,13 @@
           "SelectedMixFunction": 2
         },
         "SelectedOffset": 0,
-        "SelectedStart": 39,
+        "SelectedStart": 0,
         "SelectedStop": 0
       },
       {
-        "Enable": false,
+        "Enable": true,
         "Identifier": "/lpc/nct6798d/control/3",
-        "IsHidden": true,
+        "IsHidden": false,
         "ManualControl": false,
         "ManualControlValue": 50,
         "MatchingFanSensor": {
@@ -269,9 +269,46 @@
         "NickName": "Case (Bottom) (M.2_FAN)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
-        "SelectedFanCurve": null,
+        "SelectedFanCurve": {
+          "Name": "Case",
+          "SelectedFanCurves": [
+            {
+              "MaximumFanSpeed": 70,
+              "MaximumTemperature": 65.0,
+              "MinimumFanSpeed": 20,
+              "MinimumTemperature": 35.0,
+              "Name": "CPU",
+              "OneWayHysteresis": false,
+              "SelectedHysteresis": 3.0,
+              "SelectedResponseTime": 3,
+              "SelectedTempSource": {
+                "Identifier": "/intelcpu/0/temperature/6",
+                "IsHidden": false,
+                "Name": "CPU Package",
+                "NickName": "CPU Package"
+              }
+            },
+            {
+              "MaximumFanSpeed": 100,
+              "MaximumTemperature": 70.0,
+              "MinimumFanSpeed": 0,
+              "MinimumTemperature": 35.0,
+              "Name": "GPU",
+              "OneWayHysteresis": false,
+              "SelectedHysteresis": 3.0,
+              "SelectedResponseTime": 3,
+              "SelectedTempSource": {
+                "Identifier": "NVApiWrapper/256/sensor/0",
+                "IsHidden": false,
+                "Name": "GPU",
+                "NickName": "GPU"
+              }
+            }
+          ],
+          "SelectedMixFunction": 2
+        },
         "SelectedOffset": 0,
-        "SelectedStart": 0,
+        "SelectedStart": 12,
         "SelectedStop": 0
       },
       {
