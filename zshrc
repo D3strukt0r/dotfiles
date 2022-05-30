@@ -42,6 +42,35 @@ export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 #ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 #ssh-add --apple-load-keychain ~/.ssh/id_ed25519
 
+# Some alias for work
+# swarm-ssh reactbp-dev_fpm
+# swarm-ssh reactbp-dev_web sh
+swarm-ssh() {
+    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli swarm-ssh.sh $*
+}
+# swarm-dbdump reactbp-dev
+swarm-dbdump() {
+    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli swarm-dbdump.sh $*
+}
+# swarm-worker test-worker-1
+swarm-worker() {
+    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker run -it --rm -v $HOME/.ssh:/root/.ssh iwfwebsolutions/iwf-docker-cli ssh iwfsupport@$1.web-solutions.io
+}
+# swarm-scp test-worker-1 /data1/reactbp-dev/data/
+swarm-scp() {
+    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli scp -rp iwfsupport@$1.web-solutions.io:$2 /exports
+}
+# swarm-copy reactbp-dev_fpm /app/config/services.yaml
+# swarm-copy reactbp-dev_fpm /app/public/media
+swarm-copy() {
+    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli swarm-copy.sh $*
+}
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
