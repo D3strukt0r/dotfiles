@@ -63,7 +63,7 @@ antigen bundle copyfile
 # Alt/Option + Right 	Go to next directory
 # Alt/Option + Up 	    Move into the parent directory
 # Alt/Option + Down 	Move into the first child directory by alphabetical order
-antigen bundle dirhistory
+#antigen bundle dirhistory
 
 # Alias for encoding/decoding base64. "e64" and "d64"
 antigen bundle encode64
