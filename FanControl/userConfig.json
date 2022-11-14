@@ -75,45 +75,55 @@
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
-          "Name": "Case",
+          "Name": "Mix",
           "SelectedFanCurves": [
             {
-              "MaximumFanSpeed": 70,
-              "MaximumTemperature": 65.0,
-              "MinimumFanSpeed": 20,
-              "MinimumTemperature": 35.0,
-              "Name": "CPU",
-              "OneWayHysteresis": false,
-              "SelectedHysteresis": 3.0,
-              "SelectedResponseTime": 3,
-              "SelectedTempSource": {
-                "Identifier": "/intelcpu/0/temperature/6",
-                "IsHidden": false,
-                "Name": "CPU Package",
-                "NickName": "CPU Package"
-              }
+              "Name": "Min Speed",
+              "Percent": 20
             },
             {
-              "MaximumFanSpeed": 100,
-              "MaximumTemperature": 70.0,
-              "MinimumFanSpeed": 0,
-              "MinimumTemperature": 35.0,
-              "Name": "GPU",
-              "OneWayHysteresis": false,
-              "SelectedHysteresis": 3.0,
-              "SelectedResponseTime": 3,
-              "SelectedTempSource": {
-                "Identifier": "NVApiWrapper/256/sensor/0",
-                "IsHidden": false,
-                "Name": "GPU",
-                "NickName": "GPU"
-              }
+              "Name": "Case",
+              "SelectedFanCurves": [
+                {
+                  "MaximumFanSpeed": 70,
+                  "MaximumTemperature": 65.0,
+                  "MinimumFanSpeed": 20,
+                  "MinimumTemperature": 35.0,
+                  "Name": "CPU",
+                  "OneWayHysteresis": false,
+                  "SelectedHysteresis": 3.0,
+                  "SelectedResponseTime": 3,
+                  "SelectedTempSource": {
+                    "Identifier": "/intelcpu/0/temperature/6",
+                    "IsHidden": false,
+                    "Name": "CPU Package",
+                    "NickName": "CPU Package"
+                  }
+                },
+                {
+                  "MaximumFanSpeed": 100,
+                  "MaximumTemperature": 70.0,
+                  "MinimumFanSpeed": 0,
+                  "MinimumTemperature": 35.0,
+                  "Name": "GPU",
+                  "OneWayHysteresis": false,
+                  "SelectedHysteresis": 3.0,
+                  "SelectedResponseTime": 3,
+                  "SelectedTempSource": {
+                    "Identifier": "NVApiWrapper/256/sensor/0",
+                    "IsHidden": false,
+                    "Name": "GPU",
+                    "NickName": "GPU"
+                  }
+                }
+              ],
+              "SelectedMixFunction": 2
             }
           ],
-          "SelectedMixFunction": 2
+          "SelectedMixFunction": 0
         },
         "SelectedOffset": 0,
-        "SelectedStart": 18,
+        "SelectedStart": 15,
         "SelectedStop": 15
       },
       {
@@ -154,42 +164,52 @@
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
-          "Name": "Case",
+          "Name": "Mix",
           "SelectedFanCurves": [
             {
-              "MaximumFanSpeed": 70,
-              "MaximumTemperature": 65.0,
-              "MinimumFanSpeed": 20,
-              "MinimumTemperature": 35.0,
-              "Name": "CPU",
-              "OneWayHysteresis": false,
-              "SelectedHysteresis": 3.0,
-              "SelectedResponseTime": 3,
-              "SelectedTempSource": {
-                "Identifier": "/intelcpu/0/temperature/6",
-                "IsHidden": false,
-                "Name": "CPU Package",
-                "NickName": "CPU Package"
-              }
+              "Name": "Min Speed",
+              "Percent": 20
             },
             {
-              "MaximumFanSpeed": 100,
-              "MaximumTemperature": 70.0,
-              "MinimumFanSpeed": 0,
-              "MinimumTemperature": 35.0,
-              "Name": "GPU",
-              "OneWayHysteresis": false,
-              "SelectedHysteresis": 3.0,
-              "SelectedResponseTime": 3,
-              "SelectedTempSource": {
-                "Identifier": "NVApiWrapper/256/sensor/0",
-                "IsHidden": false,
-                "Name": "GPU",
-                "NickName": "GPU"
-              }
+              "Name": "Case",
+              "SelectedFanCurves": [
+                {
+                  "MaximumFanSpeed": 70,
+                  "MaximumTemperature": 65.0,
+                  "MinimumFanSpeed": 20,
+                  "MinimumTemperature": 35.0,
+                  "Name": "CPU",
+                  "OneWayHysteresis": false,
+                  "SelectedHysteresis": 3.0,
+                  "SelectedResponseTime": 3,
+                  "SelectedTempSource": {
+                    "Identifier": "/intelcpu/0/temperature/6",
+                    "IsHidden": false,
+                    "Name": "CPU Package",
+                    "NickName": "CPU Package"
+                  }
+                },
+                {
+                  "MaximumFanSpeed": 100,
+                  "MaximumTemperature": 70.0,
+                  "MinimumFanSpeed": 0,
+                  "MinimumTemperature": 35.0,
+                  "Name": "GPU",
+                  "OneWayHysteresis": false,
+                  "SelectedHysteresis": 3.0,
+                  "SelectedResponseTime": 3,
+                  "SelectedTempSource": {
+                    "Identifier": "NVApiWrapper/256/sensor/0",
+                    "IsHidden": false,
+                    "Name": "GPU",
+                    "NickName": "GPU"
+                  }
+                }
+              ],
+              "SelectedMixFunction": 2
             }
           ],
-          "SelectedMixFunction": 2
+          "SelectedMixFunction": 0
         },
         "SelectedOffset": 0,
         "SelectedStart": 15,
@@ -270,42 +290,52 @@
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
-          "Name": "Case",
+          "Name": "Mix",
           "SelectedFanCurves": [
             {
-              "MaximumFanSpeed": 70,
-              "MaximumTemperature": 65.0,
-              "MinimumFanSpeed": 20,
-              "MinimumTemperature": 35.0,
-              "Name": "CPU",
-              "OneWayHysteresis": false,
-              "SelectedHysteresis": 3.0,
-              "SelectedResponseTime": 3,
-              "SelectedTempSource": {
-                "Identifier": "/intelcpu/0/temperature/6",
-                "IsHidden": false,
-                "Name": "CPU Package",
-                "NickName": "CPU Package"
-              }
+              "Name": "Min Speed",
+              "Percent": 20
             },
             {
-              "MaximumFanSpeed": 100,
-              "MaximumTemperature": 70.0,
-              "MinimumFanSpeed": 0,
-              "MinimumTemperature": 35.0,
-              "Name": "GPU",
-              "OneWayHysteresis": false,
-              "SelectedHysteresis": 3.0,
-              "SelectedResponseTime": 3,
-              "SelectedTempSource": {
-                "Identifier": "NVApiWrapper/256/sensor/0",
-                "IsHidden": false,
-                "Name": "GPU",
-                "NickName": "GPU"
-              }
+              "Name": "Case",
+              "SelectedFanCurves": [
+                {
+                  "MaximumFanSpeed": 70,
+                  "MaximumTemperature": 65.0,
+                  "MinimumFanSpeed": 20,
+                  "MinimumTemperature": 35.0,
+                  "Name": "CPU",
+                  "OneWayHysteresis": false,
+                  "SelectedHysteresis": 3.0,
+                  "SelectedResponseTime": 3,
+                  "SelectedTempSource": {
+                    "Identifier": "/intelcpu/0/temperature/6",
+                    "IsHidden": false,
+                    "Name": "CPU Package",
+                    "NickName": "CPU Package"
+                  }
+                },
+                {
+                  "MaximumFanSpeed": 100,
+                  "MaximumTemperature": 70.0,
+                  "MinimumFanSpeed": 0,
+                  "MinimumTemperature": 35.0,
+                  "Name": "GPU",
+                  "OneWayHysteresis": false,
+                  "SelectedHysteresis": 3.0,
+                  "SelectedResponseTime": 3,
+                  "SelectedTempSource": {
+                    "Identifier": "NVApiWrapper/256/sensor/0",
+                    "IsHidden": false,
+                    "Name": "GPU",
+                    "NickName": "GPU"
+                  }
+                }
+              ],
+              "SelectedMixFunction": 2
             }
           ],
-          "SelectedMixFunction": 2
+          "SelectedMixFunction": 0
         },
         "SelectedOffset": 0,
         "SelectedStart": 12,
@@ -458,8 +488,56 @@
         "SelectedMixFunction": 2
       },
       {
-        "Name": "Flat",
-        "Percent": 100
+        "Name": "Min Speed",
+        "Percent": 20
+      },
+      {
+        "Name": "Mix",
+        "SelectedFanCurves": [
+          {
+            "Name": "Min Speed",
+            "Percent": 20
+          },
+          {
+            "Name": "Case",
+            "SelectedFanCurves": [
+              {
+                "MaximumFanSpeed": 70,
+                "MaximumTemperature": 65.0,
+                "MinimumFanSpeed": 20,
+                "MinimumTemperature": 35.0,
+                "Name": "CPU",
+                "OneWayHysteresis": false,
+                "SelectedHysteresis": 3.0,
+                "SelectedResponseTime": 3,
+                "SelectedTempSource": {
+                  "Identifier": "/intelcpu/0/temperature/6",
+                  "IsHidden": false,
+                  "Name": "CPU Package",
+                  "NickName": "CPU Package"
+                }
+              },
+              {
+                "MaximumFanSpeed": 100,
+                "MaximumTemperature": 70.0,
+                "MinimumFanSpeed": 0,
+                "MinimumTemperature": 35.0,
+                "Name": "GPU",
+                "OneWayHysteresis": false,
+                "SelectedHysteresis": 3.0,
+                "SelectedResponseTime": 3,
+                "SelectedTempSource": {
+                  "Identifier": "NVApiWrapper/256/sensor/0",
+                  "IsHidden": false,
+                  "Name": "GPU",
+                  "NickName": "GPU"
+                }
+              }
+            ],
+            "SelectedMixFunction": 2
+          }
+        ],
+        "SelectedMixFunction": 0
       }
     ],
     "FanSensors": [
@@ -544,6 +622,7 @@
     },
     "NvAPIWrapperSettings": {
       "Enabled": true
-    }
+    },
+    "SensorCount": 43
   }
 }
