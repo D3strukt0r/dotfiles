@@ -1,8 +1,10 @@
 {
+  "__VERSION__": "142",
   "Main": {
     "Controls": [
       {
         "Enable": true,
+        "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/1",
         "IsHidden": false,
         "ManualControl": false,
@@ -13,7 +15,8 @@
           "Name": "Fan #2",
           "NickName": "CPU_(OPT/FAN) T"
         },
-        "Name": "Fan Control #2",
+        "MinimumPercent": 0,
+        "Name": "Fan #2",
         "NickName": "CPU (CPU_(OPT/FAN))",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
@@ -39,6 +42,7 @@
       },
       {
         "Enable": false,
+        "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/6",
         "IsHidden": true,
         "ManualControl": false,
@@ -49,7 +53,8 @@
           "Name": "Fan #7",
           "NickName": "AIO_PUMP (L)"
         },
-        "Name": "Fan Control #7",
+        "MinimumPercent": 0,
+        "Name": "Fan #7",
         "NickName": "? (AIO_PUMP)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
@@ -60,6 +65,7 @@
       },
       {
         "Enable": true,
+        "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/0",
         "IsHidden": false,
         "ManualControl": false,
@@ -70,7 +76,8 @@
           "Name": "Fan #1",
           "NickName": "CHA_FAN1 (L)"
         },
-        "Name": "Fan Control #1",
+        "MinimumPercent": 0,
+        "Name": "Fan #1",
         "NickName": "Case (Back) (CHA_FAN1)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
@@ -79,7 +86,7 @@
           "SelectedFanCurves": [
             {
               "Name": "Min Speed",
-              "Percent": 20
+              "Percent": 20.0
             },
             {
               "Name": "Case",
@@ -110,7 +117,7 @@
                   "SelectedHysteresis": 3.0,
                   "SelectedResponseTime": 3,
                   "SelectedTempSource": {
-                    "Identifier": "NVApiWrapper/256/sensor/0",
+                    "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                     "IsHidden": false,
                     "Name": "GPU",
                     "NickName": "GPU"
@@ -128,6 +135,7 @@
       },
       {
         "Enable": false,
+        "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/4",
         "IsHidden": true,
         "ManualControl": false,
@@ -138,7 +146,8 @@
           "Name": "Fan #5",
           "NickName": "EXT_FAN (B ASUS)"
         },
-        "Name": "Fan Control #5",
+        "MinimumPercent": 0,
+        "Name": "Fan #5",
         "NickName": "? (EXT_FAN)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
@@ -149,6 +158,7 @@
       },
       {
         "Enable": true,
+        "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/2",
         "IsHidden": false,
         "ManualControl": false,
@@ -159,7 +169,8 @@
           "Name": "Fan #3",
           "NickName": "CHA_FAN2 (R)"
         },
-        "Name": "Fan Control #3",
+        "MinimumPercent": 0,
+        "Name": "Fan #3",
         "NickName": "Case (Front) (CHA_FAN2)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
@@ -168,7 +179,7 @@
           "SelectedFanCurves": [
             {
               "Name": "Min Speed",
-              "Percent": 20
+              "Percent": 20.0
             },
             {
               "Name": "Case",
@@ -199,7 +210,7 @@
                   "SelectedHysteresis": 3.0,
                   "SelectedResponseTime": 3,
                   "SelectedTempSource": {
-                    "Identifier": "NVApiWrapper/256/sensor/0",
+                    "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                     "IsHidden": false,
                     "Name": "GPU",
                     "NickName": "GPU"
@@ -217,6 +228,7 @@
       },
       {
         "Enable": true,
+        "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/5",
         "IsHidden": false,
         "ManualControl": false,
@@ -227,7 +239,8 @@
           "Name": "Fan #6",
           "NickName": "W_PUMP+ (R)"
         },
-        "Name": "Fan Control #6",
+        "MinimumPercent": 0,
+        "Name": "Fan #6",
         "NickName": "Pump (W_PUMP+)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
@@ -260,7 +273,7 @@
               "SelectedHysteresis": 3.0,
               "SelectedResponseTime": 3,
               "SelectedTempSource": {
-                "Identifier": "NVApiWrapper/256/sensor/0",
+                "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                 "IsHidden": false,
                 "Name": "GPU",
                 "NickName": "GPU"
@@ -275,6 +288,7 @@
       },
       {
         "Enable": true,
+        "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/3",
         "IsHidden": false,
         "ManualControl": false,
@@ -285,7 +299,8 @@
           "Name": "Fan #4",
           "NickName": "M.2_FAN (R) (Always On)"
         },
-        "Name": "Fan Control #4",
+        "MinimumPercent": 0,
+        "Name": "Fan #4",
         "NickName": "Case (Bottom) (M.2_FAN)",
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
@@ -294,7 +309,7 @@
           "SelectedFanCurves": [
             {
               "Name": "Min Speed",
-              "Percent": 20
+              "Percent": 20.0
             },
             {
               "Name": "Case",
@@ -325,7 +340,7 @@
                   "SelectedHysteresis": 3.0,
                   "SelectedResponseTime": 3,
                   "SelectedTempSource": {
-                    "Identifier": "NVApiWrapper/256/sensor/0",
+                    "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                     "IsHidden": false,
                     "Name": "GPU",
                     "NickName": "GPU"
@@ -343,16 +358,18 @@
       },
       {
         "Enable": false,
-        "Identifier": "NVApiWrapper/256/control/0",
+        "ForceApply": false,
+        "Identifier": "NVApiWrapper/0-GA102-A/control/0",
         "IsHidden": true,
         "ManualControl": false,
         "ManualControlValue": 25,
         "MatchingFanSensor": {
-          "Identifier": "NVApiWrapper/256/fan/0",
+          "Identifier": "NVApiWrapper/0-GA102-A/fan/0",
           "IsHidden": true,
           "Name": "Fan 1 - NVIDIA GeForce RTX 3080 Ti",
           "NickName": "GPU (Outer)"
         },
+        "MinimumPercent": 0,
         "Name": "Control 1 - NVIDIA GeForce RTX 3080 Ti",
         "NickName": "GPU (Outer)",
         "SelectedCommandStepDown": 8.0,
@@ -367,7 +384,7 @@
           "SelectedHysteresis": 3.0,
           "SelectedResponseTime": 3,
           "SelectedTempSource": {
-            "Identifier": "NVApiWrapper/256/sensor/0",
+            "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
             "IsHidden": false,
             "Name": "GPU",
             "NickName": "GPU"
@@ -379,16 +396,18 @@
       },
       {
         "Enable": false,
-        "Identifier": "NVApiWrapper/256/control/1",
+        "ForceApply": false,
+        "Identifier": "NVApiWrapper/0-GA102-A/control/1",
         "IsHidden": true,
         "ManualControl": false,
         "ManualControlValue": 0,
         "MatchingFanSensor": {
-          "Identifier": "NVApiWrapper/256/fan/1",
+          "Identifier": "NVApiWrapper/0-GA102-A/fan/1",
           "IsHidden": true,
           "Name": "Fan 2 - NVIDIA GeForce RTX 3080 Ti",
           "NickName": "GPU (Inner)"
         },
+        "MinimumPercent": 0,
         "Name": "Control 2 - NVIDIA GeForce RTX 3080 Ti",
         "NickName": "GPU (Inner)",
         "SelectedCommandStepDown": 8.0,
@@ -403,7 +422,7 @@
           "SelectedHysteresis": 3.0,
           "SelectedResponseTime": 3,
           "SelectedTempSource": {
-            "Identifier": "NVApiWrapper/256/sensor/0",
+            "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
             "IsHidden": false,
             "Name": "GPU",
             "NickName": "GPU"
@@ -415,7 +434,6 @@
       }
     ],
     "CustomSensors": [],
-    "DisplayTrayIconTemperature": true,
     "FanCurves": [
       {
         "MaximumFanSpeed": 70,
@@ -443,7 +461,7 @@
         "SelectedHysteresis": 3.0,
         "SelectedResponseTime": 3,
         "SelectedTempSource": {
-          "Identifier": "NVApiWrapper/256/sensor/0",
+          "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
           "IsHidden": false,
           "Name": "GPU",
           "NickName": "GPU"
@@ -478,7 +496,7 @@
             "SelectedHysteresis": 3.0,
             "SelectedResponseTime": 3,
             "SelectedTempSource": {
-              "Identifier": "NVApiWrapper/256/sensor/0",
+              "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
               "IsHidden": false,
               "Name": "GPU",
               "NickName": "GPU"
@@ -489,14 +507,14 @@
       },
       {
         "Name": "Min Speed",
-        "Percent": 20
+        "Percent": 20.0
       },
       {
         "Name": "Mix",
         "SelectedFanCurves": [
           {
             "Name": "Min Speed",
-            "Percent": 20
+            "Percent": 20.0
           },
           {
             "Name": "Case",
@@ -527,7 +545,7 @@
                 "SelectedHysteresis": 3.0,
                 "SelectedResponseTime": 3,
                 "SelectedTempSource": {
-                  "Identifier": "NVApiWrapper/256/sensor/0",
+                  "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                   "IsHidden": false,
                   "Name": "GPU",
                   "NickName": "GPU"
@@ -584,13 +602,13 @@
         "NickName": "M.2_FAN (R) (Always On)"
       },
       {
-        "Identifier": "NVApiWrapper/256/fan/0",
+        "Identifier": "NVApiWrapper/0-GA102-A/fan/0",
         "IsHidden": true,
         "Name": "Fan 1 - NVIDIA GeForce RTX 3080 Ti",
         "NickName": "GPU (Outer)"
       },
       {
-        "Identifier": "NVApiWrapper/256/fan/1",
+        "Identifier": "NVApiWrapper/0-GA102-A/fan/1",
         "IsHidden": true,
         "Name": "Fan 2 - NVIDIA GeForce RTX 3080 Ti",
         "NickName": "GPU (Inner)"
@@ -602,11 +620,11 @@
     "SecondaryColor": "#FFAEEA00",
     "SelectedTheme": "Dark",
     "SelectedTrayIconColor": "Light",
-    "SelectedTrayIconSensor": null,
     "ShowHiddenCards": true,
     "StartMinimized": true,
     "SyncThemeWithWindows": true,
-    "TemperatureSensors": []
+    "TemperatureSensors": [],
+    "TrayIcons": []
   },
   "Sensors": {
     "DisabledPlugins": [],
@@ -618,10 +636,12 @@
       "Memory": true,
       "Motherboard": true,
       "PSU": false,
-      "Storage": true
+      "Storage": true,
+      "ZeroRPMOverride": false
     },
     "NvAPIWrapperSettings": {
-      "Enabled": true
+      "Enabled": true,
+      "ZeroRPMOverride": false
     },
     "SensorCount": 43
   }

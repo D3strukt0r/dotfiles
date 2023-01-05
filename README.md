@@ -15,20 +15,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-* Git - Download on <https://git-scm.com/> or run `brew install git` on macOS
+* Chocolatey - Download on <https://chocolatey.org/install> or run `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
+* Scoop - Download on <https://scoop.sh> or run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` and `irm get.scoop.sh | iex`
+* Git - Download on <https://git-scm.com/> or run `choco install git`
+* Python - Download on <https://www.python.org/downloads/> or run `choco install python`
 
 ### Installing
 
-For first time setup
+For first-time setup
 
-```sh
-git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install
+```powershell
+git clone https://github.com/D3strukt0r/dotfiles "$HOME\.dotfiles" && cd "$HOME\.dotfiles" && .\install.ps1
 ```
 
 For getting updates
 
-```sh
-cd ~/.dotfiles && git pull && ./install
+```powershell
+cd "$HOME\.dotfiles" && git pull && .\install.ps1
 ```
 
 #### Usage of `packages.config`
@@ -41,10 +44,23 @@ Dump currently installed packages
 choco export
 ```
 
+See <https://github.com/ScoopInstaller/Scoop/issues/1543>
+
+```sh
+(scoop list) | sls '^  (\w+)' |% { $_.matches.groups[1].value } > scoop-apps.txt
+# or
+scoop export | out-file scoop-apps.json -encoding ascii
+```
+
 Install all packages from `packages.config`
 
 ```sh
 choco install packages.config
+```
+
+```sh
+$apps = gc scoop-apps.txt
+scoop install @apps
 ```
 
 #### Link (Inside PowerShell as Administrator)
@@ -68,8 +84,8 @@ New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\Profiles" -Target "
 ##### Fan Control
 
 ```powershell
-Remove-Item -Recurse -Path "C:\Apps\FanControl\userConfig.json"
-New-Item -ItemType SymbolicLink -Path "C:\Apps\FanControl\userConfig.json" -Target "$HOME\.dotfiles\FanControl\userConfig.json"
+Remove-Item -Recurse -Path "$HOME\scoop\apps\fancontrol\current\userConfig.json"
+New-Item -ItemType SymbolicLink -Path "$HOME\scoop\apps\fancontrol\current\userConfig.json" -Target "$HOME\.dotfiles\FanControl\userConfig.json"
 ```
 
 ## Built With
