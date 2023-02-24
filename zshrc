@@ -109,5 +109,9 @@ antigen init ~/.antigenrc
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+source /Users/manuele/.config/op/plugins.sh
+export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
+eval "$(basher init - zsh)"             ##basher5ea843
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

@@ -37,3 +37,10 @@ Host *
     UseKeychain yes
     IdentityFile ~/.ssh/id_ed25519
     IdentityFile ~/.ssh/id_rsa
+
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh

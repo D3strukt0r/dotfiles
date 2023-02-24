@@ -70,6 +70,7 @@ cask "android-file-transfer"
 cask "atext"
 cask "authy"
 cask "battle-net"
+# Banana Buchhaltung: https://www.banana.ch/doc9/de/node/9737
 cask "binance"
 cask "bitwarden"
 cask "browserstacklocal"
