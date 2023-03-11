@@ -64,6 +64,10 @@ brew bundle cleanup
 antigen update
 ```
 
+#### Manual installs
+
+* Virtualbox Extension - <https://www.virtualbox.org/wiki/Downloads>
+
 ## Built With
 
 Nothing needed
