@@ -23,7 +23,7 @@ What things you need to install the software and how to install them
 For first time setup
 
 ```sh
-git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install
+git clone -b macOS https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install
 ```
 
 For getting updates
