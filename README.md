@@ -66,7 +66,22 @@ antigen update
 
 #### Manual installs
 
-* Virtualbox Extension - <https://www.virtualbox.org/wiki/Downloads>
+* Virtualbox Extension <https://www.virtualbox.org/wiki/Downloads>
+* PhpStorm from Jetbrains Toolbox
+* Download GPG Key from Backup and install in GPG Suite
+* Install global certificate `mkcert -install`
+* To fix iTerm2 font for powerlevel10k run `p10k configure`
+* Install [https://github.com/nvm-sh/nvm](nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
+* Install latest node `nvm install --lts`
+* Install yarn `npm install --global yarn`
+* Install pnpm `npm install --global pnpm`
+* Install PHP-CS-Fixer `phive install --global php-cs-fixer`
+* Install PHPStan `phive install --global phpstan`
+* Install PhpUnit `phive install --global phpunit`
+* Xencelabs Drivers <https://www.xencelabs.com/eu/support/download-drivers>
+* 3CX <https://pbx.hdw.ch/webclient/api/app/mac>
+* Banana Buchhaltung <https://www.banana.ch/doc9/de/node/9737>
+
 
 ## Built With
 

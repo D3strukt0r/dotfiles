@@ -1,5 +1,6 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,25 +9,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
-# Node Version Manager
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# Node Version Manager (nvm)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # Coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 # OpenSSL
-export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+export PATH="$(brew --prefix)/opt/openssl@3/bin:$PATH"
 # Make
-export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-# Yarn Global Bin
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$(yarn global bin):$PATH"
-# Flutter
-export PATH="$HOME/Library/flutter/bin:$PATH"
-# Android
-export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
+export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
 # Python
 export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+# Flutter
+#export PATH="$HOME/Library/flutter/bin:$PATH"
+# Android
+#export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # User configuration
 
@@ -109,9 +108,9 @@ antigen init ~/.antigenrc
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source /Users/manuele/.config/op/plugins.sh
-export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
-eval "$(basher init - zsh)"             ##basher5ea843
+#source /Users/manuele/.config/op/plugins.sh
+#export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
+#eval "$(basher init - zsh)"             ##basher5ea843
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

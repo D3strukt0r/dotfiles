@@ -163,7 +163,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 if [[ $USE_GIT == true ]]; then
     # Autocompletion for GitHub CLI
     # Requires 'brew install gh'
-    antigen bundle gh
+    #antigen bundle gh # Cannot find cache in "~/.antigen/bundles/robbyrussell/oh-my-zsh/cache//completions/_gh"
 
     # Autocompletion and aliases for Git Flow
     # Requires 'brew install git-flow'
