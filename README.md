@@ -82,7 +82,6 @@ antigen update
 * 3CX <https://pbx.hdw.ch/webclient/api/app/mac>
 * Banana Buchhaltung <https://www.banana.ch/doc9/de/node/9737>
 
-
 ## Built With
 
 Nothing needed
