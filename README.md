@@ -65,7 +65,7 @@ antigen update
 #### Manual installs
 
 * Download & Install VirtualBox Extension from <https://www.virtualbox.org/wiki/Downloads>
-* Install PhpStorm from Jetbrains Toolbox
+* Install PhpStorm from Jetbrains Toolbox App
 * Restore GPG Key from File Backup and install in GPG Suite
 * Restore id_rsa & id_ed25519 from Password Manager (for Work)
 * Install global certificate `mkcert -install`
@@ -80,7 +80,9 @@ antigen update
 * Download & Install Xencelabs Drivers from <https://www.xencelabs.com/eu/support/download-drivers>
 * Download & Install 3CX from <https://pbx.hdw.ch/webclient/api/app/mac>
 * Download & Install Banana Buchhaltung from <https://www.banana.ch/doc9/de/node/9737>
+* Install Adobe Acrobat DC from Creative Cloud App
 * Add Macro to Logitech G: Back `cmd + ö` and Forward `cmd + ä`
+* Add uBlock Origin Source in Browsers from <https://github.com/StevenBlack/hosts>
 
 Allow starting/stopping vagrant without password
 
