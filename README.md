@@ -76,8 +76,9 @@ antigen update
 * Xencelabs Drivers <https://www.xencelabs.com/eu/support/download-drivers>
 * 3CX <https://pbx.hdw.ch/webclient/api/app/mac>
 * Banana Buchhaltung <https://www.banana.ch/doc9/de/node/9737>
+* Add Macro to Logitech G: Back `cmd + ö` and Forward `cmd + ä`
 
-Allow starting vagrant up without password
+Allow starting/stopping vagrant without password
 
 ```shell
 sudo visudo -f /private/etc/sudoers.d/vagrant
