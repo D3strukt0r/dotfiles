@@ -20,7 +20,7 @@ What things you need to install the software and how to install them
 
 ### Installing
 
-For first time setup
+For first-time setup
 
 ```sh
 git clone -b macOS https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install
@@ -39,11 +39,12 @@ brew tap homebrew/bundle
 brew bundle
 ```
 
-#### Backup list of apps in "Brewfile"
+#### Update Backup
 
-Dump currently installed packages
+Dump currently installed packages in Brewfile
 
 ```sh
+cd ~/.dotfiles
 brew bundle dump -f
 ```
 
@@ -53,7 +54,9 @@ Remove all packages not mentioned in `Brewfile`
 brew bundle cleanup
 ```
 
-#### antigen
+#### Updating
+
+antigen
 
 ```sh
 antigen update
@@ -61,11 +64,12 @@ antigen update
 
 #### Manual installs
 
-* Virtualbox Extension <https://www.virtualbox.org/wiki/Downloads>
-* PhpStorm from Jetbrains Toolbox
-* Download GPG Key from Backup and install in GPG Suite
+* Download & Install VirtualBox Extension from <https://www.virtualbox.org/wiki/Downloads>
+* Install PhpStorm from Jetbrains Toolbox
+* Restore GPG Key from File Backup and install in GPG Suite
+* Restore id_rsa & id_ed25519 from Password Manager (for Work)
 * Install global certificate `mkcert -install`
-* To fix iTerm2 font for powerlevel10k run `p10k configure`
+* Fix iTerm2 font for powerlevel10k with `p10k configure`
 * Install [https://github.com/nvm-sh/nvm](nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
 * Install latest node `nvm install --lts`
 * Install yarn `npm install --global yarn`
@@ -73,16 +77,16 @@ antigen update
 * Install PHP-CS-Fixer `phive install --global php-cs-fixer`
 * Install PHPStan `phive install --global phpstan`
 * Install PhpUnit `phive install --global phpunit`
-* Xencelabs Drivers <https://www.xencelabs.com/eu/support/download-drivers>
-* 3CX <https://pbx.hdw.ch/webclient/api/app/mac>
-* Banana Buchhaltung <https://www.banana.ch/doc9/de/node/9737>
+* Download & Install Xencelabs Drivers from <https://www.xencelabs.com/eu/support/download-drivers>
+* Download & Install 3CX from <https://pbx.hdw.ch/webclient/api/app/mac>
+* Download & Install Banana Buchhaltung from <https://www.banana.ch/doc9/de/node/9737>
 * Add Macro to Logitech G: Back `cmd + ö` and Forward `cmd + ä`
 
 Allow starting/stopping vagrant without password
 
 ```shell
 sudo visudo -f /private/etc/sudoers.d/vagrant
-````
+```
 
 Add the following line
 
