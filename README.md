@@ -26,30 +26,25 @@ For first time setup
 git clone -b macOS https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install
 ```
 
-For getting updates
+Run dotbot to link config files
 
 ```sh
 cd ~/.dotfiles && git pull && ./install
 ```
 
-#### Usage of "Brewfile"
-
-Install
+Install all packages from `Brewfile`
 
 ```sh
 brew tap homebrew/bundle
+brew bundle
 ```
+
+#### Backup list of apps in "Brewfile"
 
 Dump currently installed packages
 
 ```sh
 brew bundle dump -f
-```
-
-Install all packages from `Brewfile`
-
-```sh
-brew bundle
 ```
 
 Remove all packages not mentioned in `Brewfile`
@@ -81,6 +76,35 @@ antigen update
 * Xencelabs Drivers <https://www.xencelabs.com/eu/support/download-drivers>
 * 3CX <https://pbx.hdw.ch/webclient/api/app/mac>
 * Banana Buchhaltung <https://www.banana.ch/doc9/de/node/9737>
+
+Allow starting vagrant up without password
+
+```shell
+sudo visudo -f /private/etc/sudoers.d/vagrant
+````
+
+Add the following line
+
+```text
+Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+%admin     ALL = (root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+```
+
+And allow hosts-updater to update hosts file automatically with
+
+```shell
+sudo visudo -f /private/etc/sudoers.d/vagrant_hostsupdater
+```
+
+Add the following line
+
+```text
+Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
+Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
+%admin     ALL = (root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
+```
 
 ## Built With
 
