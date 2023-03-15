@@ -84,6 +84,7 @@ antigen update
 * Add Macro to Logitech G: Back `cmd + ö` and Forward `cmd + ä`
 * Add uBlock Origin Source in Browsers from <https://github.com/StevenBlack/hosts>
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
+* Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
 
 Allow starting/stopping vagrant without password
 
