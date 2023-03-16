@@ -130,8 +130,10 @@ cask "wireshark"
 cask "zoom"
 mas "Contrast", id: 1254981365
 mas "GIPHY CAPTURE", id: 668208984
+mas "Microsoft Excel", id: 462058435
 mas "Microsoft Outlook", id: 985367838
 mas "Microsoft Remote Desktop", id: 1295203466
+mas "Microsoft Word", id: 462054704
 mas "Speedtest", id: 1153157709
 mas "TextSniper", id: 1528890965
 mas "Xcode", id: 497799835

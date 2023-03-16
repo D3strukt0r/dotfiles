@@ -65,34 +65,27 @@ antigen update
 #### Manual installs
 
 * Download & Install VirtualBox Extension from <https://www.virtualbox.org/wiki/Downloads>
-* Install PhpStorm from Jetbrains Toolbox App
+* Install PhpStorm and Android Studio from Jetbrains Toolbox App
 * Restore GPG Key from File Backup and install in GPG Suite
 * Restore id_rsa & id_ed25519 from Password Manager (for Work)
 * Install global certificate `mkcert -install`
 * Fix iTerm2 font for powerlevel10k with `p10k configure`
-* Install [https://github.com/nvm-sh/nvm](nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
+* Install [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
 * Install latest node `nvm install --lts`
 * Install yarn `npm install --global yarn`
 * Install pnpm `npm install --global pnpm`
 * Install PHP-CS-Fixer `phive install --global php-cs-fixer`
 * Install PHPStan `phive install --global phpstan`
 * Install PhpUnit `phive install --global phpunit`
-* Download & Install Xencelabs Drivers from <https://www.xencelabs.com/eu/support/download-drivers>
-* Download & Install 3CX from <https://pbx.hdw.ch/webclient/api/app/mac>
-* Download & Install Banana Buchhaltung from <https://www.banana.ch/doc9/de/node/9737>
+* Download & Install [Xencelabs Drivers](https://www.xencelabs.com/eu/support/download-drivers)
+* Download & Install [3CX](https://pbx.hdw.ch/webclient/api/app/mac)
+* Download & Install [Banana Buchhaltung](https://www.banana.ch/doc9/de/node/9737)
 * Install Adobe Acrobat DC from Creative Cloud App
 * Add Macro to Logitech G: Back `cmd + ö` and Forward `cmd + ä`
-* Add uBlock Origin Source in Browsers from <https://github.com/StevenBlack/hosts>
+* Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
 * Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
-
-Allow starting/stopping vagrant without password
-
-```shell
-sudo visudo -f /private/etc/sudoers.d/vagrant
-```
-
-Add the following line
+* Allow starting/stopping vagrant without password by running `sudo visudo -f /private/etc/sudoers.d/vagrant` and adding the following lines:
 
 ```text
 Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
@@ -101,13 +94,7 @@ Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 %admin     ALL = (root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
 ```
 
-And allow hosts-updater to update hosts file automatically with
-
-```shell
-sudo visudo -f /private/etc/sudoers.d/vagrant_hostsupdater
-```
-
-Add the following line
+* And allow hosts-updater to update hosts file automatically with `sudo visudo -f /private/etc/sudoers.d/vagrant_hostsupdater` and adding following lines:
 
 ```text
 Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
