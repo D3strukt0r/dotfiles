@@ -1,42 +1,45 @@
 Host dev
-    HostName 192.168.1.21
-    User manuele
+  HostName 192.168.1.21
+  User manuele
 
 Host prod
-    HostName 159.89.28.69
-    User root
+  HostName 159.89.28.69
+  User root
 
 Host prod-web
-    HostName s096.cyon.net
-    User d3strukt
+  HostName 104.248.24.117
+
+Host prod-web-old
+  HostName s096.cyon.net
+  User d3strukt
 
 Host ap-buro
-    HostName 192.168.1.22
-    User D3strukt0r
-    PreferredAuthentications publickey
+  HostName 192.168.1.22
+  User D3strukt0r
+  PreferredAuthentications publickey
 Host ap-stube
-    HostName 192.168.1.23
-    User D3strukt0r
-    PreferredAuthentications publickey
+  HostName 192.168.1.23
+  User D3strukt0r
+  PreferredAuthentications publickey
 Host ap-manuele
-    HostName 192.168.1.24
-    User D3strukt0r
-    PreferredAuthentications publickey
+  HostName 192.168.1.24
+  User D3strukt0r
+  PreferredAuthentications publickey
 
 Host github.com
-    PreferredAuthentications publickey
+  PreferredAuthentications publickey
 Host gitlab.com
-    PreferredAuthentications publickey
+  PreferredAuthentications publickey
 Host git.iwf.io
-    PreferredAuthentications publickey
+  PreferredAuthentications publickey
 
 Host *
-    LogLevel INFO
-    Compression yes
-    AddKeysToAgent yes
-    UseKeychain yes
-    IdentityFile ~/.ssh/id_ed25519
-    IdentityFile ~/.ssh/id_rsa
+  LogLevel INFO
+  Compression yes
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/id_rsa
 
 Host *
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

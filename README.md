@@ -70,6 +70,9 @@ antigen update
 * Restore id_rsa & id_ed25519 from Password Manager (for Work)
 * Install global certificate `mkcert -install`
 * Fix iTerm2 font for powerlevel10k with `p10k configure`
+* Fix GitKraken terminal `Settings` > `Terminal`
+  * Font: `MesloLGS NF`
+  * Line Height: `1.3`
 * Install [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
 * Install latest node `nvm install --lts`
 * Install yarn `npm install --global yarn`
@@ -101,6 +104,8 @@ Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
 Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin     ALL = (root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
 ```
+
+* Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 
 ## Built With
 
