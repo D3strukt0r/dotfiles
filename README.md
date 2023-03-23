@@ -106,6 +106,7 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 ```
 
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
+* Add `~/Library/CloudStorage` and `~/VirtualBox VMs` in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
 
 ## Built With
 

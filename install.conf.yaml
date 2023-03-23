@@ -6,25 +6,25 @@
 
 - link:
     ~/.config/nvim/init.vim:
-        path: config/nvim/init.vim
+        path: src/.config/nvim/init.vim
         create: true
     ~/.config/nvim/coc-settings.json:
-        path: config/nvim/coc-settings.json
+        path: src/.config/nvim/coc-settings.json
         create: true
     ~/.config/yarn/global/package.json:
-        path: config/yarn/global/package.json
+        path: src/.config/yarn/global/package.json
         create: true
     ~/.config/yarn/global/yarn.lock:
-        path: config/yarn/global/yarn.lock
+        path: src/.config/yarn/global/yarn.lock
         create: true
     ~/.ssh/config:
-        path: ssh/config
+        path: src/.ssh/config
         create: true
-    ~/.antigenrc: antigenrc
-    ~/.gitconfig: gitconfig
-    ~/.p10k.zsh: p10k.zsh
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
+    ~/.antigenrc: src/.antigenrc
+    ~/.gitconfig: src/.gitconfig
+    ~/.p10k.zsh: src/.p10k.zsh
+    ~/.vimrc: src/.vimrc
+    ~/.zshrc: src/.zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
