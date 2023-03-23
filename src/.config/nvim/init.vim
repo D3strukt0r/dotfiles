@@ -11,7 +11,7 @@
 
 " PLUGINS (vim-plug) ------------------------------------------------------ {{{
 
-" Remember to run ":PluginInstall" after changing plugins.
+" Remember to run ":PlugInstall" after changing plugins.
 call plug#begin('~/.vim/plugged')
 
     " Bar

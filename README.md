@@ -67,8 +67,11 @@ antigen update
 * Download & Install VirtualBox Extension from <https://www.virtualbox.org/wiki/Downloads>
 * Install PhpStorm and Android Studio from Jetbrains Toolbox App
 * Restore GPG Key from File Backup and install in GPG Suite
-* Restore id_rsa & id_ed25519 from Password Manager (for Work)
+* Restore `id_rsa` & `id_ed25519` from Password Manager (for Work)
 * Install global certificate `mkcert -install`
+* Fix nvim installation in `~/.local` with `sudo chown manuele -R ~/.local`
+* Install `vim-plug` [GitHub](https://github.com/junegunn/vim-plug#unix-linux) `sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
+* Install all `nvim` plugins by running `nvim` and executing `:PlugInstall!` (eventually multiple times)
 * Fix iTerm2 font for powerlevel10k with `p10k configure`
 * Fix GitKraken terminal `Settings` > `Terminal`
   * Font: `MesloLGS NF`
