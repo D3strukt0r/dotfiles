@@ -21,41 +21,19 @@ What things you need to install the software and how to install them
 
 For first time setup
 
-```sh
-git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install
-```
-
-For getting updates
+on macOS
 
 ```sh
-cd ~/.dotfiles && git pull && ./install
+git clone -b macOS https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles
 ```
 
-#### Usage of "Brewfile"
-
-Install
+on Windows
 
 ```sh
-brew tap homebrew/bundle
+git clone -b Windows https://github.com/D3strukt0r/dotfiles "$HOME\.dotfiles" && cd "$HOME\.dotfiles"
 ```
 
-Dump currently installed packages
-
-```sh
-brew bundle dump -f
-```
-
-Install all packages from `Brewfile`
-
-```sh
-brew bundle
-```
-
-Remove all packages not mentioned in `Brewfile`
-
-```sh
-brew bundle cleanup
-```
+then follow the instructions on the corresponding branch's README.md for automatic and manual setup
 
 ## Built With
 
