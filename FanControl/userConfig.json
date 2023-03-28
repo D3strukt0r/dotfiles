@@ -1,5 +1,5 @@
 {
-  "__VERSION__": "142",
+  "__VERSION__": "143",
   "Main": {
     "Controls": [
       {
@@ -619,11 +619,11 @@
     "PrimaryColor": "#FF607D8B",
     "SecondaryColor": "#FFAEEA00",
     "SelectedTheme": "Dark",
-    "SelectedTrayIconColor": "Light",
     "ShowHiddenCards": true,
     "StartMinimized": true,
     "SyncThemeWithWindows": true,
     "TemperatureSensors": [],
+    "TrayIconColor": "#FFFFFFFF",
     "TrayIcons": []
   },
   "Sensors": {
@@ -632,6 +632,7 @@
     "LibreHardwareMonitorSettings": {
       "Controller": false,
       "CPU": true,
+      "EmbeddedEC": true,
       "GPU": true,
       "Memory": true,
       "Motherboard": true,
