@@ -85,6 +85,7 @@ antigen update
 * Install PhpUnit `phive install --global phpunit`
 * Download & Install [Xencelabs Drivers](https://www.xencelabs.com/eu/support/download-drivers)
 * Download & Install [3CX](https://pbx.hdw.ch/webclient/api/app/mac)
+  * For setup on mobile, log in at <https://pbx.hdw.ch/webclient/#/login> > `...` > `Einstellungen` > `QR-Code scannen`
 * Download & Install [Banana Buchhaltung](https://www.banana.ch/doc9/de/node/9737)
 * Install Adobe Acrobat DC from Creative Cloud App
 * Add Macro to Logitech G: Back `cmd + ö` and Forward `cmd + ä`
@@ -109,7 +110,36 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 ```
 
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
-* Add `~/Library/CloudStorage` and `~/VirtualBox VMs` in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
+* Add `~/Library/CloudStorage`, `~/VirtualBox VMs` and `/Applications` in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
+* In `Systemeinstellungen` > `Drucker & Scanner` > `[+]` > `IP` (Icon)
+  * `10.1.41.40` | `HP Jetdirect - Socket` | `Drucker - 4. OG (IWF Intern)`
+  * `10.1.41.36` | `HP Jetdirect - Socket` | `Drucker - 4. OG (Nord)`
+
+#### Manual App configuration
+
+* `aText`
+  * Snippets
+    * `dbimp` > `cat /vagrant/{pointer} | docker exec -i db sh -c 'mysql --default-character-set=utf8 -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE'`
+    * `gitcp` > `git --git-dir=../{pointer}/.git format-patch -k -1 --stdout <> | git am -3 -k`
+    * `paste` > `{clipboard}`
+* `Nightowl`
+  * Toolbar Icon > `...` > `Hotkey` > `[ ]` Turn off
+* `Pika`
+  * When opening for the first time, select `Open at startup` (or similar)
+* `Private Internet Access`
+  * Toolbar Icon > Hamburger Menu > `Einstellungen` > `Allgemein` > `Beim Systemstart öffnen` > `[x]`
+* `Scroll Reverser`
+  * Toolbar Icon > `Einstellungen...`
+    * [x] Vertikal umkehren
+    * [x] Horizontal umkehren
+    * [ ] Trackpad umkehren
+    * [x] Maus umkehren
+* `Telegram Desktop`
+  * Burger Menu > `Night Mode` > On
+* `TextSniper`
+  * Toolbar Icon > `Preferences...` > `System` > `Launch at Login` > `[x]`
+* `The Unarchiver`
+  * `Extrahieren` > `Änderungsdatum des neu erstellten Ordner ändern auf:` > `Änderungsdatum der Archivdatei`
 
 ## Built With
 
