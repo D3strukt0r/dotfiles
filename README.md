@@ -122,6 +122,11 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
     * `dbimp` > `cat /vagrant/{pointer} | docker exec -i db sh -c 'mysql --default-character-set=utf8 -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE'`
     * `gitcp` > `git --git-dir=../{pointer}/.git format-patch -k -1 --stdout <> | git am -3 -k`
     * `paste` > `{clipboard}`
+* `GitKraken`
+  * `General`
+    * `Default Branch Name` > `master`
+    * `Default External Terminal` > `iTerm2`
+  * `Notifications` > `Enable Desktop Notifications` > `[x]`
 * `Nightowl`
   * Toolbar Icon > `...` > `Hotkey` > `[ ]` Turn off
 * `Pika`
