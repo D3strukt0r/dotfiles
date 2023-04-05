@@ -62,10 +62,8 @@ antigen
 antigen update
 ```
 
-#### Manual installs
+#### Manual Configuration (CLI)
 
-* Download & Install VirtualBox Extension from <https://www.virtualbox.org/wiki/Downloads>
-* Install PhpStorm and Android Studio from Jetbrains Toolbox App
 * Restore GPG Key from File Backup and install in GPG Suite
 * Restore `id_rsa` & `id_ed25519` from Password Manager (for Work)
 * Install global certificate `mkcert -install`
@@ -73,9 +71,6 @@ antigen update
 * Install `vim-plug` [GitHub](https://github.com/junegunn/vim-plug#unix-linux) `sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
 * Install all `nvim` plugins by running `nvim` and executing `:PlugInstall!` (eventually multiple times)
 * Fix iTerm2 font for powerlevel10k with `p10k configure`
-* Fix GitKraken terminal `Settings` > `Terminal`
-  * Font: `MesloLGS NF`
-  * Line Height: `1.3`
 * Install [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
 * Install latest node `nvm install --lts`
 * Install yarn `npm install --global yarn`
@@ -83,15 +78,10 @@ antigen update
 * Install PHP-CS-Fixer `phive install --global php-cs-fixer`
 * Install PHPStan `phive install --global phpstan`
 * Install PhpUnit `phive install --global phpunit`
-* Download & Install [Xencelabs Drivers](https://www.xencelabs.com/eu/support/download-drivers)
-* Download & Install [3CX](https://pbx.hdw.ch/webclient/api/app/mac)
-  * For setup on mobile, log in at <https://pbx.hdw.ch/webclient/#/login> > `...` > `Einstellungen` > `QR-Code scannen`
-* Download & Install [Banana Buchhaltung](https://www.banana.ch/doc9/de/node/9737)
-* Install Adobe Acrobat DC from Creative Cloud App
-* Add Macro to Logitech G: Back `cmd + ö` and Forward `cmd + ä`
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
-* Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
+* Finish installation of Battle.net with `open /usr/local/Caskroom/battle-net/1.18.5.3106/Battle.net-Setup.app`
+* Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 * Allow starting/stopping vagrant without password by running `sudo visudo -f /private/etc/sudoers.d/vagrant` and adding the following lines:
 
 ```text
@@ -109,24 +99,49 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin     ALL = (root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
 ```
 
-* Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
-* Add `~/Library/CloudStorage`, `~/VirtualBox VMs` and `/Applications` in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
-* In `Systemeinstellungen` > `Drucker & Scanner` > `[+]` > `IP` (Icon)
+#### Manual System Settings Configuration
+
+* Add Time Machine Exclusions in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
+  * `~/Library/CloudStorage`
+  * `~/VirtualBox VMs`
+  * `/Applications`
+* Add Printers in `Systemeinstellungen` > `Drucker & Scanner` > `[+]` > `IP` (Icon)
   * `10.1.41.40` | `HP Jetdirect - Socket` | `Drucker - 4. OG (IWF Intern)`
   * `10.1.41.36` | `HP Jetdirect - Socket` | `Drucker - 4. OG (Nord)`
+* Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
 
-#### Manual App configuration
+#### Manual App Installation
 
+* [3CX](https://pbx.hdw.ch/webclient/api/app/mac)
+* [Banana Buchhaltung](https://www.banana.ch/doc9/de/node/9737)
+* Install `Adobe Acrobat DC` from `Creative Cloud App`
+* Install `PhpStorm` and `Android Studio` from `JetBrains Toolbox App`
+* [VirtualBox Extension](https://www.virtualbox.org/wiki/Downloads)
+* [Xencelabs Drivers](https://www.xencelabs.com/eu/support/download-drivers)
+
+#### Manual App Configuration
+
+* `3CX`
+  * (Desktop), go to [any page](https://pbx.hdw.ch/webclient/#/people) > 🍎 > `Provisionieren`
+  * (Mobile), log in at <https://pbx.hdw.ch/webclient/#/login> > `...` > `Einstellungen` > `QR-Code scannen`
 * `aText`
   * Snippets
     * `dbimp` > `cat /vagrant/{pointer} | docker exec -i db sh -c 'mysql --default-character-set=utf8 -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE'`
     * `gitcp` > `git --git-dir=../{pointer}/.git format-patch -k -1 --stdout <> | git am -3 -k`
     * `paste` > `{clipboard}`
 * `GitKraken`
-  * `General`
-    * `Default Branch Name` > `master`
-    * `Default External Terminal` > `iTerm2`
-  * `Notifications` > `Enable Desktop Notifications` > `[x]`
+  * `Settings`
+    * `General`
+      * `Default Branch Name` > `master`
+      * `Default External Terminal` > `iTerm2`
+    * `Notifications` > `Enable Desktop Notifications` > `[x]`
+    * `Terminal`
+      * `Font`: `MesloLGS NF`
+      * `Line Height`: `1.3`
+* `Logitech G`
+  * Add Macro to Mouse:
+    * Back: `cmd + ö`
+    * Forward: `cmd + ä`
 * `Nightowl`
   * Toolbar Icon > `...` > `Hotkey` > `[ ]` Turn off
 * `Pika`
