@@ -11,17 +11,25 @@
     ~/.config/nvim/coc-settings.json:
         path: src/.config/nvim/coc-settings.json
         create: true
-    ~/.config/yarn/global/package.json:
-        path: src/.config/yarn/global/package.json
-        create: true
-    ~/.config/yarn/global/yarn.lock:
-        path: src/.config/yarn/global/yarn.lock
-        create: true
     ~/.ssh/config:
         path: src/.ssh/config
         create: true
+    ~/.composer/composer.json:
+        path: src/.composer/composer.json
+        create: true
+    ~/.composer/composer.lock:
+        path: src/.composer/composer.lock
+        create: true
+    ~/Library/pnpm/global/5/package.json:
+        path: src/Library/pnpm/global/5/package.json
+        create: true
+    ~/Library/pnpm/global/5/pnpm-lock.yaml:
+        path: src/Library/pnpm/global/5/pnpm-lock.yaml
+        create: true
     ~/.antigenrc: src/.antigenrc
     ~/.gitconfig: src/.gitconfig
+    ~/.gitignore_global: src/.gitignore_global
+    ~/.gitmessage: src/.gitmessage
     ~/.p10k.zsh: src/.p10k.zsh
     ~/.vimrc: src/.vimrc
     ~/.zshrc: src/.zshrc

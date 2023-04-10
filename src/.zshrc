@@ -22,10 +22,18 @@ export PATH="$(brew --prefix)/opt/openssl@3/bin:$PATH"
 export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
 # Python
 export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+# Composer
+export PATH="$(composer global config bin-dir --absolute --quiet):$PATH"
 # Flutter
 #export PATH="$HOME/Library/flutter/bin:$PATH"
 # Android
 #export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
+# pnpm
+export PNPM_HOME="/Users/manuele/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
 # User configuration
 

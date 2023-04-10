@@ -6,15 +6,13 @@
 	program = /usr/local/bin/gpg
 [commit]
 	gpgSign = true
-	template = /Users/manuele/.stCommitMsg
+	template = /Users/manuele/.gitmessage
 [tag]
 	forceSignAnnotated = true
 [init]
 	defaultBranch = master
-[gui]
-	recentrepo = /Users/manuele/Projects-IWF/craftbp
 [core]
-	excludesfile = /Users/manuele/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
