@@ -20,6 +20,9 @@
     ~/.composer/composer.lock:
         path: src/.composer/composer.lock
         create: true
+    ~/.docker/config.json:
+        path: src/.docker/config.json
+        create: true
     ~/Library/pnpm/global/5/package.json:
         path: src/Library/pnpm/global/5/package.json
         create: true

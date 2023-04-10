@@ -68,6 +68,10 @@ antigen update
 * Restore `id_rsa` & `id_ed25519` from Password Manager (for Work)
 * Install global certificate `mkcert -install`
 * Fix nvim installation in `~/.local` with `sudo chown manuele -R ~/.local`
+* Install [docker-credential-pass](https://github.com/docker/docker-credential-helpers/releases/download/v0.7.0/docker-credential-pass-v0.7.0.darwin-amd64)
+  * `chmod +x docker-credential-pass-v0.7.0.darwin-amd64`
+  * `mv docker-credential-pass-v0.7.0.darwin-amd64 /usr/local/bin/docker-credential-pass`
+  * Use `Finder` > Right Click > `Open` once to bypass malware check failing
 * Install `vim-plug` [GitHub](https://github.com/junegunn/vim-plug#unix-linux) `sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
 * Install all `nvim` plugins by running `nvim` and executing `:PlugInstall!` (eventually multiple times)
 * Fix iTerm2 font for powerlevel10k with `p10k configure`
