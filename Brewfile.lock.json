@@ -2436,6 +2436,24 @@
         "options": {
           "full_name": "minecraft"
         }
+      },
+      "affinity-designer": {
+        "version": "2.0.4",
+        "options": {
+          "full_name": "affinity-designer"
+        }
+      },
+      "beyond-compare": {
+        "version": "4.4.6.27483",
+        "options": {
+          "full_name": "beyond-compare"
+        }
+      },
+      "logi-options-plus": {
+        "version": "1.36",
+        "options": {
+          "full_name": "logi-options-plus"
+        }
       }
     },
     "mas": {

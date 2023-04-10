@@ -124,7 +124,9 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 * [Atlassian Companion](https://update-nucleus.atlassian.com/Atlassian-Companion/291cb34fe2296e5fb82b83a04704c9b4/latest/darwin/x64/Atlassian%20Companion.dmg) [Docs](https://confluence.atlassian.com/doc/install-atlassian-companion-992678880.html)
 * [Banana Buchhaltung](https://www.banana.ch/doc9/de/node/9737)
 * Install `Adobe Acrobat DC` from `Creative Cloud App`
+* [Filezilla](https://filezilla-project.org/download.php?type=client)
 * Install `PhpStorm` and `Android Studio` from `JetBrains Toolbox App`
+* [LDAP Admin Tool](https://ldapsoft.com/ldapbrowser/ldapadmintool.html)
 * [VirtualBox Extension](https://www.virtualbox.org/wiki/Downloads)
 * [Xencelabs Drivers](https://www.xencelabs.com/eu/support/download-drivers)
 
@@ -151,6 +153,11 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
   * Add Macro to Mouse:
     * Back: `cmd + ö`
     * Forward: `cmd + ä`
+* `Microsoft Remote Desktop`
+  * PCs (Check Notes app for credentials)
+    * `Vertec Prod`: `192.168.6.114`
+    * `Vertec Test`: `192.168.6.113`
+    * `SAGE Test`: `192.168.6.181`
 * `Nightowl`
   * Toolbar Icon > `...` > `Hotkey` > `[ ]` Turn off
 * `Pika`
@@ -169,6 +176,20 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
   * Toolbar Icon > `Preferences...` > `System` > `Launch at Login` > `[x]`
 * `The Unarchiver`
   * `Extrahieren` > `Änderungsdatum des neu erstellten Ordner ändern auf:` > `Änderungsdatum der Archivdatei`
+* `Ultimaker Cura`
+  * Add Printer `Creality Ender-3 Pro`
+  * Printer Settings
+    * X: 235
+    * Y: 235
+    * Z: 250
+  * Printhead Settings
+    * X min: -58
+    * Y min: -20
+    * X max: 40
+    * Y max: 34
+    * Gantry Height: 25.0
+  * `Preferences` > `Configure Cura...`
+    * `General` > `Theme` > `Ultimaker Dark`
 
 ## Built With
 
