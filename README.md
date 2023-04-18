@@ -78,7 +78,7 @@ antigen update
 * Install iTerm2 Shell Integration. Open `iTerm2` > Toolbar > `iTerm2` > `Instell Shell Integration`
 * Install [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
 * Install latest node `nvm install --lts`
-* Install pnpm `npm install --global pnpm` & `pnpm install --glabal`
+* Install pnpm `npm install --global pnpm` & `pnpm install --global`
 * Create link with `npmrc`, login with `npm login`, create new profile `npmrc -c work-iwf` and set new registry and login with `npm login --registry https://npm.iwf.io` (use LDAP username and GitLab Verdaccio Access Token) and set default registry `npm config set registry https://npm.iwf.io`
 * Install composer `phive install --global composer`
 * Add GitHub Token to increased API rate limit `composer config --global github-oauth.github.com TOKEN`. Get `TOKEN` from password manager
@@ -88,6 +88,7 @@ antigen update
 * Install rector `composer global require rector/rector`
 * Install PHPStan and extensions `composer global require phpstan/phpstan phpstan/extension-installer phpstan/phpstan-doctrine phpstan/phpstan-phpunit phpstan/phpstan-symfony`
 * Login to Ngrok `ngrok config add-authtoken TOKEN`. Get `TOKEN` from password manager
+* Login to GitHub Copilot CLI `github-copilot-cli auth`
 * Get passwords managed with `pass`: `git clone git@github.com:D3strukt0r/pass-store.git ~/.password-store`
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"

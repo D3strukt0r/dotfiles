@@ -35,6 +35,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+# GitHub Copilot CLI Setup alias convenience commands (??, git?, and gh? commands)
+eval "$(github-copilot-cli alias -- "$0")"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
