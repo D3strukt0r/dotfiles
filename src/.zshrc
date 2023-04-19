@@ -29,7 +29,7 @@ export PATH="$(composer global config bin-dir --absolute --quiet):$PATH"
 # Android
 #export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
 # pnpm
-export PNPM_HOME="/Users/manuele/Library/pnpm"
+export PNPM_HOME="~/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -119,7 +119,7 @@ antigen init ~/.antigenrc
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#source /Users/manuele/.config/op/plugins.sh
+#source ~/.config/op/plugins.sh
 #export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
 #eval "$(basher init - zsh)"             ##basher5ea843
 
