@@ -67,7 +67,7 @@ antigen update
 * Restore GPG Key from File Backup and install in GPG Suite
 * Restore `id_rsa` & `id_ed25519` from Password Manager (for Work)
 * Install global certificate `mkcert -install`
-* Fix nvim installation in `~/.local` with `sudo chown manuele -R ~/.local`
+* Fix `nvim` installation in `~/.local` with `sudo chown manuele -R ~/.local`
 * Install [docker-credential-pass](https://github.com/docker/docker-credential-helpers/releases/download/v0.7.0/docker-credential-pass-v0.7.0.darwin-amd64)
   * `chmod +x docker-credential-pass-v0.7.0.darwin-amd64`
   * `mv docker-credential-pass-v0.7.0.darwin-amd64 /usr/local/bin/docker-credential-pass`
@@ -93,6 +93,7 @@ antigen update
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
 * Finish installation of Battle.net with `open /usr/local/Caskroom/battle-net/1.18.5.3106/Battle.net-Setup.app`
+* Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 * Allow starting/stopping vagrant without password by running `sudo visudo -f /private/etc/sudoers.d/vagrant` and adding the following lines:
 
