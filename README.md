@@ -123,6 +123,7 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
   * `10.1.41.36` | `HP Jetdirect - Socket` | `Drucker - 4. OG (Nord)`
 * Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
 * Disable Tips Notification `Systemeinstellungen` > `Mitteilungen & Fokus` > `Tipps` > `Mitteilungen erlauben` > Aus
+* Change Default window switching shortcut `Systemeinstellungen` > `Tastatur` > `Kurzbefehle` > `Tastatur` > `Fokus im nächsten Fenster` > `⌘ + (key left from y (QWERTZ) -> >,<)`
 
 #### Manual App Installation
 
