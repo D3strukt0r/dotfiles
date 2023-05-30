@@ -16,6 +16,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # Coreutils
 export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+# cURL
+export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 # OpenSSL
 export PATH="$(brew --prefix)/opt/openssl@3/bin:$PATH"
 # Make
@@ -55,28 +57,28 @@ eval "$(github-copilot-cli alias -- "$0")"
 # swarm-ssh reactbp-dev_fpm
 # swarm-ssh reactbp-dev_web sh
 swarm-ssh() {
-    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker pull iwfwebsolutions/iwf-docker-cli
     docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli swarm-ssh.sh $*
 }
 # swarm-dbdump reactbp-dev
 swarm-dbdump() {
-    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker pull iwfwebsolutions/iwf-docker-cli
     docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli swarm-dbdump.sh $*
 }
 # swarm-worker test-worker-1
 swarm-worker() {
-    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker pull iwfwebsolutions/iwf-docker-cli
     docker run -it --rm -v $HOME/.ssh:/root/.ssh iwfwebsolutions/iwf-docker-cli ssh iwfsupport@$1.web-solutions.io
 }
 # swarm-scp test-worker-1 /data1/reactbp-dev/data/
 swarm-scp() {
-    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker pull iwfwebsolutions/iwf-docker-cli
     docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli scp -rp iwfsupport@$1.web-solutions.io:$2 /exports
 }
 # swarm-copy reactbp-dev_fpm /app/config/services.yaml
 # swarm-copy reactbp-dev_fpm /app/public/media
 swarm-copy() {
-    docker pull iwfwebsolutions/iwf-docker-cli >/dev/null 2>&1
+    docker pull iwfwebsolutions/iwf-docker-cli
     docker run -it --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/exports iwfwebsolutions/iwf-docker-cli swarm-copy.sh $*
 }
 

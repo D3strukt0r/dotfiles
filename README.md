@@ -112,6 +112,13 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin     ALL = (root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
 ```
 
+* (Work) SSH Host Keys must be saved locally before being able to run `swarm-{x}` commands. Run following commands while entering `yes`to accept ssh key and then entering `exit`:
+
+```shell
+for node in 1 2 3 4 5; do swarm-worker test-worker-$node; done
+for node in 1 2 3 4 5; do swarm-worker prod-worker-$node; done
+```
+
 #### Manual System Settings Configuration
 
 * Add Time Machine Exclusions in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
