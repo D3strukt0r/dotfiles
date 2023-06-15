@@ -163,6 +163,9 @@ for node in 1 2 3 4 5; do swarm-worker prod-worker-$node; done
     * `Terminal`
       * `Font`: `MesloLGS NF`
       * `Line Height`: `1.3`
+  * <Project> Jira Issues
+    * My Issues: `project = "x" AND assignee = currentUser() AND resolution = Unresolved`
+    * Current Issues: `project = "x" AND resolution = Unresolved AND Sprint in openSprints() AND Sprint not in futureSprints()`
 * `Logitech G`
   * Add Macro to Mouse:
     * Back: `cmd + ö`
