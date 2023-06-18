@@ -64,7 +64,7 @@ antigen update
 
 #### Manual Configuration (CLI)
 
-* Restore GPG Key from File Backup and install in GPG Suite
+* Restore GPG Key from File Backup and install in GPG Suite or run `gpg --import-options import-restore --import private.gpg`
 * Restore `id_rsa` & `id_ed25519` from Password Manager (for Work)
 * Install global certificate `mkcert -install`
 * Fix `nvim` installation in `~/.local` with `sudo chown manuele -R ~/.local`
