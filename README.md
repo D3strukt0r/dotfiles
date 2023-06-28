@@ -141,6 +141,7 @@ for node in 1 2 3 4 5; do swarm-worker prod-worker-$node; done
 * [Filezilla](https://filezilla-project.org/download.php?type=client)
 * Install `PhpStorm` and `Android Studio` from `JetBrains Toolbox App`
 * [LDAP Admin Tool](https://ldapsoft.com/ldapbrowser/ldapadmintool.html)
+* [NighOwl](https://nightowlapp.co/)
 * [VirtualBox Extension](https://www.virtualbox.org/wiki/Downloads)
 * [Xencelabs Drivers](https://www.xencelabs.com/eu/support/download-drivers)
 
