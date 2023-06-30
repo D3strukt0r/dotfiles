@@ -15,8 +15,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-* Homebrew - <https://brew.sh/> - Run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` on macOS
-* Git - Download on <https://git-scm.com/> or run `brew install git` on macOS
+* File system without Case-Sensitive. `Epic Games`, `Steam`, `OneDrive` and `Adobe` don't work with it.
+* [Homebrew](https://brew.sh/) - Run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+* [Git](https://git-scm.com/) - Run `brew install git`
 
 ### Installing
 
