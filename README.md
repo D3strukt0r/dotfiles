@@ -131,6 +131,8 @@ for node in 1 2 3 4 5; do swarm-worker prod-worker-$node; done
   * `10.1.41.36` | `HP Jetdirect - Socket` | `Drucker - 4. OG (Nord)`
 * Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
 * Disable Tips Notification `Systemeinstellungen` > `Mitteilungen & Fokus` > `Tipps` > `Mitteilungen erlauben` > Aus
+* Add US English keyboard in `Systemeinstellungen` > `Tastatur` > `Eingabequellen` > `[+]` > `English` > `US` > `Hinzufügen`
+* Add quick keyboard switcher in `Systemeinstellungen` > `Tastatur` > `Beim Drücker der fn-Taste` > `Eingabequellen wechseln`
 * Change Default window switching shortcut `Systemeinstellungen` > `Tastatur` > `Kurzbefehle` > `Tastatur` > `Fokus in nächstes Fenster` > `⌘ + (key left from y (QWERTZ) -> >,<)`
 
 #### Manual App Installation

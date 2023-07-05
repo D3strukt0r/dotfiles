@@ -36,6 +36,8 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # GitHub Copilot CLI Setup alias convenience commands (??, git?, and gh? commands)
 eval "$(github-copilot-cli alias -- "$0")"
