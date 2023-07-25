@@ -178,9 +178,11 @@ for node in 1 2 3 4 5; do swarm-worker prod-worker-$node; done
     * Forward: `cmd + ä`
 * `Microsoft Remote Desktop`
   * PCs (Check Notes app for credentials)
-    * `Vertec Prod`: `192.168.6.114`
-    * `Vertec Test`: `192.168.6.113`
-    * `SAGE Test`: `192.168.6.181`
+    * `Publica Jump-Server`: [1Password]()
+    * `Abraxas RedPro Jump-Server (BFE)`: [1Password]()
+    * `HdW Vertec PROD`: [1Password]()
+    * `HdW Vertec TEST`: [1Password]()
+    * `HdW SAGE TEST`: [1Password]()
 * `Nightowl`
   * Toolbar Icon > `...` > `Hotkey` > `[ ]` Turn off
 * `Pika`
