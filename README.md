@@ -140,6 +140,7 @@ for node in 1 2 3 4 5; do swarm-worker prod-worker-$node; done
 * [3CX](https://pbx.hdw.ch/webclient/api/app/mac)
 * [Atlassian Companion](https://update-nucleus.atlassian.com/Atlassian-Companion/291cb34fe2296e5fb82b83a04704c9b4/latest/darwin/x64/Atlassian%20Companion.dmg) [Docs](https://confluence.atlassian.com/doc/install-atlassian-companion-992678880.html)
 * [Banana Buchhaltung](https://www.banana.ch/doc9/de/node/9737)
+* [Barco Clickshare App](https://www.barco.com/de/product/clickshare-app)
 * Install `Adobe Acrobat DC` from `Creative Cloud App`
 * [Filezilla](https://filezilla-project.org/download.php?type=client)
 * Install `PhpStorm` and `Android Studio` from `JetBrains Toolbox App`
