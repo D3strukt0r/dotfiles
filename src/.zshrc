@@ -123,7 +123,9 @@ antigen init ~/.antigenrc
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#source ~/.config/op/plugins.sh
+# Load 1Password Plugins
+source ~/.config/op/plugins.sh
+
 #export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
 #eval "$(basher init - zsh)"             ##basher5ea843
 

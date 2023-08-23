@@ -4,6 +4,7 @@
 	signingKey = C9E5AB85364CA764!
 [gpg]
 	program = /usr/local/bin/gpg
+	format = openpgp
 [commit]
 	gpgSign = true
 	template = /Users/manuele/.gitmessage
@@ -18,3 +19,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[gpg "ssh"]
+	program = ssh-keygen
+	allowedSignersFile = ""
