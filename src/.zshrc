@@ -38,6 +38,8 @@ case ":$PATH:" in
 esac
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+# ruby (rbenv)
+eval "$(rbenv init - zsh)"
 
 # GitHub Copilot CLI Setup alias convenience commands (??, git?, and gh? commands)
 eval "$(github-copilot-cli alias -- "$0")"
