@@ -86,6 +86,9 @@ New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\Profiles" -Target "
 ```powershell
 Remove-Item -Recurse -Path "$HOME\scoop\apps\fancontrol\current\userConfig.json"
 New-Item -ItemType SymbolicLink -Path "$HOME\scoop\apps\fancontrol\current\userConfig.json" -Target "$HOME\.dotfiles\FanControl\userConfig.json"
+# or
+Remove-Item -Recurse -Path "C:\Apps\FanControl\Configurations\userConfig.json"
+New-Item -ItemType SymbolicLink -Path "C:\Apps\FanControl\Configurations\userConfig.json" -Target "$HOME\.dotfiles\FanControl\userConfig.json"
 ```
 
 ## Built With

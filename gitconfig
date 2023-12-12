@@ -10,3 +10,5 @@
 	gpgSign = true
 [init]
 	defaultBranch = master
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
