@@ -91,7 +91,7 @@
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
           "IsHidden": false,
-          "Name": "Case",
+          "Name": "Case (20% - 100%)",
           "SelectedFanCurves": [
             {
               "IsHidden": false,
@@ -105,7 +105,7 @@
                 {
                   "IgnoreHysteresisAtLimits": true,
                   "IsHidden": false,
-                  "MaximumFanSpeed": 70,
+                  "MaximumFanSpeed": 100,
                   "MaximumTemperature": 65.0,
                   "MinimumFanSpeed": 20,
                   "MinimumTemperature": 35.0,
@@ -168,21 +168,21 @@
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
           "IsHidden": false,
-          "Name": "Pump",
+          "Name": "Pump (50% - 90%)",
           "SelectedFanCurves": [
             {
               "IsHidden": false,
-              "Name": "Min Pump Speed",
-              "Percent": 50.0
-            },
-            {
-              "IsHidden": false,
-              "Name": "Avg. Components",
+              "Name": "Lower Limit Pump (50% - 100%)",
               "SelectedFanCurves": [
+                {
+                  "IsHidden": false,
+                  "Name": "Min Pump Speed",
+                  "Percent": 50.0
+                },
                 {
                   "IgnoreHysteresisAtLimits": true,
                   "IsHidden": false,
-                  "MaximumFanSpeed": 70,
+                  "MaximumFanSpeed": 100,
                   "MaximumTemperature": 65.0,
                   "MinimumFanSpeed": 20,
                   "MinimumTemperature": 35.0,
@@ -216,10 +216,15 @@
                   }
                 }
               ],
-              "SelectedMixFunction": 2
+              "SelectedMixFunction": 0
+            },
+            {
+              "IsHidden": false,
+              "Name": "Max Pump Speed",
+              "Percent": 90.0
             }
           ],
-          "SelectedMixFunction": 0
+          "SelectedMixFunction": 3
         },
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -331,9 +336,14 @@
         "Percent": 50.0
       },
       {
+        "IsHidden": false,
+        "Name": "Max Pump Speed",
+        "Percent": 90.0
+      },
+      {
         "IgnoreHysteresisAtLimits": true,
         "IsHidden": false,
-        "MaximumFanSpeed": 70,
+        "MaximumFanSpeed": 100,
         "MaximumTemperature": 65.0,
         "MinimumFanSpeed": 20,
         "MinimumTemperature": 35.0,
@@ -373,7 +383,7 @@
           {
             "IgnoreHysteresisAtLimits": true,
             "IsHidden": false,
-            "MaximumFanSpeed": 70,
+            "MaximumFanSpeed": 100,
             "MaximumTemperature": 65.0,
             "MinimumFanSpeed": 20,
             "MinimumTemperature": 35.0,
@@ -411,7 +421,7 @@
       },
       {
         "IsHidden": false,
-        "Name": "Case",
+        "Name": "Case (20% - 100%)",
         "SelectedFanCurves": [
           {
             "IsHidden": false,
@@ -425,7 +435,7 @@
               {
                 "IgnoreHysteresisAtLimits": true,
                 "IsHidden": false,
-                "MaximumFanSpeed": 70,
+                "MaximumFanSpeed": 100,
                 "MaximumTemperature": 65.0,
                 "MinimumFanSpeed": 20,
                 "MinimumTemperature": 35.0,
@@ -466,7 +476,7 @@
       },
       {
         "IsHidden": false,
-        "Name": "Pump",
+        "Name": "Lower Limit Pump (50% - 100%)",
         "SelectedFanCurves": [
           {
             "IsHidden": false,
@@ -474,13 +484,61 @@
             "Percent": 50.0
           },
           {
+            "IgnoreHysteresisAtLimits": true,
             "IsHidden": false,
-            "Name": "Avg. Components",
+            "MaximumFanSpeed": 100,
+            "MaximumTemperature": 65.0,
+            "MinimumFanSpeed": 20,
+            "MinimumTemperature": 35.0,
+            "Name": "CPU",
+            "OneWayHysteresis": false,
+            "SelectedHysteresis": 3.0,
+            "SelectedResponseTime": 3,
+            "SelectedTempSource": {
+              "Identifier": "/intelcpu/0/temperature/49",
+              "IsHidden": false,
+              "Name": "Core Max",
+              "NickName": "Core Max"
+            }
+          },
+          {
+            "IgnoreHysteresisAtLimits": true,
+            "IsHidden": false,
+            "MaximumFanSpeed": 100,
+            "MaximumTemperature": 70.0,
+            "MinimumFanSpeed": 0,
+            "MinimumTemperature": 35.0,
+            "Name": "GPU",
+            "OneWayHysteresis": false,
+            "SelectedHysteresis": 3.0,
+            "SelectedResponseTime": 3,
+            "SelectedTempSource": {
+              "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
+              "IsHidden": false,
+              "Name": "GPU",
+              "NickName": "GPU"
+            }
+          }
+        ],
+        "SelectedMixFunction": 0
+      },
+      {
+        "IsHidden": false,
+        "Name": "Pump (50% - 90%)",
+        "SelectedFanCurves": [
+          {
+            "IsHidden": false,
+            "Name": "Lower Limit Pump (50% - 100%)",
             "SelectedFanCurves": [
+              {
+                "IsHidden": false,
+                "Name": "Min Pump Speed",
+                "Percent": 50.0
+              },
               {
                 "IgnoreHysteresisAtLimits": true,
                 "IsHidden": false,
-                "MaximumFanSpeed": 70,
+                "MaximumFanSpeed": 100,
                 "MaximumTemperature": 65.0,
                 "MinimumFanSpeed": 20,
                 "MinimumTemperature": 35.0,
@@ -514,10 +572,15 @@
                 }
               }
             ],
-            "SelectedMixFunction": 2
+            "SelectedMixFunction": 0
+          },
+          {
+            "IsHidden": false,
+            "Name": "Max Pump Speed",
+            "Percent": 90.0
           }
         ],
-        "SelectedMixFunction": 0
+        "SelectedMixFunction": 3
       }
     ],
     "FanSensors": [
@@ -576,7 +639,7 @@
         "NickName": "GPU (Inner)"
       }
     ],
-    "HideFanSpeedCards": false,
+    "HideFanSpeedCards": true,
     "HorizontalUIOrientation": false,
     "PrimaryColor": "#FF910000",
     "SecondaryColor": "#FFFFFFFF",
