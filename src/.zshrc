@@ -14,22 +14,36 @@ export PATH="$HOME/bin:$PATH"
 # Node Version Manager (nvm)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# Coreutils
-export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-# cURL
-export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
-# OpenSSL
-export PATH="$(brew --prefix)/opt/openssl@3/bin:$PATH"
-# Make
-export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
-# Python
-export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+if which brew &> /dev/null; then
+  # Coreutils
+  if [ -d "$(brew --prefix)/opt/coreutils/libexec/gnubin" ]; then
+    export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+  fi
+  # cURL
+  if [ -d "$(brew --prefix)/opt/curl/bin" ]; then
+    export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
+  fi
+  # OpenSSL
+  if [ -d "$(brew --prefix)/opt/openssl@3/bin" ]; then
+    export PATH="$(brew --prefix)/opt/openssl@3/bin:$PATH"
+  fi
+  # Make
+  if [ -d "$(brew --prefix)/opt/make/libexec/gnubin" ]; then
+    export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
+  fi
+  # Python
+  if [ -d "$(brew --prefix)/opt/python/libexec/bin" ]; then
+    export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+  fi
+fi
 # Composer
-export PATH="$(composer global config bin-dir --absolute --quiet):$PATH"
-# Flutter
-#export PATH="$HOME/Library/flutter/bin:$PATH"
+if which composer &> /dev/null; then
+  export PATH="$(composer global config bin-dir --absolute --quiet):$PATH"
+fi
 # Android
-#export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
+if [ -d "$HOME/Library/Android/sdk" ]; then
+  export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
+fi
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
@@ -37,12 +51,18 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "$HOME/.cargo/bin" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
 # ruby (rbenv)
-eval "$(rbenv init - zsh)"
+if which rbenv &> /dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
 
 # GitHub Copilot CLI Setup alias convenience commands (??, git?, and gh? commands)
-eval "$(github-copilot-cli alias -- "$0")"
+if which github-copilot-cli &> /dev/null; then
+  eval "$(github-copilot-cli alias -- "$0")"
+fi
 
 # User configuration
 
@@ -132,6 +152,12 @@ source ~/.config/op/plugins.sh
 #eval "$(basher init - zsh)"             ##basher5ea843
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# shell completion for iwf command line tool
+if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
+  autoload -Uz compinit && compinit
+  eval "$(_IWF_COMPLETE=zsh_source iwf)"
+fi
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
