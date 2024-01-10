@@ -6,36 +6,36 @@
 
 - link:
     ~/.config/nvim/init.vim:
-        path: src/.config/nvim/init.vim
+        path: .config/nvim/init.vim
         create: true
     ~/.config/nvim/coc-settings.json:
-        path: src/.config/nvim/coc-settings.json
+        path: .config/nvim/coc-settings.json
         create: true
     ~/.ssh/config:
-        path: src/.ssh/config
+        path: .ssh/config
         create: true
     ~/.composer/composer.json:
-        path: src/.composer/composer.json
+        path: .composer/composer.json
         create: true
     ~/.composer/composer.lock:
-        path: src/.composer/composer.lock
+        path: .composer/composer.lock
         create: true
     ~/.docker/config.json:
-        path: src/.docker/config.json
+        path: .docker/config.json
         create: true
     ~/Library/pnpm/global/5/package.json:
-        path: src/Library/pnpm/global/5/package.json
+        path: Library/pnpm/global/5/package.json
         create: true
     ~/Library/pnpm/global/5/pnpm-lock.yaml:
-        path: src/Library/pnpm/global/5/pnpm-lock.yaml
+        path: Library/pnpm/global/5/pnpm-lock.yaml
         create: true
-    ~/.antigenrc: src/.antigenrc
-    ~/.gitconfig: src/.gitconfig
-    ~/.gitignore_global: src/.gitignore_global
-    ~/.gitmessage: src/.gitmessage
-    ~/.p10k.zsh: src/.p10k.zsh
-    ~/.vimrc: src/.vimrc
-    ~/.zshrc: src/.zshrc
+    ~/.antigenrc: .antigenrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
+    ~/.gitmessage: .gitmessage
+    ~/.p10k.zsh: .p10k.zsh
+    ~/.vimrc: .vimrc
+    ~/.zshrc: .zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
