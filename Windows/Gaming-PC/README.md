@@ -145,6 +145,7 @@ winget install --id SteelSeries.GG --exact --source winget
 winget install --id Elgato.StreamDeck --exact --source winget # Requires Microsoft.VCRedist.2015+.x64
 winget install --id Telegram.TelegramDesktop --exact --source winget
 winget install --id Mozilla.Thunderbird --exact --source winget
+winget install --id Microsoft.VisualStudio.2022.Community --exact --source winget
 winget install --id Unity.UnityHub --exact --source winget
 winget install --id VideoLAN.VLC --exact --source winget
 winget install --id WinSCP.WinSCP --exact --source winget
