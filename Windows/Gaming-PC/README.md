@@ -81,6 +81,13 @@ Remove-Item -Recurse -Path "$HOME\.gitconfig"
 New-Item -ItemType SymbolicLink -Path "$HOME\.gitconfig" -Target "$HOME\.dotfiles\Windows\Gaming-PC\.gitconfig"
 ```
 
+Link the ssh config
+
+```powershell
+Remove-Item -Recurse -Path "$HOME\.ssh\config"
+New-Item -ItemType SymbolicLink -Path "$HOME\.ssh\config" -Target "$HOME\.dotfiles\Windows\Gaming-PC\.ssh\config"
+```
+
 Now install the rest of the packages
 
 ```powershell
@@ -123,6 +130,7 @@ winget install --id Oracle.JDK.21 --exact --source winget
 winget install --id Logitech.GHUB --exact --source winget
 winget install --id LianLi.LConnect3 --exact --source winget
 winget install --id Skillbrains.Lightshot --exact --source winget
+winget install --id Microsoft.Office --exact --source winget
 winget install --id Mojang.MinecraftLauncher --exact --source winget
 winget install --id CoreyButler.NVMforWindows --exact --source winget
 nvm install lts
