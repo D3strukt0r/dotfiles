@@ -9,31 +9,7 @@ Project
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-* Git - Download on <https://git-scm.com/> or run `brew install git` on macOS
-
-### Installing
-
-For first time setup
-
-on macOS
-
-```sh
-git clone -b macOS https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles
-```
-
-on Windows
-
-```sh
-git clone -b Windows https://github.com/D3strukt0r/dotfiles "$HOME\.dotfiles" && cd "$HOME\.dotfiles"
-```
-
-then follow the instructions on the corresponding branch's README.md for automatic and manual setup
+All my dotfiles are in the corresponding folders. Look for the README.md in there for a specific setup
 
 ## Built With
 
