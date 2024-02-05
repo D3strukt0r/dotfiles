@@ -59,11 +59,6 @@ if which rbenv &> /dev/null; then
   eval "$(rbenv init - zsh)"
 fi
 
-# GitHub Copilot CLI Setup alias convenience commands (??, git?, and gh? commands)
-if which github-copilot-cli &> /dev/null; then
-  eval "$(github-copilot-cli alias -- "$0")"
-fi
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

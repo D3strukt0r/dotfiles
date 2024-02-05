@@ -82,7 +82,8 @@ antigen update
 * Install rector `composer global require rector/rector`
 * Install PHPStan and extensions `composer global require phpstan/phpstan phpstan/extension-installer phpstan/phpstan-doctrine phpstan/phpstan-phpunit phpstan/phpstan-symfony`
 * Login to Ngrok `ngrok config add-authtoken TOKEN`. Get `TOKEN` from password manager
-* Login to GitHub Copilot CLI `github-copilot-cli auth`
+* Login to GitHub `gh auth login`
+* Add GitHub Copilot CLI `gh extension install github/gh-copilot`
 * Get passwords managed with `pass`: `git clone git@github.com:D3strukt0r/pass-store.git ~/.password-store`
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
