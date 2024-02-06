@@ -110,8 +110,8 @@ Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 * (Work) SSH Host Keys must be saved locally before being able to run `swarm-{x}` commands. Run following commands while entering `yes`to accept ssh key and then entering `exit`:
 
 ```shell
-for node in 1 2 3 4 5; do swarm-worker test-worker-$node; done
-for node in 1 2 3 4 5; do swarm-worker prod-worker-$node; done
+for i in {1..5}; do ssh -o StrictHostKeyChecking=no iwfsupport@test-worker-$i.web-solutions.io ls; done
+for i in {1..6}; do ssh -o StrictHostKeyChecking=no iwfsupport@prod-worker-$i.web-solutions.io ls; done
 ```
 
 #### Manual System Settings Configuration
