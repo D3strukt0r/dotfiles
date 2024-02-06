@@ -110,9 +110,7 @@ winget install --id EpicGames.EpicGamesLauncher --exact --source winget
 # Install Genshin Impact on Epic Games
 # Install Rocket League on Epic Games
 # As Admin only the following command:
-winget settings --enable InstallerHashOverride
-winget install --id flux.flux --ignore-security-hash --exact --source winget
-winget settings --disable InstallerHashOverride
+winget install --id flux.flux --exact --source winget
 winget install --id Figma.Figma --exact --source winget
 winget install --id Nvidia.GeForceExperience --exact --source winget
 winget install --id Nvidia.Broadcast --exact --source winget # Not there?
@@ -157,6 +155,7 @@ winget install --id Microsoft.VisualStudio.2022.Community --exact --source winge
 winget install --id Unity.UnityHub --exact --source winget
 winget install --id VideoLAN.VLC --exact --source winget
 winget install --id WinSCP.WinSCP --exact --source winget
+winget install --id Xencelabs.Driver --exact --source winget
 winget install --id Zoom.Zoom --exact --source winget
 ```
 
