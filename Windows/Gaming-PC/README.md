@@ -66,6 +66,10 @@ Remove-Item -Path $PROFILE
 New-Item -ItemType SymbolicLink `
   -Path "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" `
   -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+# or if OneDrive is used to sync the Documents folder
+New-Item -ItemType SymbolicLink `
+  -Path "$HOME\OneDrive\Dokumente\PowerShell\Microsoft.PowerShell_profile.ps1" `
+  -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 ```
 
 Then reload the profile
