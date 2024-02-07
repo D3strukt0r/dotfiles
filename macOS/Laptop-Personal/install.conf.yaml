@@ -14,6 +14,9 @@
     ~/.ssh/config:
         path: .ssh/config
         create: true
+    ~/.ssh/known_hosts:
+        path: .ssh/known_hosts
+        create: true
     ~/.composer/composer.json:
         path: .composer/composer.json
         create: true
