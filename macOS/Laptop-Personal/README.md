@@ -58,7 +58,7 @@ antigen update
 
 #### Manual Configuration (CLI)
 
-* Restore GPG Key from File Backup and install in GPG Suite or run `gpg --import-options import-restore --import private.gpg`
+* Restore GPG Key from `{backup}/GPG Keys/*` and install in GPG Suite or run `gpg --import-options import-restore --import private.gpg`
 * Restore `id_rsa` & `id_ed25519` from Password Manager (for Work)
 * Install global certificate `mkcert -install`
 * Fix `nvim` installation in `~/.local` with `sudo chown manuele -R ~/.local`
@@ -90,6 +90,7 @@ antigen update
 * Finish installation of Battle.net with `open /usr/local/Caskroom/battle-net/1.18.5.3106/Battle.net-Setup.app`
 * Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
+* (**Work**) Install [dev CLI tools](https://git.iwf.io/docker/iwf-local-dev) `pipx install git+ssh://git@git.iwf.io/docker/iwf-local-dev.git@main && iwf toolset install`
 * Allow starting/stopping vagrant without password by running `sudo visudo -f /private/etc/sudoers.d/vagrant` and adding the following lines:
 
 ```text
@@ -105,13 +106,6 @@ Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
 Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin     ALL = (root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
-```
-
-* (Work) SSH Host Keys must be saved locally before being able to run `swarm-{x}` commands. Run following commands while entering `yes`to accept ssh key and then entering `exit`:
-
-```shell
-for i in {1..5}; do ssh -o StrictHostKeyChecking=no iwfsupport@test-worker-$i.web-solutions.io ls; done
-for i in {1..6}; do ssh -o StrictHostKeyChecking=no iwfsupport@prod-worker-$i.web-solutions.io ls; done
 ```
 
 #### Manual System Settings Configuration
@@ -172,12 +166,7 @@ for i in {1..6}; do ssh -o StrictHostKeyChecking=no iwfsupport@prod-worker-$i.we
     * Back: `cmd + ö`
     * Forward: `cmd + ä`
 * `Microsoft Remote Desktop`
-  * PCs (Check Notes app for credentials)
-    * `Publica Jump-Server`: [1Password]()
-    * `Abraxas RedPro Jump-Server (BFE)`: [1Password]()
-    * `HdW Vertec PROD`: [1Password]()
-    * `HdW Vertec TEST`: [1Password]()
-    * `HdW SAGE TEST`: [1Password]()
+  * Restore Remotes from `{backup}/Remote Desktop/*` and check 1Password for credentials
 * `Nightowl`
   * Toolbar Icon > `...` > `Hotkey` > `[ ]` Turn off
 * `Pika`
