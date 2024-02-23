@@ -161,6 +161,8 @@ winget install --id VideoLAN.VLC --exact --source winget
 winget install --id WinSCP.WinSCP --exact --source winget
 winget install --id Xencelabs.Driver --exact --source winget
 winget install --id Zoom.Zoom --exact --source winget
+winget install --id Rufus.Rufus --exact --source winget
+winget install --id Balena.Etcher --exact --source winget
 ```
 
 ### Old Method Choco / Scoop
