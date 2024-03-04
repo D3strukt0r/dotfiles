@@ -163,12 +163,19 @@ winget install --id Xencelabs.Driver --exact --source winget
 winget install --id Zoom.Zoom --exact --source winget
 winget install --id Rufus.Rufus --exact --source winget
 winget install --id Balena.Etcher --exact --source winget
+winget install --id Rem0o.FanControl --exact --source winget
+
+# Link (and overwrite if already exists) FanControl config (Admin only)
+$target = "C:\Program Files (x86)\FanControl\Configurations\userConfig.json"
+if (Test-Path -Path $target) { Remove-Item -Recurse -Path $target }
+New-Item -ItemType SymbolicLink -Path $target -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\FanControl\userConfig.json"
+
+# Package managers (Chocolatey / Scoop)
+winget install --id Chocolatey.Chocolatey --exact --source winget
+winget install --id Chocolatey.ChocolateyGUI --exact --source winget
+iwr -useb get.scoop.sh | iex
+scoop bucket add extras
 ```
-
-### Old Method Choco / Scoop
-
-* Chocolatey - Download on <https://chocolatey.org/install> or run `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
-* Scoop - Download on <https://scoop.sh> or run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` and `irm get.scoop.sh | iex`
 
 #### Usage of `packages.config`
 
@@ -176,13 +183,13 @@ Install
 
 Dump currently installed packages
 
-```sh
+```powershell
 choco export
 ```
 
 See <https://github.com/ScoopInstaller/Scoop/issues/1543>
 
-```sh
+```powershell
 (scoop list) | sls '^  (\w+)' |% { $_.matches.groups[1].value } > scoop-apps.txt
 # or
 scoop export | out-file scoop-apps.json -encoding ascii
@@ -190,12 +197,12 @@ scoop export | out-file scoop-apps.json -encoding ascii
 
 Install all packages from `packages.config`
 
-```sh
+```powershell
 choco install packages.config
 ```
 
-```sh
-$apps = gc scoop-apps.txt
+```powershell
+$apps = gc scoop-apps.json
 scoop install @apps
 ```
 
@@ -208,14 +215,4 @@ Remove-Item -Recurse -Path "$HOME\Documents\GoXLR\MicProfiles"
 Remove-Item -Recurse -Path "$HOME\Documents\GoXLR\Profiles"
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\MicProfiles" -Target "$HOME\.dotfiles\GoXLR\MicProfiles"
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\Profiles" -Target "$HOME\.dotfiles\GoXLR\Profiles"
-```
-
-##### Fan Control
-
-```powershell
-Remove-Item -Recurse -Path "$HOME\scoop\apps\fancontrol\current\userConfig.json"
-New-Item -ItemType SymbolicLink -Path "$HOME\scoop\apps\fancontrol\current\userConfig.json" -Target "$HOME\.dotfiles\FanControl\userConfig.json"
-# or
-Remove-Item -Recurse -Path "C:\Apps\FanControl\Configurations\userConfig.json"
-New-Item -ItemType SymbolicLink -Path "C:\Apps\FanControl\Configurations\userConfig.json" -Target "$HOME\.dotfiles\FanControl\userConfig.json"
 ```
