@@ -61,7 +61,11 @@ sudo dnf install brave-browser -y
 
 #### Install Gaming Stuff (Steam)
 
+https://rpmfusion.org/Howto/NVIDIA
+
 ```shell
+sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
+
 sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/Maroxy:/AAT-Apps/Fedora_Rawhide/home:Maroxy:AAT-Apps.repo
 
 sudo dnf install -y \
