@@ -58,6 +58,13 @@ fi
 if which rbenv &> /dev/null; then
   eval "$(rbenv init - zsh)"
 fi
+# Python (pyenv)
+if which pyenv &> /dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
+PATH=~/.console-ninja/.bin:$PATH
 
 # User configuration
 

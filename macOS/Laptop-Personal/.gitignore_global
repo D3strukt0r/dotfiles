@@ -36,5 +36,7 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
 
-# Created by crashes
+### macOS Patch (Custom) ###
+# Created by crashes Disable instead
+# https://discussions.apple.com/thread/7852353?answerId=32132724022#32132724022
 core
