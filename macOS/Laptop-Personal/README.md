@@ -17,13 +17,13 @@ What things you need to install the software and how to install them
 For first-time setup
 
 ```sh
-git clone -b macOS https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install
+git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles/macOS/Laptop-Personal && ./install
 ```
 
 Run dotbot to link config files
 
 ```sh
-cd ~/.dotfiles && git pull && ./install
+cd ~/.dotfiles/macOS/Laptop-Personal && git pull && ./install
 ```
 
 Install all packages from `Brewfile`
