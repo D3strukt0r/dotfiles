@@ -42,6 +42,16 @@ flatpak run org.gnome.Extensions # or search for "Erweiterungen"
 
 Activate `Window List` extension. Then enable `Auf allen Bildschirmen anzeigen` in the settings.
 
+#### Install KDE (support DRM leasing, required for SteamVR)
+
+And switchdesk to switch easily between Gnome and KDE
+
+```shell
+sudo dnf groupinstall "KDE Plasma Workspaces"
+sudo dnf install -y switchdesk switchdesk-gui
+switchdesk kde
+```
+
 #### Install 1Password
 
 ```shell
