@@ -159,6 +159,8 @@ winget install --id Zoom.Zoom --exact --source winget
 winget install --id Rufus.Rufus --exact --source winget
 winget install --id Balena.Etcher --exact --source winget
 winget install --id Rem0o.FanControl --exact --source winget
+winget install --id Hashicorp.Vagrant --exact --source winget
+winget install --id Oracle.VirtualBox --exact --source winget
 
 # Reload PATH then (https://stackoverflow.com/a/31845512)
 nvm install lts

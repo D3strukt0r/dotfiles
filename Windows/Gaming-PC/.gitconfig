@@ -4,6 +4,8 @@
 	signingKey = C9E5AB85364CA764!
 [core]
 	longpaths = true
+	# Required to use 1Password SSH Agent
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 [tag]
 	forceSignAnnotated = true
 [commit]
