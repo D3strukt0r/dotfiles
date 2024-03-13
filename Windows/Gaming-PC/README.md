@@ -113,8 +113,7 @@ winget install --id SomePythonThings.ElevenClock --exact --source winget
 winget install --id EpicGames.EpicGamesLauncher --exact --source winget
 # Install Genshin Impact on Epic Games
 # Install Rocket League on Epic Games
-# As Admin only the following command:
-winget install --id flux.flux --exact --source winget
+winget install --id flux.flux --exact --source winget # TODO: Fix hash mismatch
 winget install --id Figma.Figma --exact --source winget
 winget install --id Nvidia.GeForceExperience --exact --source winget
 winget install --id Nvidia.Broadcast --exact --source winget # Not there?
@@ -135,22 +134,18 @@ winget install --id Skillbrains.Lightshot --exact --source winget
 winget install --id Microsoft.Office --exact --source winget
 winget install --id Mojang.MinecraftLauncher --exact --source winget
 winget install --id CoreyButler.NVMforWindows --exact --source winget
-nvm install lts
-nvm use 20.11.0 # or whatever the latest LTS is
 winget install --id Guru3D.Afterburner --exact --source winget
-winget install --id MSI.Kombustor.4 --exact --source winget
+winget install --id MSI.Kombustor.4 --exact --source winget # TODO: Fix hash mismatch
 winget install --id Notion.Notion --exact --source winget
 winget install --id OBSProject.OBSStudio --exact --source winget # Requires  Microsoft.VCRedist.2015+.x64
 winget install --id Peppy.Osu! --exact --source winget
 winget install --id PrivateInternetAccess.PrivateInternetAccess --exact --source winget
 winget install --id Microsoft.PowerToys --exact --source winget
-winget install --id ProtonTechnologies.ProtonMailBridge --exact --source winget
+winget install --id Proton.ProtonMailBridge --exact --source winget
 winget install --id RazerInc.RazerInstaller --exact --source winget
 winget install --id OpenWhisperSystems.Signal --exact --source winget
 winget install --id SlackTechnologies.Slack --exact --source winget
 winget install --id Valve.Steam --exact --source winget
-# Install Wallpaper Engine on Steam
-# Install games on Steam
 winget install --id SteelSeries.GG --exact --source winget
 winget install --id Elgato.StreamDeck --exact --source winget # Requires Microsoft.VCRedist.2015+.x64
 winget install --id Telegram.TelegramDesktop --exact --source winget
@@ -165,7 +160,15 @@ winget install --id Rufus.Rufus --exact --source winget
 winget install --id Balena.Etcher --exact --source winget
 winget install --id Rem0o.FanControl --exact --source winget
 
+# Reload PATH then (https://stackoverflow.com/a/31845512)
+nvm install lts
+nvm use lts
+
+# Install games from Steam (Login to steam before doing this)
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","431960" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # Wallpaper Engine
+
 # Link (and overwrite if already exists) FanControl config (Admin only)
+New-Item -ItemType Directory -Force -Path "C:\Program Files (x86)\FanControl\Configurations"
 $target = "C:\Program Files (x86)\FanControl\Configurations\userConfig.json"
 if (Test-Path -Path $target) { Remove-Item -Recurse -Path $target }
 New-Item -ItemType SymbolicLink -Path $target -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\FanControl\userConfig.json"
