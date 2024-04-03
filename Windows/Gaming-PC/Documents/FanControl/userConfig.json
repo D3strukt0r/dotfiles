@@ -1,8 +1,9 @@
 {
-  "__VERSION__": "181",
+  "__VERSION__": "185",
   "Main": {
     "Controls": [
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/1",
@@ -26,6 +27,7 @@
         "SelectedStop": 0
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/6",
@@ -49,6 +51,7 @@
         "SelectedStop": 0
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/0",
@@ -72,6 +75,7 @@
         "SelectedStop": 0
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/4",
@@ -90,19 +94,23 @@
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
+          "CommandMode": 0,
           "IsHidden": false,
           "Name": "Case (20% - 100%)",
           "SelectedFanCurves": [
             {
+              "CommandMode": 0,
               "IsHidden": false,
               "Name": "Min Fan Speed",
               "Percent": 20.0
             },
             {
+              "CommandMode": 0,
               "IsHidden": false,
               "Name": "Avg. Components",
               "SelectedFanCurves": [
                 {
+                  "CommandMode": 0,
                   "IgnoreHysteresisAtLimits": true,
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
@@ -121,6 +129,7 @@
                   }
                 },
                 {
+                  "CommandMode": 0,
                   "IgnoreHysteresisAtLimits": true,
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
@@ -149,6 +158,7 @@
         "SelectedStop": 12
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/2",
@@ -167,19 +177,23 @@
         "SelectedCommandStepDown": 8.0,
         "SelectedCommandStepUp": 8.0,
         "SelectedFanCurve": {
+          "CommandMode": 0,
           "IsHidden": false,
           "Name": "Pump (50% - 90%)",
           "SelectedFanCurves": [
             {
+              "CommandMode": 0,
               "IsHidden": false,
               "Name": "Lower Limit Pump (50% - 100%)",
               "SelectedFanCurves": [
                 {
+                  "CommandMode": 0,
                   "IsHidden": false,
                   "Name": "Min Pump Speed",
                   "Percent": 50.0
                 },
                 {
+                  "CommandMode": 0,
                   "IgnoreHysteresisAtLimits": true,
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
@@ -198,6 +212,7 @@
                   }
                 },
                 {
+                  "CommandMode": 0,
                   "IgnoreHysteresisAtLimits": true,
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
@@ -219,6 +234,7 @@
               "SelectedMixFunction": 0
             },
             {
+              "CommandMode": 0,
               "IsHidden": false,
               "Name": "Max Pump Speed",
               "Percent": 90.0
@@ -231,6 +247,7 @@
         "SelectedStop": 0
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/5",
@@ -254,6 +271,7 @@
         "SelectedStop": 0
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "/lpc/nct6798d/control/3",
@@ -277,6 +295,7 @@
         "SelectedStop": 0
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "NVApiWrapper/0-GA102-A/control/0",
@@ -300,6 +319,7 @@
         "SelectedStop": 0
       },
       {
+        "Calibration": null,
         "Enable": true,
         "ForceApply": false,
         "Identifier": "NVApiWrapper/0-GA102-A/control/1",
@@ -326,21 +346,25 @@
     "CustomSensors": [],
     "FanCurves": [
       {
+        "CommandMode": 0,
         "IsHidden": false,
         "Name": "Min Fan Speed",
         "Percent": 20.0
       },
       {
+        "CommandMode": 0,
         "IsHidden": false,
         "Name": "Min Pump Speed",
         "Percent": 50.0
       },
       {
+        "CommandMode": 0,
         "IsHidden": false,
         "Name": "Max Pump Speed",
         "Percent": 90.0
       },
       {
+        "CommandMode": 0,
         "IgnoreHysteresisAtLimits": true,
         "IsHidden": false,
         "MaximumFanSpeed": 100,
@@ -359,6 +383,7 @@
         }
       },
       {
+        "CommandMode": 0,
         "IgnoreHysteresisAtLimits": true,
         "IsHidden": false,
         "MaximumFanSpeed": 100,
@@ -377,10 +402,12 @@
         }
       },
       {
+        "CommandMode": 0,
         "IsHidden": false,
         "Name": "Avg. Components",
         "SelectedFanCurves": [
           {
+            "CommandMode": 0,
             "IgnoreHysteresisAtLimits": true,
             "IsHidden": false,
             "MaximumFanSpeed": 100,
@@ -399,6 +426,7 @@
             }
           },
           {
+            "CommandMode": 0,
             "IgnoreHysteresisAtLimits": true,
             "IsHidden": false,
             "MaximumFanSpeed": 100,
@@ -420,19 +448,23 @@
         "SelectedMixFunction": 2
       },
       {
+        "CommandMode": 0,
         "IsHidden": false,
         "Name": "Case (20% - 100%)",
         "SelectedFanCurves": [
           {
+            "CommandMode": 0,
             "IsHidden": false,
             "Name": "Min Fan Speed",
             "Percent": 20.0
           },
           {
+            "CommandMode": 0,
             "IsHidden": false,
             "Name": "Avg. Components",
             "SelectedFanCurves": [
               {
+                "CommandMode": 0,
                 "IgnoreHysteresisAtLimits": true,
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
@@ -451,6 +483,7 @@
                 }
               },
               {
+                "CommandMode": 0,
                 "IgnoreHysteresisAtLimits": true,
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
@@ -475,15 +508,18 @@
         "SelectedMixFunction": 0
       },
       {
+        "CommandMode": 0,
         "IsHidden": false,
         "Name": "Lower Limit Pump (50% - 100%)",
         "SelectedFanCurves": [
           {
+            "CommandMode": 0,
             "IsHidden": false,
             "Name": "Min Pump Speed",
             "Percent": 50.0
           },
           {
+            "CommandMode": 0,
             "IgnoreHysteresisAtLimits": true,
             "IsHidden": false,
             "MaximumFanSpeed": 100,
@@ -502,6 +538,7 @@
             }
           },
           {
+            "CommandMode": 0,
             "IgnoreHysteresisAtLimits": true,
             "IsHidden": false,
             "MaximumFanSpeed": 100,
@@ -523,19 +560,23 @@
         "SelectedMixFunction": 0
       },
       {
+        "CommandMode": 0,
         "IsHidden": false,
         "Name": "Pump (50% - 90%)",
         "SelectedFanCurves": [
           {
+            "CommandMode": 0,
             "IsHidden": false,
             "Name": "Lower Limit Pump (50% - 100%)",
             "SelectedFanCurves": [
               {
+                "CommandMode": 0,
                 "IsHidden": false,
                 "Name": "Min Pump Speed",
                 "Percent": 50.0
               },
               {
+                "CommandMode": 0,
                 "IgnoreHysteresisAtLimits": true,
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
@@ -554,6 +595,7 @@
                 }
               },
               {
+                "CommandMode": 0,
                 "IgnoreHysteresisAtLimits": true,
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
@@ -575,6 +617,7 @@
             "SelectedMixFunction": 0
           },
           {
+            "CommandMode": 0,
             "IsHidden": false,
             "Name": "Max Pump Speed",
             "Percent": 90.0
@@ -639,6 +682,7 @@
         "NickName": "GPU (Inner)"
       }
     ],
+    "HideCalibration": false,
     "HideFanSpeedCards": true,
     "HorizontalUIOrientation": false,
     "PrimaryColor": "#FF910000",

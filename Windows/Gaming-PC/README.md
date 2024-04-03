@@ -113,10 +113,10 @@ winget install --id SomePythonThings.ElevenClock --exact --source winget
 winget install --id EpicGames.EpicGamesLauncher --exact --source winget
 # Install Genshin Impact on Epic Games
 # Install Rocket League on Epic Games
-winget install --id flux.flux --exact --source winget # TODO: Fix hash mismatch
+winget install --id flux.flux --exact --source winget # Often has has mismatch because file has no version
 winget install --id Figma.Figma --exact --source winget
 winget install --id Nvidia.GeForceExperience --exact --source winget
-winget install --id Nvidia.Broadcast --exact --source winget # Not there?
+winget install --id Nvidia.Broadcast --exact --source winget # Will continue download while installing
 winget install --id Axosoft.GitKraken --exact --source winget
 winget install --id GnuPG.Gpg4win --exact --source winget
 # Restore GPG keys from backup
