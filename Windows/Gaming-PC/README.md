@@ -174,6 +174,12 @@ nvm use lts
 # And install mkcert
 mkcert -install
 
+# Install vagrant plugins
+vagrant plugin install vagrant-hostsupdater vagrant-notify-forwarder vagrant-gatling-rsync vagrant-vbguest
+
+# To allow permanent access to the hosts file (https://github.com/agiledivider/vagrant-hostsupdater?tab=readme-ov-file#windows-uac-prompt) (Does not work in PowerShell must be in CMD as Administrator)
+cacls %SYSTEMROOT%\system32\drivers\etc\hosts /E /G %USERNAME%:W
+
 # Install games from Steam (Login to steam before doing this)
 Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","431960" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # Wallpaper Engine
 
