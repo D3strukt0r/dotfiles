@@ -108,9 +108,43 @@ W: http://apt.insync.io/ubuntu/dists/jammy/InRelease: Schlüssel ist im veraltet
 
 ```shell
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
-echo 'deb http://apt.insync.io/ubuntu jammy non-free contrib' | sudo tee /etc/apt/sources.list.d/insync.list
+echo "deb http://apt.insync.io/ubuntu $(lsb_release -cs) non-free contrib" | sudo tee /etc/apt/sources.list.d/insync.list
 sudo apt update && sudo apt install insync
 ```
+
+Install VirtualBox (https://www.virtualbox.org/wiki/Linux_Downloads)
+
+`deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian <mydist> contrib`
+
+```shell
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor
+sudo apt update && sudo apt install virtualbox-7.0
+```
+
+If you get the error message `VirtualBox is not currently allowed to access USB devices. You can change this by adding your user to the 'vboxusers' group. Please see the user manual for a more detailed explanation.` run `sudo usermod -a -G vboxusers $USER` (https://askubuntu.com/a/377781). After re-loggin in, check with `groups $USER`
+
+Then download the [extension pack](https://www.virtualbox.org/wiki/Downloads) and install it via the VirtualBox GUI. ex. for 7.0.14: https://download.virtualbox.org/virtualbox/7.0.14/Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack
+
+Install Vagrant (https://developer.hashicorp.com/vagrant/install?product_intent=vagrant#linux)
+
+```shell
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install vagrant
+```
+
+Install JetBrains Toolbox (https://www.jetbrains.com/toolbox-app/) (https://askubuntu.com/a/1410934)
+
+```shell
+curl -L -o jetbrains-toolbox-2.2.3.20090.tar.gz https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.2.3.20090.tar.gz
+curl https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.2.3.20090.tar.gz.sha256 | sha256sum -c
+tar -xvzf jetbrains-toolbox-2.2.3.20090.tar.gz
+sudo mv jetbrains-toolbox-2.2.3.20090/jetbrains-toolbox /opt/jetbrains-toolbox.AppImage
+rm -rf jetbrains-toolbox-2.2.3.20090.tar.gz jetbrains-toolbox-2.2.3.20090
+```
+
+Then install PhpStorm and Android Studio through it.
 
 ### Installing on Fedora
 
