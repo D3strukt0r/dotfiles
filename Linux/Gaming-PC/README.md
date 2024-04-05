@@ -44,24 +44,25 @@ Restore GPG from backup and load SSH keys
 gpg --import-options import-restore --import <file>.asc
 ```
 
+Install tools to make life easier
+
+```shell
+sudo apt install wget curl apt-transport-https gpg htop
+```
+
 Install VS Code (https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
 
 ```shell
-sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
-
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install code
+sudo apt update && sudo apt install code
 ```
 
 Install 1Password (https://support.1password.com/install-linux/#debian-or-ubuntu)
 
 ```shell
-sudo apt-get install curl
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
 sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
@@ -69,6 +70,27 @@ curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sud
 sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
 sudo apt update && sudo apt install 1password
+```
+
+Install Brave (https://brave.com/linux/#debian-ubuntu-mint)
+
+```shell
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update && sudo apt install brave-browser
+```
+
+Install Steam (https://repo.steampowered.com/steam/)
+
+```shell
+sudo curl -fsSLo /usr/share/keyrings/steam.gpg https://repo.steampowered.com/steam/archive/stable/steam.gpg
+sudo tee /etc/apt/sources.list.d/steam-stable.list <<'EOF'
+deb [arch=amd64,i386 signed-by=/usr/share/keyrings/steam.gpg] https://repo.steampowered.com/steam/ stable steam
+deb-src [arch=amd64,i386 signed-by=/usr/share/keyrings/steam.gpg] https://repo.steampowered.com/steam/ stable steam
+EOF
+sudo dpkg --add-architecture i386
+sudo apt update && sudo apt install libgl1-mesa-dri:amd64 libgl1-mesa-dri:i386 libgl1-mesa-glx:amd64 libgl1-mesa-glx:i386 steam-launcher
+# Then you need to start Steam to finish installation
 ```
 
 ### Installing on Fedora
