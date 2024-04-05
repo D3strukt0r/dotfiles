@@ -93,6 +93,25 @@ sudo apt update && sudo apt install libgl1-mesa-dri:amd64 libgl1-mesa-dri:i386 l
 # Then you need to start Steam to finish installation
 ```
 
+Install insync (for Dropbox, OneDrive syncing) (https://www.insynchq.com/downloads/linux#apt)
+
+check with "lsb_release -sc"
+
+`deb http://apt.insync.io/[DISTRIBUTION] [CODENAME] non-free contrib`
+
+TODO: Fix this warning
+
+```
+N: Das Laden der konfigurierten Datei »main/binary-i386/Packages« wird übersprungen, da das Depot »https://brave-browser-apt-release.s3.brave.com stable InRelease« die Architektur »i386« nicht unterstützt.
+W: http://apt.insync.io/ubuntu/dists/jammy/InRelease: Schlüssel ist im veralteten Schlüsselbund trusted.gpg gespeichert (/etc/apt/trusted.gpg), siehe den Abschnitt MISSBILLIGUNG in apt-key(8) für Details.
+```
+
+```shell
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
+echo 'deb http://apt.insync.io/ubuntu jammy non-free contrib' | sudo tee /etc/apt/sources.list.d/insync.list
+sudo apt update && sudo apt install insync
+```
+
 ### Installing on Fedora
 
 #### Install VS Code on Fedora
