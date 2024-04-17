@@ -180,8 +180,21 @@ vagrant plugin install vagrant-hostsupdater vagrant-notify-forwarder vagrant-gat
 # To allow permanent access to the hosts file (https://github.com/agiledivider/vagrant-hostsupdater?tab=readme-ov-file#windows-uac-prompt) (Does not work in PowerShell must be in CMD as Administrator)
 cacls %SYSTEMROOT%\system32\drivers\etc\hosts /E /G %USERNAME%:W
 
-# Install games from Steam (Login to steam before doing this)
+# Install games from Steam (Login to steam before doing this). Do each command one by one, needs confirmation in Steam client
+# Find the AppID on https://steamdb.info/search/
 Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","431960" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # Wallpaper Engine
+
+# VR Games
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","250820" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # SteamVR
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","1635730" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # VIVE Console for SteamVR
+# Install Vive Wireless from: "https://dl.vive.com/oobe/ViveWireless/ViveWirelessSetup.exe", waiting for https://github.com/microsoft/winget-pkgs/issues/138203
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","620980" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # Beat Saber
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","348250" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # Google Earth VR
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","341800" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # Keep Talking and Nobody Explodes
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","275850" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # No Man's Sky
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","617830" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # SUPERHOT VR
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","868150" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # Takelings House Party
+Start-Process -FilePath ".\steam.exe" -ArgumentList "-applaunch","438100" -WorkingDirectory "${Env:Programfiles(x86)}\Steam\" -Wait # VRChat
 
 # Link (and overwrite if already exists) FanControl config (Admin only)
 New-Item -ItemType Directory -Force -Path "C:\Program Files (x86)\FanControl\Configurations"
