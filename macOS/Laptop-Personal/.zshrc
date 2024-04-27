@@ -51,8 +51,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # rust
-if [ -d "$HOME/.cargo/bin" ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "$HOME/.cargo" ]; then
+  . "$HOME/.cargo/env"
 fi
 # ruby (rbenv)
 if which rbenv &> /dev/null; then
