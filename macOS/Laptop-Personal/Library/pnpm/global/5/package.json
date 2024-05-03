@@ -2,10 +2,10 @@
 	"dependencies": {
 		"degit": "^2.8.4",
 		"npm-check": "^6.0.1",
-		"npm-check-updates": "^16.14.14",
+		"npm-check-updates": "^16.14.20",
 		"npmrc": "^1.1.1",
 		"svgo": "^3.2.0",
-		"typescript": "^5.3.3",
-		"yarn": "^1.22.21"
+		"typescript": "^5.4.5",
+		"yarn": "^1.22.22"
 	}
 }

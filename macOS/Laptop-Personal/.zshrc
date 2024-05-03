@@ -134,3 +134,6 @@ fi
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+
+# Created by `pipx` on 2024-04-30 09:54:46
+export PATH="$PATH:/Users/manuele/.local/bin"
