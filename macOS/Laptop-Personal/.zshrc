@@ -65,6 +65,10 @@ if which pyenv &> /dev/null; then
   eval "$(pyenv init -)"
 fi
 PATH=~/.console-ninja/.bin:$PATH
+# Fix Google Cloud SDK does not support Python 3.12, link to 3.11
+# (ModuleNotFoundError: No module named 'imp')
+# https://stackoverflow.com/questions/77316716/gcloud-modulenotfounderror-no-module-named-imp
+export CLOUDSDK_PYTHON=$(which python3.11)
 
 # User configuration
 
