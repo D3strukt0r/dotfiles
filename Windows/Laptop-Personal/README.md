@@ -137,6 +137,9 @@ winget install --id Zoom.Zoom --exact --source winget
 winget install --id Rufus.Rufus --exact --source winget
 winget install --id Balena.Etcher --exact --source winget
 
+# Crypto
+winget install --id LedgerHQ.LedgerLive --exact --source winget
+
 # 3D Printing
 winget install --id Ultimaker.Cura --exact --source winget
 
