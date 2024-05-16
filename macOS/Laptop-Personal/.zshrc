@@ -69,6 +69,16 @@ PATH=~/.console-ninja/.bin:$PATH
 # (ModuleNotFoundError: No module named 'imp')
 # https://stackoverflow.com/questions/77316716/gcloud-modulenotfounderror-no-module-named-imp
 export CLOUDSDK_PYTHON=$(which python3.11)
+# Enable iwf env through `iwf-enable` command
+iwf-enable() {
+  if [ -f ~/Projects-IWF/iwf-local-dev/.venv/bin/activate ]; then
+    cd ~/Projects-IWF/iwf-local-dev
+    . .venv/bin/activate
+    cd - > /dev/null
+  else
+    echo "No iwf-local-dev environment found in ~/Projects-IWF/iwf-local-dev"
+  fi
+}
 
 # User configuration
 
