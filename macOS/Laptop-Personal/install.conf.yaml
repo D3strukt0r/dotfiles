@@ -6,16 +6,16 @@
 
 - link:
     ~/.config/nvim/init.vim:
-        path: .config/nvim/init.vim
+        path: ../General/.config/nvim/init.vim
         create: true
     ~/.config/nvim/coc-settings.json:
-        path: .config/nvim/coc-settings.json
+        path: ../General/.config/nvim/coc-settings.json
         create: true
     ~/.ssh/config:
         path: .ssh/config
         create: true
     ~/.ssh/known_hosts:
-        path: .ssh/known_hosts
+        path: ../../General/.ssh/known_hosts
         create: true
     ~/.composer/composer.json:
         path: .composer/composer.json
@@ -34,10 +34,10 @@
         create: true
     ~/.antigenrc: .antigenrc
     ~/.gitconfig: .gitconfig
-    ~/.gitignore_global: .gitignore_global
-    ~/.gitmessage: .gitmessage
-    ~/.p10k.zsh: .p10k.zsh
-    ~/.vimrc: .vimrc
+    ~/.gitignore_global: ../General/.gitignore_global
+    ~/.gitmessage: ../General/.gitmessage
+    ~/.p10k.zsh: ../General/.p10k.zsh
+    ~/.vimrc: ../General/.vimrc
     ~/.zshrc: .zshrc
 
 - shell:
