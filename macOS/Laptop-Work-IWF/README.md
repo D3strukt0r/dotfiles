@@ -29,7 +29,6 @@ cd ~/.dotfiles/macOS/Laptop-Work-IWF && git pull && ./install
 Install all packages from `Brewfile`
 
 ```sh
-brew tap homebrew/bundle
 brew bundle
 ```
 

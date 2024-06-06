@@ -29,7 +29,6 @@ cd ~/.dotfiles/macOS/Laptop-Personal && git pull && ./install
 Install all packages from `Brewfile`
 
 ```sh
-brew tap homebrew/bundle
 brew bundle
 ```
 
