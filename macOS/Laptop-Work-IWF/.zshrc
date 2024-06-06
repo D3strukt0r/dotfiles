@@ -1,6 +1,3 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -42,24 +39,12 @@ fi
 if which composer &> /dev/null; then
   export PATH="$(composer global config bin-dir --absolute --quiet):$PATH"
 fi
-# Android
-if [ -d "$HOME/Library/Android/sdk" ]; then
-  export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
-fi
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# rust
-if [ -d "$HOME/.cargo" ]; then
-  . "$HOME/.cargo/env"
-fi
-# ruby (rbenv)
-if which rbenv &> /dev/null; then
-  eval "$(rbenv init - zsh)"
-fi
 # Python (pyenv)
 if which pyenv &> /dev/null; then
   export PYENV_ROOT="$HOME/.pyenv"
@@ -149,9 +134,6 @@ if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
   autoload -Uz compinit && compinit
   eval "$(_IWF_COMPLETE=zsh_source iwf)"
 fi
-
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
 
 # Created by `pipx` on 2024-04-30 09:54:46
 if [ -d "$HOME/.local/bin" ]; then

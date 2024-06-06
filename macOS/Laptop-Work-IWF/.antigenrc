@@ -1,0 +1,288 @@
+USE_GIT=true
+USE_PHP=true
+USE_CONTAINER=true
+USE_NODEJS=true
+USE_PYTHON=true
+
+# Load various lib files
+antigen use oh-my-zsh
+
+#
+# Select Theme
+#
+antigen theme romkatv/powerlevel10k
+
+#
+# Antigen Bundles
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
+#
+
+#
+# General Plugins
+#
+
+# Adds "opswd" wrapper for finding and copying services' passwords
+antigen bundle 1password
+
+# Helps finding aliases with "alias-finder "<command>"". "-l" for longer command, "-e" for exact match
+antigen bundle alias-finder
+
+# Find aliases with "acs <command>".
+# Requires Python
+antigen bundle aliases
+
+# Add colors to "man" pages
+antigen bundle colored-man-pages
+
+# Use code styling when outputting file content with "ccat <file>"
+# Requires 'pip install Pygments'
+antigen bundle colorize
+
+# Suggests package when command not found
+antigen bundle command-not-found
+
+# Adds common aliases
+antigen bundle common-aliases
+
+# Copy currently entered command in clipboard with "Ctrl + O"
+antigen bundle copybuffer
+
+# Copy current dir ($PWD) to clipboard by executing "copydir"
+antigen bundle copypath
+
+# Copy file contents to clipboard by executing "copyfile"
+antigen bundle copyfile
+
+# Enter/Leave directories easily
+# Alt/Option + Left 	Go to previous directory
+# Alt/Option + Right 	Go to next directory
+# Alt/Option + Up 	    Move into the parent directory
+# Alt/Option + Down 	Move into the first child directory by alphabetical order
+#antigen bundle dirhistory
+
+# Alias for encoding/decoding base64. "e64" and "d64"
+antigen bundle encode64
+
+# Easy extract compressed files. Use "extract <file>"
+antigen bundle extract
+
+# Easy search for frontend tools. Use "frontend <context> <term>". "frontend is optional"
+antigen bundle frontend-search
+
+# Automatically expand glob patterns in the command line. Use "Ctrl + Space" for regular space
+#antigen bundle globalias
+
+# Enable gpg-agent if not already running
+antigen bundle gpg-agent
+
+# Aliases for "history"
+# Requires "brew install httpie"
+antigen bundle history
+
+# Autocompletion and aliases for "httpie"
+#antigen bundle httpie
+
+# Autocompletion for ISO Date and function for common formats
+antigen bundle isodate
+
+# Functions for handlind JSON
+antigen bundle jsontools
+
+# Automatically start keychain for GPG and SSH. Use together with 'gpg-agent'
+antigen bundle keychain
+
+# Shortcut for adding "man" to current buffer. "Esc + 'man'"
+antigen bundle man
+
+# Quickly fix permissions. 'set755' for directories, 'set644' for files. 'fixperms' is both
+antigen bundle perms
+
+# Quickly jump to project. Use 'pj <project'
+antigen bundle pj
+
+# Never automatically run pasted commands
+antigen bundle safe-paste
+
+# Automatically load ssh-agent
+antigen bundle ssh-agent
+
+# Add 'sudo' by pressing 'Esc' twice
+antigen bundle sudo
+
+# Helper functions for managing a system (server)
+#antigen bundle systemadmin
+
+# Press 'Esc' twice to enter 'fuck'
+# Requires 'brew install thefuck'
+#antigen bundle thefuck
+
+# Change Oh-My-Zsh theme using 'theme <theme_name>'. 'lsthemes' for list
+antigen bundle themes
+
+# Compress in any format with 'ua <format> <files>'
+antigen bundle universalarchive
+
+# URL tools. 'urlencode' and 'urldecode'
+antigen bundle urltools
+
+# Aliases for VS Code
+antigen bundle vscode
+
+# Seach the internet using 'web_search <context> <term>'
+antigen bundle web-search
+
+# Add interactive tab-completion for 'cd'
+# Requires 'brew install fzf'
+antigen bundle zsh-interactive-cd
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Fish-like auto suggestions
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Extra zsh completions
+antigen bundle zsh-users/zsh-completions
+
+# history-substring-search
+# Search through the history of previous commands with current buffer. Use "UP" and "DOWN"
+# zsh-syntax-highlighting needs to come before this!
+antigen bundle zsh-users/zsh-history-substring-search
+
+#
+# Git Plugins
+#
+if [[ $USE_GIT == true ]]; then
+    # Autocompletion for GitHub CLI
+    # Requires 'brew install gh'
+    #antigen bundle gh # Cannot find cache in "~/.antigen/bundles/robbyrussell/oh-my-zsh/cache//completions/_gh"
+
+    # Autocompletion and aliases for Git Flow
+    # Requires 'brew install git-flow'
+    antigen bundle git-flow
+
+    # Aliases and functions for 'git' command
+    antigen bundle git
+
+    # Use gitignore.io to generate .gitignore files.
+    # 'gi list', 'gi [TEMPLATENAME] >> .gitignore'
+    antigen bundle gitignore
+
+    # Autocompletion and aliases for 'repo' commands
+    antigen bundle repo
+fi
+
+#
+# PHP Plugins
+#
+if [[ $USE_PHP == true ]]; then
+    # Autocompletion and aliases for "composer" commands
+    antigen bundle composer
+
+    # Autocompletion for Laravel "homestead"
+    #antigen bundle homestead
+
+    # Autocompletion for Laravel
+    #antigen bundle laravel
+
+    # Autocompletion for Symfony
+    #antigen bundle symfony
+
+    # Autocompletion and aliases for WP CLI
+    #antigen bundle wp-cli
+fi
+
+#
+# Docker/Kubernetes Plugins
+#
+if [[ $USE_CONTAINER == true ]]; then
+    # Autocompletion and aliases for "docker-compose" commands
+    antigen bundle docker-compose
+
+    # Autocompletion for "docker" commands
+    antigen bundle docker
+
+    # Autocompletion for "helm" commands
+    antigen bundle helm
+
+    # Autocompletion and aliases for "kubectl" commands
+    antigen bundle kubectl
+
+    # Show current context from kubcectl. Requires setup
+    # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectx
+    #antigen bundle kubectx
+fi
+
+#
+# Node.JS Plugins
+#
+if [[ $USE_NODEJS == true ]]; then
+    # Add docs function for Node.JS. Use 'node-docs <package>'
+    antigen bundle node
+
+    # Autocompletion and aliases for "npm" commands
+    antigen bundle npm
+
+    # Autocompletion for 'nvm' command
+    # Requires 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash'
+    antigen bundle nvm
+
+    # Autocompletion and aliases for 'react-native' command
+    antigen bundle react-native
+
+    # Autocompletion and aliases for 'yarn' command
+    antigen bundle yarn
+fi
+
+#
+# Python Plugins
+#
+if [[ $USE_PYTHON == true ]]; then
+    # Autocompletion for 'pip' packages
+    antigen bundle pip
+
+    # Aliases for 'pipenv'
+    #antigen bundle pipenv
+
+    # Load pyenv (manage python versions)
+    #antigen bundle pyenv
+
+    # Autocompletion and aliases for 'pylint' commands
+    #antigen bundle pylint
+
+    # Aliases for 'python'
+    antigen bundle python
+fi
+
+#
+# System Specific Plugins
+#
+if [[ $OSTYPE == 'darwin'* ]]; then
+    # Aliases for 'brew' command
+    antigen bundle brew
+
+    # Useful functions for iTerm2
+    antigen bundle iterm2
+
+    # Functions for macOS
+    antigen bundle macos
+
+    # Aliases and utilities for XCode
+    antigen bundle xcode
+elif [[ $OSTYPE == 'linux'* ]]; then
+    ID=$(grep -oP '(?<=^ID=).+' /etc/os-release | tr -d '"')
+    VERSION=$(grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"')
+
+    if [[ $ID == 'debian' ]]; then
+        # Aliases and functions for 'debian' systems
+        antigen bundle debian
+    elif [[ $ID == 'ubuntu' ]]; then
+        # Aliases and functions for 'ubuntu' systems
+        antigen bundle ubuntu
+    fi
+elif [[ $OSTYPE == 'cygwin' ]]; then
+    :
+fi
+
+# Tell Antigen that you're done
+antigen apply
