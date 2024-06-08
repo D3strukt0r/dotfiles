@@ -95,11 +95,15 @@ fi
 
 # Load Antigen
 if [[ $OSTYPE == 'darwin'* ]]; then
+  if [ -s /opt/homebrew/share/antigen/antigen.zsh ]; then
+    source /opt/homebrew/share/antigen/antigen.zsh
+  else
     source /usr/local/share/antigen/antigen.zsh
+  fi
 elif [[ $OSTYPE == 'linux'* ]]; then
-    source /usr/share/zsh-antigen/antigen.zsh
+  source /usr/share/zsh-antigen/antigen.zsh
 elif [[ $OSTYPE == 'cygwin' ]]; then
-    :
+  :
 fi
 
 # Enable option stacking when using e.g. "docker run -it <TAB>"
