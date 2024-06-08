@@ -200,7 +200,7 @@ if [[ $USE_CONTAINER == true ]]; then
     antigen bundle docker-compose
 
     # Autocompletion for "docker" commands
-    antigen bundle docker
+    #antigen bundle docker
 
     # Autocompletion for "helm" commands
     antigen bundle helm
