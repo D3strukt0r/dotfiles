@@ -144,6 +144,11 @@ antigen init ~/.antigenrc
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Created by `pipx` on 2024-04-30 09:54:46
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$PATH:$HOME/.local/bin"
+fi
+
 # shell completion for iwf command line tool
 if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
   autoload -Uz compinit && compinit
@@ -152,8 +157,3 @@ fi
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
-
-# Created by `pipx` on 2024-04-30 09:54:46
-if [ -d "$HOME/.local/bin" ]; then
-  export PATH="$PATH:$HOME/.local/bin"
-fi
