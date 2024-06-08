@@ -98,7 +98,7 @@ antigen update
 * Add Printers in `Systemeinstellungen` > `Drucker & Scanner` > `[+]` > `IP` (Icon)
   * `10.1.41.40` | `HP Jetdirect - Socket` | `Drucker - 4. OG (IWF Intern)`
   * `10.1.41.36` | `HP Jetdirect - Socket` | `Drucker - 4. OG (Nord)`
-* Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
+* Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Kontrollzentrum` > `Uhr` > `Uhroptionen ...` > `Datum anzeigen` to `Immer`
 * Disable Tips Notification `Systemeinstellungen` > `Mitteilungen & Fokus` > `Tipps` > `Mitteilungen erlauben` > Aus
 * Add US English keyboard in `Systemeinstellungen` > `Tastatur` > `Eingabequellen` > `[+]` > `English` > `US` > `Hinzufügen`
 * Add quick keyboard switcher in `Systemeinstellungen` > `Tastatur` > `Beim Drücker der fn-Taste` > `Eingabequellen wechseln`
