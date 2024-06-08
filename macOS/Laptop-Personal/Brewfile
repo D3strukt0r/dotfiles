@@ -158,6 +158,7 @@ mas "Microsoft Word", id: 462054704
 mas "Speedtest", id: 1153157709
 mas "TextSniper", id: 1528890965
 mas "Xcode", id: 497799835
+mas "Yoink", id: 457622435
 vscode "aaron-bond.better-comments"
 vscode "adpyke.vscode-userscript"
 vscode "ahmadalli.vscode-nginx-conf"
