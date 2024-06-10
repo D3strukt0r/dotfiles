@@ -109,8 +109,9 @@ antigen update
 * [3CX](https://pbx.hdw.ch/webclient/api/app/mac)
 * [Atlassian Companion](https://update-nucleus.atlassian.com/Atlassian-Companion/291cb34fe2296e5fb82b83a04704c9b4/latest/darwin/x64/Atlassian%20Companion.dmg) [Docs](https://confluence.atlassian.com/doc/install-atlassian-companion-992678880.html)
 * [Barco Clickshare App](https://www.barco.com/de/product/clickshare-app)
+* [FortiClient VPN](https://www.fortinet.com/support/product-downloads#vpn) - For some reason currently not available anymore through brew `cask "forticlient-vpn"`
 * Install `Adobe Acrobat DC` from `Creative Cloud App`
-* Install `PhpStorm` from `JetBrains Toolbox App`
+* Install `Android Studio` & `PhpStorm` from `JetBrains Toolbox App`
 
 #### Manual App Configuration
 
