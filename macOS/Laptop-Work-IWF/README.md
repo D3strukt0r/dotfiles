@@ -86,7 +86,7 @@ antigen update
 * Get passwords managed with `pass`: `git clone git@github.com:D3strukt0r/pass-store.git ~/.password-store`
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
-* Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client
+* Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client > `Login` > `Prüfung starten` > `1. ... [Herunterladen]` > Install > `2. ... Klicken Sie hier, ...` > `Prüfung von dieser Website aus immer zulassen` > `Ja ich bestätige obiges und will fortfahren.`
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 * (**Work**) Install [dev CLI tools](https://git.iwf.io/docker/iwf-local-dev) `pipx install git+ssh://git@git.iwf.io/docker/iwf-local-dev.git@main && iwf toolset install`
 
@@ -110,6 +110,7 @@ antigen update
 * [Atlassian Companion](https://update-nucleus.atlassian.com/Atlassian-Companion/291cb34fe2296e5fb82b83a04704c9b4/latest/darwin/x64/Atlassian%20Companion.dmg) [Docs](https://confluence.atlassian.com/doc/install-atlassian-companion-992678880.html)
 * [Barco Clickshare App](https://www.barco.com/de/product/clickshare-app)
 * [FortiClient VPN](https://www.fortinet.com/support/product-downloads#vpn) - For some reason currently not available anymore through brew `cask "forticlient-vpn"`
+* [F5 VPN Client](https://uvek.abx-ras.ch/) - Login required through Abraxas
 * Install `Adobe Acrobat DC` from `Creative Cloud App`
 * Install `Android Studio` & `PhpStorm` from `JetBrains Toolbox App`
 
@@ -117,6 +118,7 @@ antigen update
 
 * `3CX`
   * (Desktop), go to [any page](https://pbx.hdw.ch/webclient/#/people) > 🍎 > `Provisionieren`
+  * (Desktop Alternative), go to [`Apps`](https://pbx.hdw.ch/webclient/#/apps) > `Desktop Anwendung` > `2. ... [Provisionieren]`
   * (Mobile), log in at <https://pbx.hdw.ch/webclient/#/login> > `...` > `Einstellungen` > `QR-Code scannen`
 * `GitKraken`
   * `Settings`
