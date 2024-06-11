@@ -87,7 +87,7 @@ antigen update
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
 * Finish installation of Battle.net with `open /usr/local/Caskroom/battle-net/1.18.5.3106/Battle.net-Setup.app`
-* Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client > `Login` > `Prüfung starten` > `1. ... [Herunterladen]` > Install > `2. ... Klicken Sie hier, ...` > `Prüfung von dieser Website aus immer zulassen` > `Ja ich bestätige obiges und will fortfahren.`
+* Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client > `Login` > `Prüfung überspringen` > Click on network icon > `Netzwerkzugriffs-Clientkomponenten sind erforderlich. ... 1. [Herunterladen]` > `2. Klicken Sie hier, wenn die Installation abgeschlossen ist.`
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 * (**Work**) Install [dev CLI tools](https://git.iwf.io/docker/iwf-local-dev) `pipx install git+ssh://git@git.iwf.io/docker/iwf-local-dev.git@main && iwf toolset install`
 * Allow starting/stopping vagrant without password by running `sudo visudo -f /private/etc/sudoers.d/vagrant` and adding the following lines:
