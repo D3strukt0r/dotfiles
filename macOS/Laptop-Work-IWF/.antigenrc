@@ -203,7 +203,7 @@ if [[ $USE_CONTAINER == true ]]; then
     #antigen bundle docker
 
     # Autocompletion for "helm" commands
-    antigen bundle helm
+    #antigen bundle helm
 
     # Autocompletion and aliases for "kubectl" commands
     antigen bundle kubectl
