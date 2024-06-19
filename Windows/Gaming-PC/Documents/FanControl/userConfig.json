@@ -1,5 +1,5 @@
 {
-  "__VERSION__": "188",
+  "__VERSION__": "193",
   "Main": {
     "Controls": [
       {
@@ -344,6 +344,7 @@
       }
     ],
     "CustomSensors": [],
+    "Fahrenheit": false,
     "FanCurves": [
       {
         "CommandMode": 0,

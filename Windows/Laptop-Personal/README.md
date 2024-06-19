@@ -136,6 +136,7 @@ winget install --id Xencelabs.Driver --exact --source winget
 winget install --id Zoom.Zoom --exact --source winget
 winget install --id Rufus.Rufus --exact --source winget
 winget install --id Balena.Etcher --exact --source winget
+winget install --id LocalSend.LocalSend --exact --source winget
 
 # Crypto
 winget install --id LedgerHQ.LedgerLive --exact --source winget
