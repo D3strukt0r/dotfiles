@@ -154,6 +154,12 @@ winget install --id LedgerHQ.LedgerLive --exact --source winget
 winget install --id Ultimaker.Cura --exact --source winget
 
 # Games
+winget install --id Ryochan7.DS4Windows --exact --source winget
+# Requires:
+# - Microsoft.VCRedist.2015+.x64
+# - Microsoft.DotNet.DesktopRuntime.8
+# - ViGEm.ViGEmBus
+# - ViGEm.HidHide
 winget install --id Valve.Steam --exact --source winget
 winget install --id EpicGames.EpicGamesLauncher --exact --source winget
 # Install Genshin Impact on Epic Games
