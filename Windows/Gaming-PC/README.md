@@ -144,6 +144,11 @@ winget install --id Zoom.Zoom --exact --source winget
 winget install --id Rufus.Rufus --exact --source winget
 winget install --id Balena.Etcher --exact --source winget
 winget install --id Rem0o.FanControl --exact --source winget
+winget install --id LocalSend.LocalSend --exact --source winget
+winget install --id Levitsky.FontBase --exact --source winget
+
+# Crypto
+winget install --id LedgerHQ.LedgerLive --exact --source winget
 
 # 3D Printing
 winget install --id Ultimaker.Cura --exact --source winget
@@ -212,6 +217,15 @@ iwr -useb get.scoop.sh | iex
 scoop bucket add extras
 ```
 
+Manually install the following packages
+
+* [GoXLR App](https://www.tc-helicon.com/downloads.html) - <https://mediadl.musictribe.com/download/software/tchelicon/GoXLR/app/GoXLR%20App%20V1.6.4.013.exe>
+* [GoXLR Driver](https://www.tc-helicon.com/product.html?modelCode=0803-AAB) - <https://mediadl.musictribe.com/download/software/tchelicon/GoXLR/TC-Helicon_GoXLR_Driver.zip>
+
+Manually Configure
+
+* Add `Titillium Web` font in FontBase
+
 #### Usage of `packages.config`
 
 Install
@@ -248,6 +262,19 @@ scoop install @apps
 ```powershell
 Remove-Item -Recurse -Path "$HOME\Documents\GoXLR\MicProfiles"
 Remove-Item -Recurse -Path "$HOME\Documents\GoXLR\Profiles"
-New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\MicProfiles" -Target "$HOME\.dotfiles\GoXLR\MicProfiles"
-New-Item -ItemType SymbolicLink -Path "$HOME\Documents\GoXLR\Profiles" -Target "$HOME\.dotfiles\GoXLR\Profiles"
+New-Item -ItemType SymbolicLink `
+  -Path "$HOME\Documents\GoXLR\MicProfiles" `
+  -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\GoXLR\MicProfiles"
+New-Item -ItemType SymbolicLink `
+  -Path "$HOME\Documents\GoXLR\Profiles" `
+  -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\GoXLR\Profiles"
+# or if OneDrive is used to sync the Documents folder
+Remove-Item -Recurse -Path "$HOME\OneDrive\Dokumente\GoXLR\MicProfiles"
+Remove-Item -Recurse -Path "$HOME\OneDrive\Dokumente\GoXLR\Profiles"
+New-Item -ItemType SymbolicLink `
+  -Path "$HOME\OneDrive\Dokumente\GoXLR\MicProfiles" `
+  -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\GoXLR\MicProfiles"
+New-Item -ItemType SymbolicLink `
+  -Path "$HOME\OneDrive\Dokumente\GoXLR\Profiles" `
+  -Target "$HOME\.dotfiles\Windows\Gaming-PC\Documents\GoXLR\Profiles"
 ```
