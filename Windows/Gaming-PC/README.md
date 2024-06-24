@@ -107,18 +107,11 @@ winget install --id Adobe.Acrobat.Reader.64-bit --exact --source winget
 winget install --id Elgato.ControlCenter --exact --source winget
 winget install --id Discord.Discord --exact --source winget
 winget install --id Dropbox.Dropbox --exact --source winget
-winget install --id File-New-Project.EarTrumpet --exact --source winget
-winget install --id SomePythonThings.ElevenClock --exact --source winget
 winget install --id flux.flux --exact --source winget # Often has has mismatch because file has no version
 winget install --id Figma.Figma --exact --source winget
-winget install --id Nvidia.GeForceExperience --exact --source winget
 winget install --id Nvidia.Broadcast --exact --source winget # Will continue download while installing
 winget install --id HandBrake.HandBrake --exact --source winget # Requires .NET 6.0
 winget install --id REALiX.HWiNFO --exact --source winget
-winget install --id Corsair.iCUE.5 --exact --source winget # Takes a moment to show up, maybe restart Windows
-winget install --id Intel.IntelDriverAndSupportAssistant --exact --source winget
-winget install --id Logitech.GHUB --exact --source winget
-winget install --id LianLi.LConnect3 --exact --source winget
 winget install --id Skillbrains.Lightshot --exact --source winget
 winget install --id Microsoft.Office --exact --source winget
 winget install --id Guru3D.Afterburner --exact --source winget
@@ -128,23 +121,37 @@ winget install --id OBSProject.OBSStudio --exact --source winget # Requires  Mic
 winget install --id PrivateInternetAccess.PrivateInternetAccess --exact --source winget
 winget install --id Microsoft.PowerToys --exact --source winget
 winget install --id Proton.ProtonMailBridge --exact --source winget
-winget install --id RazerInc.RazerInstaller --exact --source winget
 winget install --id OpenWhisperSystems.Signal --exact --source winget
 winget install --id SlackTechnologies.Slack --exact --source winget
-winget install --id SteelSeries.GG --exact --source winget
-winget install --id Elgato.StreamDeck --exact --source winget # Requires Microsoft.VCRedist.2015+.x64
 winget install --id Telegram.TelegramDesktop --exact --source winget
 winget install --id Mozilla.Thunderbird --exact --source winget
 winget install --id Microsoft.VisualStudio.2022.Community --exact --source winget
 winget install --id Unity.UnityHub --exact --source winget
 winget install --id VideoLAN.VLC --exact --source winget
 winget install --id WinSCP.WinSCP --exact --source winget
-winget install --id Xencelabs.Driver --exact --source winget
 winget install --id Zoom.Zoom --exact --source winget
 winget install --id Rufus.Rufus --exact --source winget
 winget install --id Balena.Etcher --exact --source winget
-winget install --id Rem0o.FanControl --exact --source winget
 winget install --id LocalSend.LocalSend --exact --source winget
+
+# Drivers & Control
+winget install --id Nvidia.GeForceExperience --exact --source winget
+# winget install --id Corsair.iCUE.5 --exact --source winget # Takes a moment to show up, maybe restart Windows
+# Don't install iCUE from winget, it's kinda broken, program doesn't exist?? Use https://www3.corsair.com/software/CUE_V5/public/modules/windows/installer/Install%20iCUE.exe
+winget install --id Intel.IntelDriverAndSupportAssistant --exact --source winget
+winget install --id Logitech.GHUB --exact --source winget
+winget install --id LianLi.LConnect3 --exact --source winget
+winget install --id RazerInc.RazerInstaller --exact --source winget
+winget install --id SteelSeries.GG --exact --source winget
+winget install --id Elgato.StreamDeck --exact --source winget
+# Requires
+# - Microsoft.VCRedist.2015+.x64
+winget install --id Xencelabs.Driver --exact --source winget
+winget install --id Rem0o.FanControl --exact --source winget
+
+# PC Tools
+winget install --id File-New-Project.EarTrumpet --exact --source winget
+winget install --id SomePythonThings.ElevenClock --exact --source winget
 winget install --id Levitsky.FontBase --exact --source winget
 
 # Crypto
