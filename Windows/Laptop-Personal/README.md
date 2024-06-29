@@ -112,11 +112,8 @@ winget install --id File-New-Project.EarTrumpet --exact --source winget
 winget install --id SomePythonThings.ElevenClock --exact --source winget
 winget install --id flux.flux --exact --source winget # Often has has mismatch because file has no version
 winget install --id Figma.Figma --exact --source winget
-winget install --id Nvidia.GeForceExperience --exact --source winget
-winget install --id Nvidia.Broadcast --exact --source winget # Will continue download while installing
 winget install --id HandBrake.HandBrake --exact --source winget # Requires .NET 6.0
 winget install --id REALiX.HWiNFO --exact --source winget
-winget install --id Intel.IntelDriverAndSupportAssistant --exact --source winget
 winget install --id Logitech.GHUB --exact --source winget
 winget install --id Skillbrains.Lightshot --exact --source winget
 winget install --id Microsoft.Office --exact --source winget
