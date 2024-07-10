@@ -89,6 +89,7 @@ antigen update
 * Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client > `Login` > `Prüfung überspringen` > Click on network icon > `Netzwerkzugriffs-Clientkomponenten sind erforderlich. ... 1. [Herunterladen]` > `2. Klicken Sie hier, wenn die Installation abgeschlossen ist.`
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 * (**Work**) Install [dev CLI tools](https://git.iwf.io/docker/iwf-local-dev) `pipx install git+ssh://git@git.iwf.io/docker/iwf-local-dev.git@main && iwf toolset install`
+* Finish installation of Paragon ExtFS with `open /opt/homebrew/Caskroom/paragon-extfs/12.1.27/FSInstaller.app`
 
 #### Manual System Settings Configuration
 
