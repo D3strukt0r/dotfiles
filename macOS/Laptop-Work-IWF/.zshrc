@@ -45,6 +45,8 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+# TODO: Why do i need this?
+export PATH="$HOME/Library/pnpm/global/5/node_modules/.bin:$PATH"
 # Python (pyenv)
 if which pyenv &> /dev/null; then
   export PYENV_ROOT="$HOME/.pyenv"
