@@ -1,5 +1,5 @@
 {
-  "__VERSION__": "193",
+  "__VERSION__": "196",
   "Main": {
     "Controls": [
       {
@@ -688,15 +688,18 @@
     "HorizontalUIOrientation": false,
     "PrimaryColor": "#FF910000",
     "SecondaryColor": "#FFFFFFFF",
-    "SelectedTheme": "Inherit",
+    "SelectedTheme": "",
     "ShowHiddenCards": false,
     "SyncThemeWithWindows": true,
     "SyncTrayIconColorWithWindows": true,
     "TemperatureSensors": [],
-    "TrayIconColor": "#FFFFFFFF",
+    "TrayIconColor": null,
     "TrayIcons": []
   },
   "Sensors": {
+    "AdlxWrapperSettings": {
+      "Enabled": false
+    },
     "DisabledPlugins": [],
     "DisableStorageSensors": false,
     "LibreHardwareMonitorSettings": {
