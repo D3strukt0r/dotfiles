@@ -119,6 +119,7 @@ winget install --id MSI.Kombustor.4 --exact --source winget # TODO: Fix hash mis
 winget install --id Notion.Notion --exact --source winget
 winget install --id OBSProject.OBSStudio --exact --source winget # Requires  Microsoft.VCRedist.2015+.x64
 winget install --id PrivateInternetAccess.PrivateInternetAccess --exact --source winget
+winget install --id Proton.ProtonVPN --exact --source winget
 winget install --id Microsoft.PowerToys --exact --source winget
 winget install --id Proton.ProtonMailBridge --exact --source winget
 winget install --id OpenWhisperSystems.Signal --exact --source winget
@@ -187,6 +188,8 @@ winget install --id GnuPG.Gpg4win --exact --source winget
 # Restore GPG keys from backup
 winget install --id CoreyButler.NVMforWindows --exact --source winget
 winget install --id Oracle.JDK.21 --exact --source winget
+winget install --id Postman.Postman --exact --source winget
+winget install --id Rustlang.Rustup --exact --source winget
 
 # Reload PATH then (https://stackoverflow.com/a/31845512)
 nvm install lts
