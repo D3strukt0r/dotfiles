@@ -92,6 +92,12 @@ Remove-Item -Recurse -Path "$HOME\.ssh\config"
 New-Item -ItemType SymbolicLink -Path "$HOME\.ssh\config" -Target "$HOME\.dotfiles\Windows\Gaming-PC\.ssh\config"
 ```
 
+To ignore hash not matching run ([StackOverflow](https://stackoverflow.com/questions/75647313/winget-install-my-app-receives-installer-hash-does-not-match))
+
+```powershell
+winget settings --enable InstallerHashOverride
+```
+
 Now install the rest of the packages
 
 ```powershell
@@ -110,7 +116,9 @@ winget install --id Dropbox.Dropbox --exact --source winget
 winget install --id flux.flux --exact --source winget # Often has has mismatch because file has no version
 winget install --id Figma.Figma --exact --source winget
 winget install --id Nvidia.Broadcast --exact --source winget # Will continue download while installing
-winget install --id HandBrake.HandBrake --exact --source winget # Requires .NET 6.0
+winget install --id HandBrake.HandBrake --exact --source winget
+# Requires
+# - Microsoft.DotNet.DesktopRuntime.8
 winget install --id REALiX.HWiNFO --exact --source winget
 winget install --id Skillbrains.Lightshot --exact --source winget
 winget install --id Microsoft.Office --exact --source winget
