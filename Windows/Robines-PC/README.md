@@ -136,6 +136,17 @@ winget install --id 9NBLGGH2JHRG --exact --source msstore # One Task
 winget install --id Apple.iTunes --exact --source winget
 winget install --id ImageLine.FLStudio --exact --source winget # Also installs MichaelTippach.ASIO4ALL
 winget install --id NVAccess.NVDA --exact --source winget
+# PaintTools SAI
+# -> https://www.systemax.jp/en/sai/
+# -> https://www.systemax.jp/bin/sai-1.2.5-ful-en.exe
+winget install --id 9NLRL58VZCK9 --exact --source msstore # Hue Essentials
+# TODO: Figure out why Hue Essentials throws "Failed to launch JVM"
+# BERNINA Creator 9 (TODO: Actually use USB Stick)
+# -> https://www.bernina.com/de-CH/Software-CH/Sticksoftware/BERNINA-Sticksoftware-9/BERNINA-Sticksoftware-9-%E2%80%93-Creator
+# -> https://cdn.bernina.com/download/BERNINA_Embroidery_Software_V9/BERNINAEmbroiderySoftware_V9_2_Jun2024_Creator_24_1_266_20177.zip
+# AEJuice Pack Manager
+# -> https://aejuice.com/checkout/order-received/free-plugins/?email=unknown@gmail.com
+# -> https://aejuice.com/pack_manager/AEJuice_Pack_Manager.zip
 
 # Drivers & Control
 winget install --id Asus.ArmouryCrate --exact --source winget
