@@ -90,6 +90,7 @@ antigen update
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 * (**Work**) Install [dev CLI tools](https://git.iwf.io/docker/iwf-local-dev) `pipx install git+ssh://git@git.iwf.io/docker/iwf-local-dev.git@main && iwf toolset install`
 * Finish installation of Paragon ExtFS with `open /opt/homebrew/Caskroom/paragon-extfs/12.1.27/FSInstaller.app`
+* Setup Docker Contexts `for i in {1..5}; do docker context create "iwf-test-$i" --docker "host=ssh://iwfsupport@test-worker-$i.web-solutions.io"; done`
 
 #### Manual System Settings Configuration
 
