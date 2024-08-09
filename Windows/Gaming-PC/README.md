@@ -157,6 +157,9 @@ winget install --id Elgato.StreamDeck --exact --source winget
 # - Microsoft.VCRedist.2015+.x64
 winget install --id Xencelabs.Driver --exact --source winget
 winget install --id Rem0o.FanControl --exact --source winget
+# winget install --id Samsung.SamsungMagician --exact --source winget # For Samsung Magician, the package was removed (https://github.com/microsoft/winget-pkgs/pull/164032) use:
+# -> https://semiconductor.samsung.com/consumer-storage/support/tools/
+# -> https://download.semiconductor.samsung.com/resources/software-resources/Samsung_Magician_Installer_Official_8.1.0.800.exe
 
 # PC Tools
 winget install --id File-New-Project.EarTrumpet --exact --source winget

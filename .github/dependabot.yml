@@ -13,8 +13,8 @@ updates:
     reviewers:
       - "D3strukt0r"
     schedule:
-      interval: "daily"
-      time: "08:00"
+      interval: "weekly" # on monday
+      time: "16:00"
       timezone: "Europe/Zurich"
 
   # macOS pnpm
@@ -25,6 +25,16 @@ updates:
     reviewers:
       - "D3strukt0r"
     schedule:
-      interval: "daily"
-      time: "08:00"
+      interval: "weekly" # on monday
+      time: "16:00"
+      timezone: "Europe/Zurich"
+  - package-ecosystem: "npm"
+    directory: "/macOS/Laptop-Work-IWF/Library/pnpm/global/5"
+    labels:
+      - "dependabot :robot:"
+    reviewers:
+      - "D3strukt0r"
+    schedule:
+      interval: "weekly" # on monday
+      time: "16:00"
       timezone: "Europe/Zurich"
