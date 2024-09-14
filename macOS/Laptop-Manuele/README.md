@@ -17,13 +17,13 @@ What things you need to install the software and how to install them
 For first-time setup
 
 ```sh
-git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles/macOS/Laptop-Personal && ./install
+git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles/macOS/Laptop-Manuele && ./install
 ```
 
 Run dotbot to link config files
 
 ```sh
-cd ~/.dotfiles/macOS/Laptop-Personal && git pull && ./install
+cd ~/.dotfiles/macOS/Laptop-Manuele && git pull && ./install
 ```
 
 Install all packages from `Brewfile`
@@ -85,7 +85,7 @@ antigen update
 * Add GitHub Copilot CLI `gh extension install github/gh-copilot`
 * Get passwords managed with `pass`: `git clone git@github.com:D3strukt0r/pass-store.git ~/.password-store`
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
-* Finish installation of Forticlient with `open /usr/local/Caskroom/forticlient-vpn/7.0/FortiClientUpdate.app`. Unlock settings with 🔒 and restore from File Backup "FortiClient"
+* Finish installation of Forticlient. Unlock settings with 🔒 and restore from File Backup "FortiClient"
 * Finish installation of Battle.net with `open /usr/local/Caskroom/battle-net/1.18.5.3106/Battle.net-Setup.app`
 * Login to [Abraxas](https://uvek.abx-ras.ch/) and get the F5 VPN Client > `Login` > `Prüfung überspringen` > Click on network icon > `Netzwerkzugriffs-Clientkomponenten sind erforderlich. ... 1. [Herunterladen]` > `2. Klicken Sie hier, wenn die Installation abgeschlossen ist.`
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually

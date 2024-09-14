@@ -25,13 +25,13 @@ winget install --id Microsoft.PowerShell --exact --source winget
 For first-time setup
 
 ```powershell
-git clone https://github.com/D3strukt0r/dotfiles "$HOME\.dotfiles" && cd "$HOME\.dotfiles\Windows\Laptop-Personal" && .\install.ps1
+git clone https://github.com/D3strukt0r/dotfiles "$HOME\.dotfiles" && cd "$HOME\.dotfiles\Windows\Laptop-Manuele" && .\install.ps1
 ```
 
 For getting updates
 
 ```powershell
-cd "$HOME\.dotfiles\Windows\Laptop-Personal" && git pull && .\install.ps1
+cd "$HOME\.dotfiles\Windows\Laptop-Manuele" && git pull && .\install.ps1
 ```
 
 ### Manual Steps
@@ -67,11 +67,11 @@ Link the PowerShell profile
 Remove-Item -Path $PROFILE
 New-Item -ItemType SymbolicLink `
   -Path "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" `
-  -Target "$HOME\.dotfiles\Windows\Laptop-Personal\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+  -Target "$HOME\.dotfiles\Windows\Laptop-Manuele\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 # or if OneDrive is used to sync the Documents folder
 New-Item -ItemType SymbolicLink `
   -Path "$HOME\OneDrive\Dokumente\PowerShell\Microsoft.PowerShell_profile.ps1" `
-  -Target "$HOME\.dotfiles\Windows\Laptop-Personal\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+  -Target "$HOME\.dotfiles\Windows\Laptop-Manuele\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 ```
 
 Then reload the profile
@@ -84,14 +84,14 @@ Link the Git config
 
 ```powershell
 Remove-Item -Recurse -Path "$HOME\.gitconfig"
-New-Item -ItemType SymbolicLink -Path "$HOME\.gitconfig" -Target "$HOME\.dotfiles\Windows\Laptop-Personal\.gitconfig"
+New-Item -ItemType SymbolicLink -Path "$HOME\.gitconfig" -Target "$HOME\.dotfiles\Windows\Laptop-Manuele\.gitconfig"
 ```
 
 Link the ssh config
 
 ```powershell
 Remove-Item -Recurse -Path "$HOME\.ssh\config"
-New-Item -ItemType SymbolicLink -Path "$HOME\.ssh\config" -Target "$HOME\.dotfiles\Windows\Laptop-Personal\.ssh\config"
+New-Item -ItemType SymbolicLink -Path "$HOME\.ssh\config" -Target "$HOME\.dotfiles\Windows\Laptop-Manuele\.ssh\config"
 ```
 
 To ignore hash not matching run ([StackOverflow](https://stackoverflow.com/questions/75647313/winget-install-my-app-receives-installer-hash-does-not-match))

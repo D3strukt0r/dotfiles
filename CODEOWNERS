@@ -7,7 +7,7 @@
 # https://stackoverflow.com/questions/75531641/exclude-codeowners-from-dependabot-pr
 # Don't automatically assign reviewers on PRs that only modify these files.
 # As they have no owner listed, these files are not owned by anyone.
-macOS/Laptop-Personal/Library/pnpm/global/5/package.json
-macOS/Laptop-Personal/Library/pnpm/global/5/pnpm-lock.yaml
+macOS/Laptop-Manuele/Library/pnpm/global/5/package.json
+macOS/Laptop-Manuele/Library/pnpm/global/5/pnpm-lock.yaml
 macOS/Laptop-Work-IWF/Library/pnpm/global/5/package.json
 macOS/Laptop-Work-IWF/Library/pnpm/global/5/pnpm-lock.yaml
