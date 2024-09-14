@@ -24,7 +24,7 @@ antigen theme romkatv/powerlevel10k
 #
 
 # Adds "opswd" wrapper for finding and copying services' passwords
-antigen bundle 1password
+#antigen bundle 1password
 
 # Autocompletion for "adb" commands
 antigen bundle adb
@@ -208,10 +208,10 @@ if [[ $USE_CONTAINER == true ]]; then
     antigen bundle docker-compose
 
     # Autocompletion for "docker" commands
-    antigen bundle docker
+    #antigen bundle docker
 
     # Autocompletion for "helm" commands
-    antigen bundle helm
+    #antigen bundle helm
 
     # Autocompletion and aliases for "kubectl" commands
     antigen bundle kubectl
