@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.ssh/config:
+        path: .ssh/config
+        create: true
+    ~/.ssh/known_hosts:
+        path: ../../General/.ssh/known_hosts
+        create: true
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: ../General/.gitignore_global
+    ~/.gitmessage: ../General/.gitmessage
+    ~/.p10k.zsh: ../General/.p10k.zsh
+    ~/.zshrc: .zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+# curl -s https://raw.githubusercontent.com/basherpm/basher/master/install.sh | bash
+# basher install pforret/bashew
