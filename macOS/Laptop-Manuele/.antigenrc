@@ -232,7 +232,7 @@ fi
 #
 if [[ $USE_FLUTTER == true ]]; then
     # Autocompletion and aliases for "flutter" commands
-    antigen bundle flutter
+    #antigen bundle flutter
 fi
 
 #

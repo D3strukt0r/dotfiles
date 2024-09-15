@@ -1,0 +1,16 @@
+[user]
+	email = dev@d3strukt0r.me
+	name = D3strukt0r
+	signingKey = C9E5AB85364CA764!
+[core]
+	longpaths = true
+	# Required to use 1Password SSH Agent
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+[tag]
+	forceSignAnnotated = true
+[commit]
+	gpgSign = true
+[init]
+	defaultBranch = master
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
