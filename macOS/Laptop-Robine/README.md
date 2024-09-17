@@ -53,14 +53,11 @@ brew bundle cleanup
 * Fix iTerm2 font for powerlevel10k with `p10k configure`
 * Install iTerm2 Shell Integration. Open `iTerm2` > Toolbar > `iTerm2` > `Instell Shell Integration`
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
-* Finish installation of Battle.net with `open /usr/local/Caskroom/battle-net/1.18.10.3141/Battle.net-Setup.app`
-* Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 
 #### Manual System Settings Configuration
 
 * Add Time Machine Exclusions in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
   * `~/Library/CloudStorage`
-  * `~/VirtualBox VMs`
   * `/Applications`
 * Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
 * Disable Tips Notification `Systemeinstellungen` > `Mitteilungen & Fokus` > `Tipps` > `Mitteilungen erlauben` > Aus
@@ -70,7 +67,6 @@ brew bundle cleanup
 #### Manual App Installation
 
 * Install `Adobe Acrobat DC` from `Creative Cloud App`
-* [NighOwl](https://nightowlapp.co/)
 
 #### Manual App Configuration
 
@@ -80,10 +76,6 @@ brew bundle cleanup
   * Add Macro to Mouse:
     * Back: `cmd + ö`
     * Forward: `cmd + ä`
-* `Microsoft Remote Desktop`
-  * Restore Remotes from `{backup}/Remote Desktop/*` and check 1Password for credentials
-* `Nightowl`
-  * Toolbar Icon > `...` > `Hotkey` > `[ ]` Turn off
 * `Pika`
   * When opening for the first time, select `Open at startup` (or similar)
 * `Scroll Reverser`
@@ -92,8 +84,6 @@ brew bundle cleanup
     * [x] Horizontal umkehren
     * [ ] Trackpad umkehren
     * [x] Maus umkehren
-* `Telegram Desktop`
-  * Burger Menu > `Night Mode` > On
 * `TextSniper`
   * Toolbar Icon > `Preferences...` > `System` > `Launch at Login` > `[x]`
 * `The Unarchiver`
