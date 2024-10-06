@@ -29,7 +29,7 @@ cd ~/.dotfiles/macOS/Laptop-Manuele && git pull && ./install
 Install all packages from `Brewfile`
 
 ```sh
-brew bundle
+brew bundle -v
 ```
 
 #### Update Backup

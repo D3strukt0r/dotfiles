@@ -29,7 +29,7 @@ cd ~/.dotfiles/macOS/Laptop-Work-IWF && git pull && ./install
 Install all packages from `Brewfile`
 
 ```sh
-brew bundle
+brew bundle -v
 ```
 
 #### Update Backup

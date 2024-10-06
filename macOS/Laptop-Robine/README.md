@@ -29,7 +29,7 @@ cd ~/.dotfiles/macOS/Laptop-Robine && git pull && ./install
 Install all packages from `Brewfile`
 
 ```sh
-brew bundle
+brew bundle -v
 ```
 
 #### Update Backup
