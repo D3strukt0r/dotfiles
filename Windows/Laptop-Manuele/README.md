@@ -152,6 +152,8 @@ winget install --id EpicGames.EpicGamesLauncher --exact --source winget
 # Install Rocket League on Epic Games
 winget install --id Peppy.Osu! --exact --source winget
 winget install --id Mojang.MinecraftLauncher --exact --source winget
+winget install --id Blizzard.BattleNet --exact --source winget
+# Install-Path: C:\Program Files (x86)\Battle.net
 
 # Development Tools
 winget install --id JetBrains.Toolbox --exact --source winget
