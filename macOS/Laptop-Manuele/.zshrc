@@ -47,6 +47,8 @@ if [ -d "$HOME/Library/Android/sdk" ]; then
   export PATH="$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH"
 fi
 # pnpm
+
+# Cannot use "pnpm bin --global" because PNPM_HOME is what will be used for that command
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
