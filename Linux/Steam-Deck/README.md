@@ -37,6 +37,7 @@ flatpak install flathub com.rustdesk.RustDesk
 flatpak install flathub eu.betterbird.Betterbird
 flatpak install flathub me.kozec.syncthingtk
 flatpak install flathub com.dropbox.Client
+flatpak install flathub com.github.tchx84.Flatseal
 
 # 3D Design
 flatpak install flathub com.ultimaker.cura
@@ -83,18 +84,29 @@ flatpak install flathub org.ryujinx.Ryujinx
 flatpak install flathub ca.parallel_launcher.ParallelLauncher
 ```
 
-Emu Deck - [Help Page](https://emudeck.github.io/how-to-install-emudeck/steamos/) - [Download](https://www.emudeck.com/EmuDeck.desktop)
+Emu Deck - [Download](https://www.emudeck.com/EmuDeck.desktop) - [Website](https://www.emudeck.com/)  - [Help Page](https://emudeck.github.io/how-to-install-emudeck/steamos/)
 
 ```bash
-sh -c 'curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash'
+curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash
 ```
 
 Waydroid Installer - [Repository](https://github.com/ryanrudolfoba/SteamOS-Waydroid-Installer)
 
 ```bash
-cd ~/
-git clone --depth=1 https://github.com/ryanrudolfoba/steamos-waydroid-installer
+git clone --depth=1 https://github.com/ryanrudolfoba/steamos-waydroid-installer ~/steamos-waydroid-installer
 cd ~/steamos-waydroid-installer
 chmod +x steamos-waydroid-installer.sh
 ./steamos-waydroid-installer.sh
+```
+
+Decky - [Download](https://decky.xyz/download) - [Website](https://decky.xyz/) - [Instruction](https://wiki.deckbrew.xyz/en/user-guide/install) - [Repository](https://github.com/SteamDeckHomebrew/decky-installer)
+
+```bash
+rm -f /tmp/user_install_script.sh
+if curl -S -s -L -O --output-dir /tmp/ --connect-timeout 60 https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/user_install_script.sh; then
+  bash /tmp/user_install_script.sh
+else
+  echo "Something went wrong, please report this if it is a bug"
+  read
+fi
 ```
