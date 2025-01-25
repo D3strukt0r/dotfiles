@@ -1,5 +1,5 @@
 {
-  "__VERSION__": "198",
+  "__VERSION__": "212",
   "Main": {
     "Controls": [
       {
@@ -122,7 +122,7 @@
                   "SelectedHysteresis": 3.0,
                   "SelectedResponseTime": 3,
                   "SelectedTempSource": {
-                    "Identifier": "/intelcpu/0/temperature/49",
+                    "Identifier": "/intelcpu/0/temperature/0",
                     "IsHidden": false,
                     "Name": "Core Max",
                     "NickName": "Core Max"
@@ -205,7 +205,7 @@
                   "SelectedHysteresis": 3.0,
                   "SelectedResponseTime": 3,
                   "SelectedTempSource": {
-                    "Identifier": "/intelcpu/0/temperature/49",
+                    "Identifier": "/intelcpu/0/temperature/0",
                     "IsHidden": false,
                     "Name": "Core Max",
                     "NickName": "Core Max"
@@ -377,7 +377,7 @@
         "SelectedHysteresis": 3.0,
         "SelectedResponseTime": 3,
         "SelectedTempSource": {
-          "Identifier": "/intelcpu/0/temperature/49",
+          "Identifier": "/intelcpu/0/temperature/0",
           "IsHidden": false,
           "Name": "Core Max",
           "NickName": "Core Max"
@@ -420,7 +420,7 @@
             "SelectedHysteresis": 3.0,
             "SelectedResponseTime": 3,
             "SelectedTempSource": {
-              "Identifier": "/intelcpu/0/temperature/49",
+              "Identifier": "/intelcpu/0/temperature/0",
               "IsHidden": false,
               "Name": "Core Max",
               "NickName": "Core Max"
@@ -477,7 +477,7 @@
                 "SelectedHysteresis": 3.0,
                 "SelectedResponseTime": 3,
                 "SelectedTempSource": {
-                  "Identifier": "/intelcpu/0/temperature/49",
+                  "Identifier": "/intelcpu/0/temperature/0",
                   "IsHidden": false,
                   "Name": "Core Max",
                   "NickName": "Core Max"
@@ -532,7 +532,7 @@
             "SelectedHysteresis": 3.0,
             "SelectedResponseTime": 3,
             "SelectedTempSource": {
-              "Identifier": "/intelcpu/0/temperature/49",
+              "Identifier": "/intelcpu/0/temperature/0",
               "IsHidden": false,
               "Name": "Core Max",
               "NickName": "Core Max"
@@ -589,7 +589,7 @@
                 "SelectedHysteresis": 3.0,
                 "SelectedResponseTime": 3,
                 "SelectedTempSource": {
-                  "Identifier": "/intelcpu/0/temperature/49",
+                  "Identifier": "/intelcpu/0/temperature/0",
                   "IsHidden": false,
                   "Name": "Core Max",
                   "NickName": "Core Max"

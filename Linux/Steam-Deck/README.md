@@ -86,6 +86,7 @@ flatpak install --system flathub net.lutris.Lutris
 flatpak install --system flathub io.github.philipk.boilr
 flatpak install --system flathub net.davidotek.pupgui2 # ProtonUp-Qt
 flatpak install --system flathub com.github.Matoking.protontricks
+flatpak install --system flathub com.github.mtkennerly.ludusavi
 
 # Emulators
 flatpak install --system flathub app.xemu.xemu # Xbox 360 Emulator
