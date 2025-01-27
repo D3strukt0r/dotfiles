@@ -13,9 +13,10 @@ class Flatpak(dotbot.Plugin):
         success = True
 
         # Read file defined in "data.list" and install all packages
-        with open(data.list) as f:
+        with open(data["list"]) as f:
             for line in f:
                 try:
+                    self._log.info('Installing package: '+line)
                     subprocess.run(['flatpak install --noninteractive '+line], shell=True, check=True)
                 except subprocess.CalledProcessError:
                     success = False
