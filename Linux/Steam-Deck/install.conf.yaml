@@ -11,7 +11,6 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
-# Link to flatpaks.txt
 - flatpak:
     list: flatpaks.txt
 
