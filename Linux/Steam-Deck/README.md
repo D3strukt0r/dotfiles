@@ -67,7 +67,6 @@ curl -sL https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/do
 An Anime Game Launcher - [Repository](https://github.com/an-anime-team/an-anime-game-launcher) - [Build Repository](https://github.com/an-anime-team/flatpak-builds)
 
 ```bash
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists launcher.moe https://gol.launcher.moe/gol.launcher.moe.flatpakrepo
 flatpak install launcher.moe moe.launcher.an-anime-game-launcher
 ```
