@@ -1,0 +1,4 @@
+com.brave.Browser
+com.protonvpn.www
+ch.protonmail.protonmail-bridge
+com.calibre_ebook.calibre

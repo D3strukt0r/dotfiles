@@ -17,6 +17,9 @@ For first-time setup
 
 ```sh
 git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles/Linux/Steam-Deck && ./install
+# restore ssh & gpg
+# gpg --import-options import-restore --import private.gpg
+git remote set-url origin git@github.com:D3strukt0r/dotfiles.git
 ```
 
 Run dotbot to link config files
@@ -25,8 +28,10 @@ Run dotbot to link config files
 cd ~/.dotfiles/Linux/Steam-Deck && git pull && ./install
 ```
 
-```bash
-flatpak list --app --system --columns=application | tr '\n' ' '
+Update list of installed flatpaks
+
+```sh
+flatpak list --app --columns=application > flatpaks.txt
 ```
 
 #### Manual Configuration (CLI)

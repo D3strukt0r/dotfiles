@@ -27,3 +27,7 @@ end_of_line = crlf
 [*.{markdown,md}]
 # Trailing whitespace means manual linebreaks in Markdown thus is not trimmable
 trim_trailing_whitespace = false
+
+[*.py]
+indent_size = 4
+tab_width = 4

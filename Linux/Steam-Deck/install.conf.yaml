@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    #~/.gitconfig: .gitconfig
+    ~/.gitignore_global: ../General/.gitignore_global
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+# Link to flatpaks.txt
+- flatpak:
+    list: flatpaks.txt
+
+# curl -s https://raw.githubusercontent.com/basherpm/basher/master/install.sh | bash
+# basher install pforret/bashew
