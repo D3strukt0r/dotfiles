@@ -12,7 +12,6 @@ com.heroicgameslauncher.hgl
 com.jetbrains.PhpStorm
 com.mastermindzh.tidal-hifi
 com.moonlight_stream.Moonlight
-com.onepassword.OnePassword
 com.protonvpn.www
 com.prusa3d.PrusaSlicer
 com.rustdesk.RustDesk
@@ -29,7 +28,6 @@ io.github.shiiion.primehack
 io.neovim.nvim
 md.obsidian.Obsidian
 me.kozec.syncthingtk
-moe.launcher.an-anime-game-launcher
 net.davidotek.pupgui2
 net.kuribo64.melonDS
 net.lutris.Lutris
