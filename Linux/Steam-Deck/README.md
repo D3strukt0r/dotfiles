@@ -21,7 +21,7 @@ git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles/L
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 # copy ssh keys from backup
-chmod 600 ~/.ssh/id_ed25519
+chmod 600 ~/.ssh/id_ed25519_personal
 
 # copy gpg keys from backup
 gpg --import-options import-restore --import private.gpg

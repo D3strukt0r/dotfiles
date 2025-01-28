@@ -5,6 +5,9 @@
 - clean: ['~']
 
 - link:
+    ~/.ssh/config:
+        path: .ssh/config
+        create: true
     ~/.gitconfig: .gitconfig
     ~/.gitignore_global: ../General/.gitignore_global
 
