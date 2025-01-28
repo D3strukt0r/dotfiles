@@ -112,3 +112,9 @@ An Anime Game Launcher - [Repository](https://github.com/an-anime-team/an-anime-
 flatpak remote-add --if-not-exists launcher.moe https://gol.launcher.moe/gol.launcher.moe.flatpakrepo
 flatpak install launcher.moe moe.launcher.an-anime-game-launcher
 ```
+
+CryoUtilities (Steam Deck Utilities) - [Repository](https://github.com/CryoByte33/steam-deck-utilities)
+
+```bash
+curl -sL https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
+```
