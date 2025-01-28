@@ -165,6 +165,7 @@ winget install --id Rem0o.FanControl --exact --source winget
 winget install --id File-New-Project.EarTrumpet --exact --source winget
 winget install --id SomePythonThings.ElevenClock --exact --source winget
 winget install --id Levitsky.FontBase --exact --source winget
+winget install --id RustDesk.RustDesk --exact --source winget
 
 # Crypto
 winget install --id LedgerHQ.LedgerLive --exact --source winget
