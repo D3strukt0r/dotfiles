@@ -29,8 +29,6 @@ gpg --import-options import-restore --import private.gpg
 git remote set-url origin git@github.com:D3strukt0r/dotfiles.git
 ```
 
-Use Brave to setup the KDE Wallet before setting up other application that need a password store
-
 Run dotbot to link config files
 
 ```sh
@@ -52,11 +50,10 @@ flatpak install https://downloads.1password.com/linux/flatpak/1Password.flatpakr
 
 Update password store (see [Electron Docs](https://www.electronjs.org/docs/latest/api/safe-storage#safestoragegetselectedstoragebackend-linux))
 
-```bash
-cp /var/lib/flatpak/app/ch.protonmail.protonmail-bridge/current/active/export/share/applications/ch.protonmail.protonmail-bridge.desktop '~/.local/share/applications/ProtonMail Bridge.desktop'
+Use Brave to setup the KDE Wallet before setting up other application that need a password store
 
-# In FlatSeal adjust "ch.protonmail.protonmail-bridge" to include "--password-store="gnome-libsecret"" in the command
-flatpak override --env=SIGNAL_PASSWORD_STORE=gnome_libsecret org.signal.Signal
+```bash
+sudo flatpak override --env=SIGNAL_PASSWORD_STORE=gnome-libsecret org.signal.Signal
 ```
 
 Emu Deck - [Download](https://www.emudeck.com/EmuDeck.desktop) - [Website](https://www.emudeck.com/)  - [Help Page](https://emudeck.github.io/how-to-install-emudeck/steamos/)

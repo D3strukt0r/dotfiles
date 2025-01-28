@@ -96,3 +96,5 @@ $RECYCLE.BIN/
 
 # Generated when chocolatey overwrites backup
 packages.config.backup
+
+__pycache__/
