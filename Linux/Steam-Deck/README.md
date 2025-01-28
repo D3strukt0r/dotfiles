@@ -53,7 +53,7 @@ Update password store (see [Electron Docs](https://www.electronjs.org/docs/lates
 Use Brave to setup the KDE Wallet before setting up other application that need a password store
 
 ```bash
-cp /var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop ~/.local/share/applications/Visual\ Studio\ Code.desktop
+cp /var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
 # Add "--password-store=gnome-libsecret" to arguments (https://github.com/flathub/com.visualstudio.code/issues/415)
 sudo flatpak override --env=SIGNAL_PASSWORD_STORE=gnome-libsecret org.signal.Signal
 ```
