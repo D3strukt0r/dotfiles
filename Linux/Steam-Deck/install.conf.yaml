@@ -5,7 +5,7 @@
 - clean: ['~']
 
 - link:
-    #~/.gitconfig: .gitconfig
+    ~/.gitconfig: .gitconfig
     ~/.gitignore_global: ../General/.gitignore_global
 
 - shell:

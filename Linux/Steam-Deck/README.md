@@ -18,15 +18,18 @@ For first-time setup
 ```sh
 git clone https://github.com/D3strukt0r/dotfiles ~/.dotfiles && cd ~/.dotfiles/Linux/Steam-Deck && ./install
 
-# restore ssh & gpg
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 # copy ssh keys from backup
 chmod 600 ~/.ssh/id_ed25519
+
 # copy gpg keys from backup
 gpg --import-options import-restore --import private.gpg
+
 git remote set-url origin git@github.com:D3strukt0r/dotfiles.git
 ```
+
+Use Brave to setup the KDE Wallet before setting up other application that need a password store
 
 Run dotbot to link config files
 
