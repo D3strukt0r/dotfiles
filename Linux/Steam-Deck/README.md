@@ -37,11 +37,17 @@ flatpak list --app --columns=application > flatpaks.txt
 #### Manual Configuration (CLI)
 
 ```bash
-# Office
+# 1Password
 flatpak install https://downloads.1password.com/linux/flatpak/1Password.flatpakref
+````
 
-# Messaging
-flatpak override --env=SIGNAL_PASSWORD_STORE=kwallet org.signal.Signal
+Update password store (see [Electron Docs](https://www.electronjs.org/docs/latest/api/safe-storage#safestoragegetselectedstoragebackend-linux))
+
+```bash
+cp /var/lib/flatpak/app/ch.protonmail.protonmail-bridge/current/active/export/share/applications/ch.protonmail.protonmail-bridge.desktop '~/.local/share/applications/ProtonMail Bridge.desktop'
+
+# In FlatSeal adjust "ch.protonmail.protonmail-bridge" to include "--password-store="gnome-libsecret"" in the command
+flatpak override --env=SIGNAL_PASSWORD_STORE=gnome_libsecret org.signal.Signal
 ```
 
 Emu Deck - [Download](https://www.emudeck.com/EmuDeck.desktop) - [Website](https://www.emudeck.com/)  - [Help Page](https://emudeck.github.io/how-to-install-emudeck/steamos/)

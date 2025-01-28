@@ -46,3 +46,4 @@ org.libretro.RetroArch
 org.ppsspp.PPSSPP
 org.ryujinx.Ryujinx
 org.scummvm.ScummVM
+org.kde.kwalletmanager5
