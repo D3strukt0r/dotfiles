@@ -78,6 +78,34 @@ Decky - [Download](https://decky.xyz/download) - [Website](https://decky.xyz/) -
 curl -sL https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/user_install_script.sh | sudo bash
 ```
 
+And install extensions
+
+* SteamGridDB
+* CSS Loader
+* ProtonDB Badges
+* Animation Changer
+* PowerTools
+* EmuDecky
+* Audio Loader
+* AutoFlatpaks
+* DeckMTP
+* HLTB for Deck
+* Pause Games
+* Emuchievements
+* IsThereAnyDeal for Deck
+* MagicPods
+* MoonDeck
+* Decky Cloud Save
+* Quick Launch
+* TunnelDeck
+* CheatDeck
+* MusicControl
+* Controller Tools
+* KDE Connect
+* Shotty
+* Syncthing
+* PlayCount
+
 An Anime Game Launcher - [Repository](https://github.com/an-anime-team/an-anime-game-launcher) - [Build Repository](https://github.com/an-anime-team/flatpak-builds)
 
 ```bash
