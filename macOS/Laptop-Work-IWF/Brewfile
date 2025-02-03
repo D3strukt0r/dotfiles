@@ -32,7 +32,7 @@ brew "git"
 brew "git-flow"
 brew "gnupg"
 brew "go"
-brew "pkg-config"
+brew "pkgconf"
 brew "gobject-introspection"
 brew "hadolint"
 brew "helm"
@@ -90,8 +90,9 @@ cask "onedrive"
 cask "orbstack"
 cask "pika"
 cask "postman"
-cask "protonmail-bridge"
+cask "proton-mail-bridge"
 cask "protonvpn"
+cask "rustdesk"
 cask "scroll-reverser"
 cask "signal"
 cask "slack"
@@ -109,6 +110,7 @@ mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft Word", id: 462054704
 mas "Say No to Notch", id: 1639306886
+mas "Tailscale", id: 1475387142
 mas "TextSniper", id: 1528890965
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
