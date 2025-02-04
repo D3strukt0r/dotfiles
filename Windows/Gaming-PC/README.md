@@ -187,6 +187,8 @@ winget install --id EpicGames.EpicGamesLauncher --exact --source winget
 winget install --id Peppy.Osu! --exact --source winget
 winget install --id Mojang.MinecraftLauncher --exact --source winget
 winget install --id LizardByte.Sunshine --exact --source winget
+winget install --id Playnite.Playnite --exact --source winget
+# And install Sunshine Extension: playnite://playnite/installaddon/SunshineAppExport
 
 # Development Tools
 winget install --id JetBrains.Toolbox --exact --source winget
