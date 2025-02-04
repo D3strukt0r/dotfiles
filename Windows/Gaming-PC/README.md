@@ -32,12 +32,12 @@ For getting updates
 cd "$HOME\.dotfiles\Windows\Gaming-PC" && git pull && .\install.ps1
 ```
 
-### Manual Steps
-
 ```powershell
-winget install --id Microsoft.VisualStudioCode --exact --source winget
-winget install --id JanDeDobbeleer.OhMyPosh --exact --source winget
+winget export packages.json --include-versions
+winget import --import-file packages.json --ignore-versions --accept-package-agreements --accept-source-agreements
 ```
+
+### Manual Steps
 
 Then install the font `Meslo`
 
@@ -101,110 +101,29 @@ winget settings --enable InstallerHashOverride
 Now install the rest of the packages
 
 ```powershell
-winget install --id AgileBits.1Password --exact --source winget
-winget install --id 7zip.7zip --exact --source winget
-winget install --name "Affinity Photo 2" --exact --source msstore
-winget install --name "Affinity Designer 2" --exact --source msstore
-winget install --id Audacity.Audacity --exact --source winget
-winget install --id BlenderFoundation.Blender --exact --source winget
-winget install --id Brave.Brave --exact --source winget
-winget install --name "Adobe Creative Cloud" --exact --source msstore
 winget install --id Adobe.Acrobat.Reader.64-bit --exact --source winget
-winget install --id Elgato.ControlCenter --exact --source winget
-winget install --id Discord.Discord --exact --source winget
-winget install --id Dropbox.Dropbox --exact --source winget
-winget install --id flux.flux --exact --source winget # Often has has mismatch because file has no version
-winget install --id Figma.Figma --exact --source winget
 winget install --id Nvidia.Broadcast --exact --source winget # Will continue download while installing
-winget install --id HandBrake.HandBrake --exact --source winget
-# Requires
-# - Microsoft.DotNet.DesktopRuntime.8
-winget install --id REALiX.HWiNFO --exact --source winget
-winget install --id Skillbrains.Lightshot --exact --source winget
 winget install --id Microsoft.Office --exact --source winget
-winget install --id Guru3D.Afterburner --exact --source winget
 winget install --id MSI.Kombustor.4 --exact --source winget # TODO: Fix hash mismatch
-winget install --id Notion.Notion --exact --source winget
-winget install --id OBSProject.OBSStudio --exact --source winget # Requires  Microsoft.VCRedist.2015+.x64
-winget install --id PrivateInternetAccess.PrivateInternetAccess --exact --source winget
-winget install --id Proton.ProtonVPN --exact --source winget
-winget install --id Microsoft.PowerToys --exact --source winget
-winget install --id Proton.ProtonMailBridge --exact --source winget
-winget install --id OpenWhisperSystems.Signal --exact --source winget
-winget install --id SlackTechnologies.Slack --exact --source winget
-winget install --id Telegram.TelegramDesktop --exact --source winget
-winget install --id Mozilla.Thunderbird --exact --source winget
-winget install --id Microsoft.VisualStudio.2022.Community --exact --source winget
-winget install --id Unity.UnityHub --exact --source winget
-winget install --id VideoLAN.VLC --exact --source winget
-winget install --id WinSCP.WinSCP --exact --source winget
-winget install --id Zoom.Zoom --exact --source winget
-winget install --id Rufus.Rufus --exact --source winget
-winget install --id Balena.Etcher --exact --source winget
-winget install --id LocalSend.LocalSend --exact --source winget
 
 # Drivers & Control
 winget install --id Nvidia.GeForceExperience --exact --source winget
 # winget install --id Corsair.iCUE.5 --exact --source winget # Takes a moment to show up, maybe restart Windows
 # Don't install iCUE from winget, it's kinda broken, program doesn't exist?? Use https://www3.corsair.com/software/CUE_V5/public/modules/windows/installer/Install%20iCUE.exe
-winget install --id Intel.IntelDriverAndSupportAssistant --exact --source winget
-winget install --id Logitech.GHUB --exact --source winget
-winget install --id LianLi.LConnect3 --exact --source winget
 winget install --id RazerInc.RazerInstaller --exact --source winget
-winget install --id SteelSeries.GG --exact --source winget
-winget install --id Elgato.StreamDeck --exact --source winget
-# Requires
-# - Microsoft.VCRedist.2015+.x64
-winget install --id Xencelabs.Driver --exact --source winget
-winget install --id Rem0o.FanControl --exact --source winget
 # winget install --id Samsung.SamsungMagician --exact --source winget # For Samsung Magician, the package was removed (https://github.com/microsoft/winget-pkgs/pull/164032) use:
 # -> https://semiconductor.samsung.com/consumer-storage/support/tools/
 # -> https://download.semiconductor.samsung.com/resources/software-resources/Samsung_Magician_Installer_Official_8.1.0.800.exe
 
-# PC Tools
-winget install --id File-New-Project.EarTrumpet --exact --source winget
-winget install --id SomePythonThings.ElevenClock --exact --source winget
-winget install --id Levitsky.FontBase --exact --source winget
-winget install --id RustDesk.RustDesk --exact --source winget
-
-# Crypto
-winget install --id LedgerHQ.LedgerLive --exact --source winget
-
-# 3D Printing
-winget install --id Ultimaker.Cura --exact --source winget
-
-# Games
-winget install --id Ryochan7.DS4Windows --exact --source winget
-# Requires:
-# - Microsoft.VCRedist.2015+.x64
-# - Microsoft.DotNet.DesktopRuntime.8
-# - ViGEm.ViGEmBus
-# - ViGEm.HidHide
-winget install --id Valve.Steam --exact --source winget
-winget install --id EpicGames.EpicGamesLauncher --exact --source winget
 # Install Genshin Impact on Epic Games
 # Install Rocket League on Epic Games
 winget install --id Peppy.Osu! --exact --source winget
-winget install --id Mojang.MinecraftLauncher --exact --source winget
-winget install --id LizardByte.Sunshine --exact --source winget
-winget install --id Playnite.Playnite --exact --source winget
-# And install Sunshine Extension: playnite://playnite/installaddon/SunshineAppExport
+# Install Sunshine Extension: playnite://playnite/installaddon/SunshineAppExport
 
 # Development Tools
-winget install --id JetBrains.Toolbox --exact --source winget
 # Install Android Studio on JetBrains Hub
 # Install PhpStorm on JetBrains Hub
-winget install --id Docker.DockerDesktop --exact --source winget
-winget install --id Hashicorp.Vagrant --exact --source winget
-winget install --id Oracle.VirtualBox --exact --source winget
-winget install --id FiloSottile.mkcert --exact --source winget
-winget install --id Axosoft.GitKraken --exact --source winget
-winget install --id GnuPG.Gpg4win --exact --source winget
 # Restore GPG keys from backup
-winget install --id CoreyButler.NVMforWindows --exact --source winget
-winget install --id Oracle.JDK.21 --exact --source winget
-winget install --id Postman.Postman --exact --source winget
-winget install --id Rustlang.Rustup --exact --source winget
 
 # Reload PATH then (https://stackoverflow.com/a/31845512)
 nvm install lts
