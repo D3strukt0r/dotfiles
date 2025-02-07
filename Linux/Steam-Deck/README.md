@@ -61,6 +61,8 @@ sudo flatpak override --env=SIGNAL_PASSWORD_STORE=gnome-libsecret org.signal.Sig
 Emu Deck - [Download](https://www.emudeck.com/EmuDeck.desktop) - [Website](https://www.emudeck.com/)  - [Help Page](https://emudeck.github.io/how-to-install-emudeck/steamos/)
 
 ```bash
+ln -s . ~/EmuVirtual
+# Select "Custom Directory" during install and choose ~/EmuVirtual
 curl -sL https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash
 ```
 
