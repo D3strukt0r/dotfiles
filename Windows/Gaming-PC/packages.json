@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-02-04T21:36:29.853-00:00",
+	"CreationDate" : "2025-02-07T20:12:47.319-00:00",
 	"Sources" : 
 	[
 		{
@@ -23,16 +23,20 @@
 					"Version" : "3.7.1"
 				},
 				{
+					"PackageIdentifier" : "Betterbird.Betterbird",
+					"Version" : "128.7.0"
+				},
+				{
 					"PackageIdentifier" : "Ryochan7.DS4Windows",
 					"Version" : "Unknown"
 				},
 				{
 					"PackageIdentifier" : "Docker.DockerDesktop",
-					"Version" : "4.37.1"
+					"Version" : "4.38.0"
 				},
 				{
 					"PackageIdentifier" : "Git.Git",
-					"Version" : "2.47.1"
+					"Version" : "2.47.1.2"
 				},
 				{
 					"PackageIdentifier" : "REALiX.HWiNFO",
@@ -44,15 +48,11 @@
 				},
 				{
 					"PackageIdentifier" : "Mozilla.Firefox",
-					"Version" : "134.0.2"
-				},
-				{
-					"PackageIdentifier" : "Mozilla.Thunderbird.de",
-					"Version" : "128.6.0"
+					"Version" : "135.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive",
-					"Version" : "25.004.0109.0002"
+					"Version" : "25.005.0112.0003"
 				},
 				{
 					"PackageIdentifier" : "Proton.ProtonMailBridge",
@@ -76,7 +76,7 @@
 				},
 				{
 					"PackageIdentifier" : "TeamViewer.TeamViewer",
-					"Version" : "15.61.4"
+					"Version" : "15.62.4"
 				},
 				{
 					"PackageIdentifier" : "Unity.UnityHub",
@@ -100,7 +100,7 @@
 				},
 				{
 					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh",
-					"Version" : "24.18.1"
+					"Version" : "24.19.0"
 				},
 				{
 					"PackageIdentifier" : "Elgato.StreamDeck",
@@ -113,6 +113,14 @@
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64",
 					"Version" : "10.0.40219"
+				},
+				{
+					"PackageIdentifier" : "Oracle.JDK.21",
+					"Version" : "21.0.6.0"
+				},
+				{
+					"PackageIdentifier" : "Elgato.ControlCenter",
+					"Version" : "1.8.1.654"
 				},
 				{
 					"PackageIdentifier" : "Logitech.GHUB",
@@ -143,11 +151,7 @@
 					"Version" : "Unknown"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerShell",
-					"Version" : "7.4.6.0"
-				},
-				{
-					"PackageIdentifier" : "Adobe.Acrobat.Pro",
+					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit",
 					"Version" : "24.005.20399"
 				},
 				{
@@ -155,16 +159,16 @@
 					"Version" : "9.23.1019"
 				},
 				{
-					"PackageIdentifier" : "Elgato.ControlCenter",
-					"Version" : "1.7.2.624"
-				},
-				{
-					"PackageIdentifier" : "Oracle.JDK.21",
-					"Version" : "21.0.5.0"
+					"PackageIdentifier" : "Oracle.VirtualBox",
+					"Version" : "7.1.6"
 				},
 				{
 					"PackageIdentifier" : "Elgato.4KCaptureUtility",
 					"Version" : "1.7.14.10283"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell",
+					"Version" : "7.5.0.0"
 				},
 				{
 					"PackageIdentifier" : "BlenderFoundation.Blender",
@@ -172,15 +176,11 @@
 				},
 				{
 					"PackageIdentifier" : "Kitware.CMake",
-					"Version" : "3.31.4"
+					"Version" : "3.31.5"
 				},
 				{
 					"PackageIdentifier" : "Elgato.CameraHub",
 					"Version" : "1.11.0.4066"
-				},
-				{
-					"PackageIdentifier" : "Oracle.VirtualBox",
-					"Version" : "7.1.4"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community",
@@ -192,7 +192,7 @@
 				},
 				{
 					"PackageIdentifier" : "Dropbox.Dropbox",
-					"Version" : "217.3.4374"
+					"Version" : "218.3.4216"
 				},
 				{
 					"PackageIdentifier" : "GnuPG.GnuPG",
@@ -205,6 +205,10 @@
 				{
 					"PackageIdentifier" : "HandBrake.HandBrake",
 					"Version" : "1.9.0"
+				},
+				{
+					"PackageIdentifier" : "LibreWolf.LibreWolf",
+					"Version" : "134.0.2-1"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge",
@@ -236,7 +240,11 @@
 				},
 				{
 					"PackageIdentifier" : "Rem0o.FanControl",
-					"Version" : "212"
+					"Version" : "214"
+				},
+				{
+					"PackageIdentifier" : "Python.Launcher",
+					"Version" : "> 3.12.0"
 				},
 				{
 					"PackageIdentifier" : "Skillbrains.Lightshot",
@@ -253,10 +261,6 @@
 				{
 					"PackageIdentifier" : "EpicGames.EpicGamesLauncher",
 					"Version" : "1.3.93.0"
-				},
-				{
-					"PackageIdentifier" : "Python.Launcher",
-					"Version" : "> 3.12.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86",
@@ -296,15 +300,15 @@
 				},
 				{
 					"PackageIdentifier" : "Notion.Notion",
-					"Version" : "4.3.0"
+					"Version" : "4.5.0"
 				},
 				{
 					"PackageIdentifier" : "OpenWhisperSystems.Signal",
-					"Version" : "7.40.1"
+					"Version" : "7.41.0"
 				},
 				{
 					"PackageIdentifier" : "Brave.Brave",
-					"Version" : "132.1.74.48"
+					"Version" : "133.1.75.175"
 				},
 				{
 					"PackageIdentifier" : "Discord.Discord",
@@ -312,7 +316,7 @@
 				},
 				{
 					"PackageIdentifier" : "Figma.Figma",
-					"Version" : "124.7.4"
+					"Version" : "125.0.7"
 				},
 				{
 					"PackageIdentifier" : "Figma.FigmaAgent",
@@ -332,7 +336,7 @@
 				},
 				{
 					"PackageIdentifier" : "Postman.Postman",
-					"Version" : "11.28.4"
+					"Version" : "11.31.4"
 				},
 				{
 					"PackageIdentifier" : "Rufus.Rufus",
@@ -344,15 +348,15 @@
 				},
 				{
 					"PackageIdentifier" : "Spotify.Spotify",
-					"Version" : "1.2.53.440.g7b2f582a"
+					"Version" : "1.2.56.502.ga68d2d4f"
 				},
 				{
 					"PackageIdentifier" : "JetBrains.Toolbox",
-					"Version" : "2.5.2.35332"
+					"Version" : "2.5.3.37797"
 				},
 				{
 					"PackageIdentifier" : "Ventoy.Ventoy",
-					"Version" : "1.0.99"
+					"Version" : "1.1.00"
 				},
 				{
 					"PackageIdentifier" : "Zoom.Zoom.EXE",
@@ -372,11 +376,11 @@
 				},
 				{
 					"PackageIdentifier" : "ppy.osu",
-					"Version" : "2025.101.0"
+					"Version" : "2025.118.3"
 				},
 				{
 					"PackageIdentifier" : "SlackTechnologies.Slack",
-					"Version" : "4.42.115"
+					"Version" : "4.42.117"
 				},
 				{
 					"PackageIdentifier" : "WinSCP.WinSCP",
@@ -387,24 +391,24 @@
 					"Version" : "1.16.1"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerToys",
-					"Version" : "0.87.1"
-				},
-				{
 					"PackageIdentifier" : "Telegram.TelegramDesktop",
-					"Version" : "5.10.3"
+					"Version" : "5.10.7"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode",
-					"Version" : "1.96.4"
+					"Version" : "1.97.0"
+				},
+				{
+					"PackageIdentifier" : "Python.Python.3.12",
+					"Version" : "3.12.9"
 				},
 				{
 					"PackageIdentifier" : "SomePythonThings.ElevenClock",
 					"Version" : "4.4.1.1"
 				},
 				{
-					"PackageIdentifier" : "Python.Python.3.12",
-					"Version" : "3.12.8"
+					"PackageIdentifier" : "Microsoft.PowerToys",
+					"Version" : "0.88.0"
 				},
 				{
 					"PackageIdentifier" : "File-New-Project.EarTrumpet",
@@ -412,7 +416,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Teams",
-					"Version" : "24335.208.3315.1951"
+					"Version" : "25007.607.3371.8436"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller",
@@ -424,7 +428,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.UI.Xaml.2.8",
-					"Version" : "8.2310.30001.0"
+					"Version" : "8.2501.31001.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14",
@@ -436,7 +440,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal",
-					"Version" : "1.21.3231.0"
+					"Version" : "1.22.10352.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WSL",
