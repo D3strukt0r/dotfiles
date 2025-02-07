@@ -62,8 +62,9 @@ Emu Deck - [Download](https://www.emudeck.com/EmuDeck.desktop) - [Website](https
 
 ```bash
 ln -s . ~/EmuVirtual
-# Select "Custom Directory" during install and choose ~/EmuVirtual
 curl -sL https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash
+# Select "Custom Directory" during install and choose ~/EmuVirtual
+# Restore "yuzu.AppImage" to "~/Applications/yuzu.AppImage" and in EmuDeck set it up by clicking "Reset configuration"
 ```
 
 Waydroid Installer - [Repository](https://github.com/ryanrudolfoba/SteamOS-Waydroid-Installer)
