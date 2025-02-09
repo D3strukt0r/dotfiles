@@ -121,3 +121,11 @@ CryoUtilities (Steam Deck Utilities) - [Repository](https://github.com/CryoByte3
 ```bash
 curl -sL https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
 ```
+
+Homebrew - [Website](https://brew.sh/)
+
+Note: Will install to `/home/linuxbrew/.linuxbrew` which is RW and not affected by SteamOS updates.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
