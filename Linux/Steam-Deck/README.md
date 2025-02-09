@@ -126,6 +126,9 @@ Homebrew - [Website](https://brew.sh/)
 
 Note: Will install to `/home/linuxbrew/.linuxbrew` which is RW and not affected by SteamOS updates.
 
+[How to install](https://gist.github.com/uyjulian/105397c59e95f79f488297bb08c39146)
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'if [ $(basename $(printf "%s" "$(ps -p $(ps -p $$ -o ppid=) -o cmd=)" | cut --delimiter " " --fields 1)) = konsole ] ; then '$'\n''eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'$'\n''fi'$'\n' >> ~/.bash_profile
 ```
