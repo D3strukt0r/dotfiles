@@ -132,3 +132,9 @@ Note: Will install to `/home/linuxbrew/.linuxbrew` which is RW and not affected 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'if [ $(basename $(printf "%s" "$(ps -p $(ps -p $$ -o ppid=) -o cmd=)" | cut --delimiter " " --fields 1)) = konsole ] ; then '$'\n''eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'$'\n''fi'$'\n' >> ~/.bash_profile
 ```
+
+In `Konsole` settings, create a new profile, and set the command to `/bin/bash -l`, then install following packages
+
+```bash
+brew install glibc gcc
+```
