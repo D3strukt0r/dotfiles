@@ -42,7 +42,6 @@ org.libreoffice.LibreOffice
 org.libretro.RetroArch
 org.localsend.localsend_app
 org.ppsspp.PPSSPP
-org.ryujinx.Ryujinx
 org.scummvm.ScummVM
 org.signal.Signal
 org.telegram.desktop
