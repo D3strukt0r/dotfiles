@@ -67,6 +67,17 @@ curl -sL https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh
 # Restore "yuzu.AppImage" to "~/Applications/yuzu.AppImage" and in EmuDeck set it up by clicking "Reset configuration"
 ```
 
+Emu Deck Export/Import Tool - [Website](https://emudeck.github.io/tools/steamos/import-and-export-tool/)
+
+```bash
+curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/export.sh | bash
+```
+
+```bash
+curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/import.sh | bash
+```
+
+
 Waydroid Installer - [Repository](https://github.com/ryanrudolfoba/SteamOS-Waydroid-Installer)
 
 ```bash
