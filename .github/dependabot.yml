@@ -10,8 +10,6 @@ updates:
     directory: "/"
     labels:
       - "dependabot :robot:"
-    reviewers:
-      - "D3strukt0r"
     schedule:
       interval: "weekly" # on monday
       time: "16:00"
@@ -22,8 +20,6 @@ updates:
     directory: "/macOS/Laptop-Manuele/Library/pnpm/global/5"
     labels:
       - "dependabot :robot:"
-    reviewers:
-      - "D3strukt0r"
     schedule:
       interval: "weekly" # on monday
       time: "16:00"
@@ -32,8 +28,6 @@ updates:
     directory: "/macOS/Laptop-Work-IWF/Library/pnpm/global/5"
     labels:
       - "dependabot :robot:"
-    reviewers:
-      - "D3strukt0r"
     schedule:
       interval: "weekly" # on monday
       time: "16:00"
