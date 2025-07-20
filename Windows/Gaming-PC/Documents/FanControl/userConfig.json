@@ -1,5 +1,5 @@
 {
-  "__VERSION__": "212",
+  "__VERSION__": "228",
   "Main": {
     "Controls": [
       {
@@ -19,8 +19,8 @@
           "Name": "Fan #2",
           "NickName": "CHA_FAN?"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": null,
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -43,8 +43,8 @@
           "Name": "Fan #7",
           "NickName": "CHA_FAN?"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": null,
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -67,8 +67,8 @@
           "Name": "Fan #1",
           "NickName": "CHA_FAN?"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": null,
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -91,8 +91,8 @@
           "Name": "Fan #5",
           "NickName": "Case (Front) (CHA_FAN4)"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": {
           "CommandMode": 0,
           "IsHidden": false,
@@ -102,7 +102,7 @@
               "CommandMode": 0,
               "IsHidden": false,
               "Name": "Min Fan Speed",
-              "Percent": 20.0
+              "Percent": 20
             },
             {
               "CommandMode": 0,
@@ -111,16 +111,19 @@
               "SelectedFanCurves": [
                 {
                   "CommandMode": 0,
-                  "IgnoreHysteresisAtLimits": true,
+                  "HysteresisConfig": {
+                    "HysteresisValueDown": 3,
+                    "HysteresisValueUp": 3,
+                    "IgnoreHysteresisAtLimits": true,
+                    "ResponseTimeDown": 3,
+                    "ResponseTimeUp": 3
+                  },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 65.0,
+                  "MaximumTemperature": 65,
                   "MinimumFanSpeed": 20,
-                  "MinimumTemperature": 35.0,
+                  "MinimumTemperature": 35,
                   "Name": "CPU",
-                  "OneWayHysteresis": false,
-                  "SelectedHysteresis": 3.0,
-                  "SelectedResponseTime": 3,
                   "SelectedTempSource": {
                     "Identifier": "/intelcpu/0/temperature/0",
                     "IsHidden": false,
@@ -130,16 +133,19 @@
                 },
                 {
                   "CommandMode": 0,
-                  "IgnoreHysteresisAtLimits": true,
+                  "HysteresisConfig": {
+                    "HysteresisValueDown": 3,
+                    "HysteresisValueUp": 3,
+                    "IgnoreHysteresisAtLimits": true,
+                    "ResponseTimeDown": 3,
+                    "ResponseTimeUp": 3
+                  },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 70.0,
+                  "MaximumTemperature": 70,
                   "MinimumFanSpeed": 0,
-                  "MinimumTemperature": 35.0,
+                  "MinimumTemperature": 35,
                   "Name": "GPU",
-                  "OneWayHysteresis": false,
-                  "SelectedHysteresis": 3.0,
-                  "SelectedResponseTime": 3,
                   "SelectedTempSource": {
                     "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                     "IsHidden": false,
@@ -174,8 +180,8 @@
           "Name": "Fan #3",
           "NickName": "Pump (CHA_FAN2)"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": {
           "CommandMode": 0,
           "IsHidden": false,
@@ -190,20 +196,23 @@
                   "CommandMode": 0,
                   "IsHidden": false,
                   "Name": "Min Pump Speed",
-                  "Percent": 50.0
+                  "Percent": 50
                 },
                 {
                   "CommandMode": 0,
-                  "IgnoreHysteresisAtLimits": true,
+                  "HysteresisConfig": {
+                    "HysteresisValueDown": 3,
+                    "HysteresisValueUp": 3,
+                    "IgnoreHysteresisAtLimits": true,
+                    "ResponseTimeDown": 3,
+                    "ResponseTimeUp": 3
+                  },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 65.0,
+                  "MaximumTemperature": 65,
                   "MinimumFanSpeed": 20,
-                  "MinimumTemperature": 35.0,
+                  "MinimumTemperature": 35,
                   "Name": "CPU",
-                  "OneWayHysteresis": false,
-                  "SelectedHysteresis": 3.0,
-                  "SelectedResponseTime": 3,
                   "SelectedTempSource": {
                     "Identifier": "/intelcpu/0/temperature/0",
                     "IsHidden": false,
@@ -213,16 +222,19 @@
                 },
                 {
                   "CommandMode": 0,
-                  "IgnoreHysteresisAtLimits": true,
+                  "HysteresisConfig": {
+                    "HysteresisValueDown": 3,
+                    "HysteresisValueUp": 3,
+                    "IgnoreHysteresisAtLimits": true,
+                    "ResponseTimeDown": 3,
+                    "ResponseTimeUp": 3
+                  },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 70.0,
+                  "MaximumTemperature": 70,
                   "MinimumFanSpeed": 0,
-                  "MinimumTemperature": 35.0,
+                  "MinimumTemperature": 35,
                   "Name": "GPU",
-                  "OneWayHysteresis": false,
-                  "SelectedHysteresis": 3.0,
-                  "SelectedResponseTime": 3,
                   "SelectedTempSource": {
                     "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                     "IsHidden": false,
@@ -237,7 +249,7 @@
               "CommandMode": 0,
               "IsHidden": false,
               "Name": "Max Pump Speed",
-              "Percent": 90.0
+              "Percent": 90
             }
           ],
           "SelectedMixFunction": 3
@@ -263,8 +275,8 @@
           "Name": "Fan #6",
           "NickName": "CHA_FAN?"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": null,
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -287,8 +299,8 @@
           "Name": "Fan #4",
           "NickName": "CHA_FAN?"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": null,
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -311,8 +323,8 @@
           "Name": "Fan 1 - NVIDIA GeForce RTX 3080 Ti",
           "NickName": "GPU (Outer)"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": null,
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -335,8 +347,8 @@
           "Name": "Fan 2 - NVIDIA GeForce RTX 3080 Ti",
           "NickName": "GPU (Inner)"
         },
-        "SelectedCommandStepDown": 8.0,
-        "SelectedCommandStepUp": 8.0,
+        "SelectedCommandStepDown": 8,
+        "SelectedCommandStepUp": 8,
         "SelectedFanCurve": null,
         "SelectedOffset": 0,
         "SelectedStart": 0,
@@ -350,32 +362,35 @@
         "CommandMode": 0,
         "IsHidden": false,
         "Name": "Min Fan Speed",
-        "Percent": 20.0
+        "Percent": 20
       },
       {
         "CommandMode": 0,
         "IsHidden": false,
         "Name": "Min Pump Speed",
-        "Percent": 50.0
+        "Percent": 50
       },
       {
         "CommandMode": 0,
         "IsHidden": false,
         "Name": "Max Pump Speed",
-        "Percent": 90.0
+        "Percent": 90
       },
       {
         "CommandMode": 0,
-        "IgnoreHysteresisAtLimits": true,
+        "HysteresisConfig": {
+          "HysteresisValueDown": 3,
+          "HysteresisValueUp": 3,
+          "IgnoreHysteresisAtLimits": true,
+          "ResponseTimeDown": 3,
+          "ResponseTimeUp": 3
+        },
         "IsHidden": false,
         "MaximumFanSpeed": 100,
-        "MaximumTemperature": 65.0,
+        "MaximumTemperature": 65,
         "MinimumFanSpeed": 20,
-        "MinimumTemperature": 35.0,
+        "MinimumTemperature": 35,
         "Name": "CPU",
-        "OneWayHysteresis": false,
-        "SelectedHysteresis": 3.0,
-        "SelectedResponseTime": 3,
         "SelectedTempSource": {
           "Identifier": "/intelcpu/0/temperature/0",
           "IsHidden": false,
@@ -385,16 +400,19 @@
       },
       {
         "CommandMode": 0,
-        "IgnoreHysteresisAtLimits": true,
+        "HysteresisConfig": {
+          "HysteresisValueDown": 3,
+          "HysteresisValueUp": 3,
+          "IgnoreHysteresisAtLimits": true,
+          "ResponseTimeDown": 3,
+          "ResponseTimeUp": 3
+        },
         "IsHidden": false,
         "MaximumFanSpeed": 100,
-        "MaximumTemperature": 70.0,
+        "MaximumTemperature": 70,
         "MinimumFanSpeed": 0,
-        "MinimumTemperature": 35.0,
+        "MinimumTemperature": 35,
         "Name": "GPU",
-        "OneWayHysteresis": false,
-        "SelectedHysteresis": 3.0,
-        "SelectedResponseTime": 3,
         "SelectedTempSource": {
           "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
           "IsHidden": false,
@@ -409,16 +427,19 @@
         "SelectedFanCurves": [
           {
             "CommandMode": 0,
-            "IgnoreHysteresisAtLimits": true,
+            "HysteresisConfig": {
+              "HysteresisValueDown": 3,
+              "HysteresisValueUp": 3,
+              "IgnoreHysteresisAtLimits": true,
+              "ResponseTimeDown": 3,
+              "ResponseTimeUp": 3
+            },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 65.0,
+            "MaximumTemperature": 65,
             "MinimumFanSpeed": 20,
-            "MinimumTemperature": 35.0,
+            "MinimumTemperature": 35,
             "Name": "CPU",
-            "OneWayHysteresis": false,
-            "SelectedHysteresis": 3.0,
-            "SelectedResponseTime": 3,
             "SelectedTempSource": {
               "Identifier": "/intelcpu/0/temperature/0",
               "IsHidden": false,
@@ -428,16 +449,19 @@
           },
           {
             "CommandMode": 0,
-            "IgnoreHysteresisAtLimits": true,
+            "HysteresisConfig": {
+              "HysteresisValueDown": 3,
+              "HysteresisValueUp": 3,
+              "IgnoreHysteresisAtLimits": true,
+              "ResponseTimeDown": 3,
+              "ResponseTimeUp": 3
+            },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 70.0,
+            "MaximumTemperature": 70,
             "MinimumFanSpeed": 0,
-            "MinimumTemperature": 35.0,
+            "MinimumTemperature": 35,
             "Name": "GPU",
-            "OneWayHysteresis": false,
-            "SelectedHysteresis": 3.0,
-            "SelectedResponseTime": 3,
             "SelectedTempSource": {
               "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
               "IsHidden": false,
@@ -457,7 +481,7 @@
             "CommandMode": 0,
             "IsHidden": false,
             "Name": "Min Fan Speed",
-            "Percent": 20.0
+            "Percent": 20
           },
           {
             "CommandMode": 0,
@@ -466,16 +490,19 @@
             "SelectedFanCurves": [
               {
                 "CommandMode": 0,
-                "IgnoreHysteresisAtLimits": true,
+                "HysteresisConfig": {
+                  "HysteresisValueDown": 3,
+                  "HysteresisValueUp": 3,
+                  "IgnoreHysteresisAtLimits": true,
+                  "ResponseTimeDown": 3,
+                  "ResponseTimeUp": 3
+                },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 65.0,
+                "MaximumTemperature": 65,
                 "MinimumFanSpeed": 20,
-                "MinimumTemperature": 35.0,
+                "MinimumTemperature": 35,
                 "Name": "CPU",
-                "OneWayHysteresis": false,
-                "SelectedHysteresis": 3.0,
-                "SelectedResponseTime": 3,
                 "SelectedTempSource": {
                   "Identifier": "/intelcpu/0/temperature/0",
                   "IsHidden": false,
@@ -485,16 +512,19 @@
               },
               {
                 "CommandMode": 0,
-                "IgnoreHysteresisAtLimits": true,
+                "HysteresisConfig": {
+                  "HysteresisValueDown": 3,
+                  "HysteresisValueUp": 3,
+                  "IgnoreHysteresisAtLimits": true,
+                  "ResponseTimeDown": 3,
+                  "ResponseTimeUp": 3
+                },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 70.0,
+                "MaximumTemperature": 70,
                 "MinimumFanSpeed": 0,
-                "MinimumTemperature": 35.0,
+                "MinimumTemperature": 35,
                 "Name": "GPU",
-                "OneWayHysteresis": false,
-                "SelectedHysteresis": 3.0,
-                "SelectedResponseTime": 3,
                 "SelectedTempSource": {
                   "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                   "IsHidden": false,
@@ -517,20 +547,23 @@
             "CommandMode": 0,
             "IsHidden": false,
             "Name": "Min Pump Speed",
-            "Percent": 50.0
+            "Percent": 50
           },
           {
             "CommandMode": 0,
-            "IgnoreHysteresisAtLimits": true,
+            "HysteresisConfig": {
+              "HysteresisValueDown": 3,
+              "HysteresisValueUp": 3,
+              "IgnoreHysteresisAtLimits": true,
+              "ResponseTimeDown": 3,
+              "ResponseTimeUp": 3
+            },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 65.0,
+            "MaximumTemperature": 65,
             "MinimumFanSpeed": 20,
-            "MinimumTemperature": 35.0,
+            "MinimumTemperature": 35,
             "Name": "CPU",
-            "OneWayHysteresis": false,
-            "SelectedHysteresis": 3.0,
-            "SelectedResponseTime": 3,
             "SelectedTempSource": {
               "Identifier": "/intelcpu/0/temperature/0",
               "IsHidden": false,
@@ -540,16 +573,19 @@
           },
           {
             "CommandMode": 0,
-            "IgnoreHysteresisAtLimits": true,
+            "HysteresisConfig": {
+              "HysteresisValueDown": 3,
+              "HysteresisValueUp": 3,
+              "IgnoreHysteresisAtLimits": true,
+              "ResponseTimeDown": 3,
+              "ResponseTimeUp": 3
+            },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 70.0,
+            "MaximumTemperature": 70,
             "MinimumFanSpeed": 0,
-            "MinimumTemperature": 35.0,
+            "MinimumTemperature": 35,
             "Name": "GPU",
-            "OneWayHysteresis": false,
-            "SelectedHysteresis": 3.0,
-            "SelectedResponseTime": 3,
             "SelectedTempSource": {
               "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
               "IsHidden": false,
@@ -574,20 +610,23 @@
                 "CommandMode": 0,
                 "IsHidden": false,
                 "Name": "Min Pump Speed",
-                "Percent": 50.0
+                "Percent": 50
               },
               {
                 "CommandMode": 0,
-                "IgnoreHysteresisAtLimits": true,
+                "HysteresisConfig": {
+                  "HysteresisValueDown": 3,
+                  "HysteresisValueUp": 3,
+                  "IgnoreHysteresisAtLimits": true,
+                  "ResponseTimeDown": 3,
+                  "ResponseTimeUp": 3
+                },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 65.0,
+                "MaximumTemperature": 65,
                 "MinimumFanSpeed": 20,
-                "MinimumTemperature": 35.0,
+                "MinimumTemperature": 35,
                 "Name": "CPU",
-                "OneWayHysteresis": false,
-                "SelectedHysteresis": 3.0,
-                "SelectedResponseTime": 3,
                 "SelectedTempSource": {
                   "Identifier": "/intelcpu/0/temperature/0",
                   "IsHidden": false,
@@ -597,16 +636,19 @@
               },
               {
                 "CommandMode": 0,
-                "IgnoreHysteresisAtLimits": true,
+                "HysteresisConfig": {
+                  "HysteresisValueDown": 3,
+                  "HysteresisValueUp": 3,
+                  "IgnoreHysteresisAtLimits": true,
+                  "ResponseTimeDown": 3,
+                  "ResponseTimeUp": 3
+                },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 70.0,
+                "MaximumTemperature": 70,
                 "MinimumFanSpeed": 0,
-                "MinimumTemperature": 35.0,
+                "MinimumTemperature": 35,
                 "Name": "GPU",
-                "OneWayHysteresis": false,
-                "SelectedHysteresis": 3.0,
-                "SelectedResponseTime": 3,
                 "SelectedTempSource": {
                   "Identifier": "NVApiWrapper/0-GA102-A/sensor/0",
                   "IsHidden": false,
@@ -621,7 +663,7 @@
             "CommandMode": 0,
             "IsHidden": false,
             "Name": "Max Pump Speed",
-            "Percent": 90.0
+            "Percent": 90
           }
         ],
         "SelectedMixFunction": 3
