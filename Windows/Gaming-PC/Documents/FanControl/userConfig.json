@@ -120,15 +120,15 @@
                   },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 65,
-                  "MinimumFanSpeed": 20,
+                  "MaximumTemperature": 90,
+                  "MinimumFanSpeed": 0,
                   "MinimumTemperature": 35,
                   "Name": "CPU",
                   "SelectedTempSource": {
-                    "Identifier": "/intelcpu/0/temperature/0",
+                    "Identifier": "/intelcpu/0/temperature/1",
                     "IsHidden": false,
-                    "Name": "Core Max",
-                    "NickName": "Core Max"
+                    "Name": "Core Average",
+                    "NickName": "Core Average"
                   }
                 },
                 {
@@ -142,7 +142,7 @@
                   },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 70,
+                  "MaximumTemperature": 74,
                   "MinimumFanSpeed": 0,
                   "MinimumTemperature": 35,
                   "Name": "GPU",
@@ -209,15 +209,15 @@
                   },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 65,
-                  "MinimumFanSpeed": 20,
+                  "MaximumTemperature": 90,
+                  "MinimumFanSpeed": 0,
                   "MinimumTemperature": 35,
                   "Name": "CPU",
                   "SelectedTempSource": {
-                    "Identifier": "/intelcpu/0/temperature/0",
+                    "Identifier": "/intelcpu/0/temperature/1",
                     "IsHidden": false,
-                    "Name": "Core Max",
-                    "NickName": "Core Max"
+                    "Name": "Core Average",
+                    "NickName": "Core Average"
                   }
                 },
                 {
@@ -231,7 +231,7 @@
                   },
                   "IsHidden": false,
                   "MaximumFanSpeed": 100,
-                  "MaximumTemperature": 70,
+                  "MaximumTemperature": 74,
                   "MinimumFanSpeed": 0,
                   "MinimumTemperature": 35,
                   "Name": "GPU",
@@ -387,15 +387,15 @@
         },
         "IsHidden": false,
         "MaximumFanSpeed": 100,
-        "MaximumTemperature": 65,
-        "MinimumFanSpeed": 20,
+        "MaximumTemperature": 90,
+        "MinimumFanSpeed": 0,
         "MinimumTemperature": 35,
         "Name": "CPU",
         "SelectedTempSource": {
-          "Identifier": "/intelcpu/0/temperature/0",
+          "Identifier": "/intelcpu/0/temperature/1",
           "IsHidden": false,
-          "Name": "Core Max",
-          "NickName": "Core Max"
+          "Name": "Core Average",
+          "NickName": "Core Average"
         }
       },
       {
@@ -409,7 +409,7 @@
         },
         "IsHidden": false,
         "MaximumFanSpeed": 100,
-        "MaximumTemperature": 70,
+        "MaximumTemperature": 74,
         "MinimumFanSpeed": 0,
         "MinimumTemperature": 35,
         "Name": "GPU",
@@ -436,15 +436,15 @@
             },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 65,
-            "MinimumFanSpeed": 20,
+            "MaximumTemperature": 90,
+            "MinimumFanSpeed": 0,
             "MinimumTemperature": 35,
             "Name": "CPU",
             "SelectedTempSource": {
-              "Identifier": "/intelcpu/0/temperature/0",
+              "Identifier": "/intelcpu/0/temperature/1",
               "IsHidden": false,
-              "Name": "Core Max",
-              "NickName": "Core Max"
+              "Name": "Core Average",
+              "NickName": "Core Average"
             }
           },
           {
@@ -458,7 +458,7 @@
             },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 70,
+            "MaximumTemperature": 74,
             "MinimumFanSpeed": 0,
             "MinimumTemperature": 35,
             "Name": "GPU",
@@ -499,15 +499,15 @@
                 },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 65,
-                "MinimumFanSpeed": 20,
+                "MaximumTemperature": 90,
+                "MinimumFanSpeed": 0,
                 "MinimumTemperature": 35,
                 "Name": "CPU",
                 "SelectedTempSource": {
-                  "Identifier": "/intelcpu/0/temperature/0",
+                  "Identifier": "/intelcpu/0/temperature/1",
                   "IsHidden": false,
-                  "Name": "Core Max",
-                  "NickName": "Core Max"
+                  "Name": "Core Average",
+                  "NickName": "Core Average"
                 }
               },
               {
@@ -521,7 +521,7 @@
                 },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 70,
+                "MaximumTemperature": 74,
                 "MinimumFanSpeed": 0,
                 "MinimumTemperature": 35,
                 "Name": "GPU",
@@ -560,15 +560,15 @@
             },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 65,
-            "MinimumFanSpeed": 20,
+            "MaximumTemperature": 90,
+            "MinimumFanSpeed": 0,
             "MinimumTemperature": 35,
             "Name": "CPU",
             "SelectedTempSource": {
-              "Identifier": "/intelcpu/0/temperature/0",
+              "Identifier": "/intelcpu/0/temperature/1",
               "IsHidden": false,
-              "Name": "Core Max",
-              "NickName": "Core Max"
+              "Name": "Core Average",
+              "NickName": "Core Average"
             }
           },
           {
@@ -582,7 +582,7 @@
             },
             "IsHidden": false,
             "MaximumFanSpeed": 100,
-            "MaximumTemperature": 70,
+            "MaximumTemperature": 74,
             "MinimumFanSpeed": 0,
             "MinimumTemperature": 35,
             "Name": "GPU",
@@ -623,15 +623,15 @@
                 },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 65,
-                "MinimumFanSpeed": 20,
+                "MaximumTemperature": 90,
+                "MinimumFanSpeed": 0,
                 "MinimumTemperature": 35,
                 "Name": "CPU",
                 "SelectedTempSource": {
-                  "Identifier": "/intelcpu/0/temperature/0",
+                  "Identifier": "/intelcpu/0/temperature/1",
                   "IsHidden": false,
-                  "Name": "Core Max",
-                  "NickName": "Core Max"
+                  "Name": "Core Average",
+                  "NickName": "Core Average"
                 }
               },
               {
@@ -645,7 +645,7 @@
                 },
                 "IsHidden": false,
                 "MaximumFanSpeed": 100,
-                "MaximumTemperature": 70,
+                "MaximumTemperature": 74,
                 "MinimumFanSpeed": 0,
                 "MinimumTemperature": 35,
                 "Name": "GPU",
