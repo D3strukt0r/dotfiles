@@ -22,7 +22,7 @@ antigen theme romkatv/powerlevel10k
 #
 
 # Adds "opswd" wrapper for finding and copying services' passwords
-antigen bundle 1password
+#antigen bundle 1password
 
 # Helps finding aliases with "alias-finder "<command>"". "-l" for longer command, "-e" for exact match
 antigen bundle alias-finder
