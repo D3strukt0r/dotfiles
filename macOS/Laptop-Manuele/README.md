@@ -84,6 +84,7 @@ antigen update
 * Login to GitHub `gh auth login`
 * Add GitHub Copilot CLI `gh extension install github/gh-copilot`
 * Get passwords managed with `pass`: `git clone git@github.com:D3strukt0r/pass-store.git ~/.password-store`
+* Configure browserpass (system-wide doesn't work) `PREFIX='/opt/homebrew/opt/browserpass' make hosts-brave-user -f '/opt/homebrew/opt/browserpass/lib/browserpass/Makefile'`
 * Add uBlock Origin Source in Browsers from [StevenBlack/hosts](https://github.com/StevenBlack/hosts)
 * Finish installation of Forticlient. Unlock settings with 🔒 and restore from File Backup "FortiClient"
 * Finish installation of Battle.net with `open /usr/local/Caskroom/battle-net/1.18.10.3141/Battle.net-Setup.app`
