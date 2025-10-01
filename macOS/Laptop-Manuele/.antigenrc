@@ -137,7 +137,7 @@ antigen bundle urltools
 antigen bundle vscode
 
 # Seach the internet using 'web_search <context> <term>'
-antigen bundle web-search
+#antigen bundle web-search
 
 # Add interactive tab-completion for 'cd'
 # Requires 'brew install fzf'
