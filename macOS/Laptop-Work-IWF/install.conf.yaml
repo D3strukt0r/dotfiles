@@ -5,11 +5,8 @@
 - clean: ['~']
 
 - link:
-    ~/.config/nvim/init.vim:
-        path: ../General/.config/nvim/init.vim
-        create: true
-    ~/.config/nvim/coc-settings.json:
-        path: ../General/.config/nvim/coc-settings.json
+    ~/.config/nvim:
+        path: ../General/.config/nvim
         create: true
     ~/.ssh/config:
         path: .ssh/config

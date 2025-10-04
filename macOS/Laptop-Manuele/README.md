@@ -92,6 +92,8 @@ antigen update
 * Make sure `asimov` is running for excluding project dependencies in Time Machine Backups with `sudo brew services start asimov` and/or run `asimov` to run manually
 * (**Work**) Install [dev CLI tools](https://git.iwf.io/docker/iwf-local-dev) `pipx install git+ssh://git@git.iwf.io/docker/iwf-local-dev.git@main && iwf toolset install`
 * In LibreWolf, set `about:config` > `browser.download.start_downloads_in_tmp_dir` to `false` ([Reddit](https://www.reddit.com/r/LibreWolf/comments/1fqjumb/downloads/))
+* Setup Claude Code MCPs:
+  * `claude mcp add context7 -- npx -y @upstash/context7-mcp --api-key <KEY>` (get `<KEY>` from password manager)
 * Install vagrant plugins `vagrant plugin install vagrant-hostsupdater vagrant-notify-forwarder vagrant-gatling-rsync vagrant-vbguest`
 * Fix Vagrant 2.4.1 for VirtualBox 7.1 `sudo nvim /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/plugins/providers/virtualbox/driver/meta.rb` and add `"7.1" => Version_7_0,` ([Issue](https://github.com/hashicorp/vagrant/issues/13501))
 * Allow starting/stopping vagrant without password by running `sudo visudo -f /private/etc/sudoers.d/vagrant` and adding the following lines:
