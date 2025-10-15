@@ -73,11 +73,11 @@ antigen update
 * Install latest node `nvm install --lts`
 * Install pnpm `corepack enable pnpm` & `pnpm install --global`
 * Create link with `npmrc`, login with `npm login`, create new profile `npmrc -c work-iwf` and set new registry and login with `npm login --registry https://npm.iwf.io` (use LDAP username and GitLab Verdaccio Access Token) and set default registry `npm config set registry https://npm.iwf.io`
-* Install composer `phive install --global composer`
+* Install composer `sudo phive install --global composer`
 * Add GitHub Token to increased API rate limit `composer config --global github-oauth.github.com TOKEN`. Get `TOKEN` from password manager
-* Install PHP-CS-Fixer `phive install --global php-cs-fixer`
-* Install PHP_CodeSniffer `phive install --global phpcs phpcbf`
-* Install PhpUnit `phive install --global phpunit`
+* Install PHP-CS-Fixer `sudo phive install --global php-cs-fixer`
+* Install PHP_CodeSniffer `sudo phive install --global phpcs phpcbf`
+* Install PhpUnit `sudo phive install --global phpunit`
 * Install rector `composer global require rector/rector`
 * Install PHPStan and extensions `composer global require phpstan/phpstan phpstan/extension-installer phpstan/phpstan-doctrine phpstan/phpstan-phpunit phpstan/phpstan-symfony`
 * Login to Ngrok `ngrok config add-authtoken TOKEN`. Get `TOKEN` from password manager
