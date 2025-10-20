@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@anthropic-ai/claude-code':
-        specifier: ^2.0.14
-        version: 2.0.14
+        specifier: ^2.0.22
+        version: 2.0.22
       degit:
         specifier: ^2.8.4
         version: 2.8.4
@@ -32,8 +32,8 @@ importers:
 
 packages:
 
-  '@anthropic-ai/claude-code@2.0.14':
-    resolution: {integrity: sha512-Q4A4Jo7WZ4aMUIu8CUIIo2Jt66kl2vrEjRg/kYzX6syuK0DiV3WhdMZceSvLAU0BFpX1L8aERhRWxLWDxX3fYg==}
+  '@anthropic-ai/claude-code@2.0.22':
+    resolution: {integrity: sha512-3FVySgr2zYrHnQ0deOeCzXdLSa/JkCBm1QR7x4j07puNnvHrFhBo6whv/IMOcSvxL62RRW3csRcGsQhUGPNc/w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1415,7 +1415,7 @@ packages:
 
 snapshots:
 
-  '@anthropic-ai/claude-code@2.0.14':
+  '@anthropic-ai/claude-code@2.0.22':
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
