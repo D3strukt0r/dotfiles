@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-07-21T09:28:23.915-00:00",
+	"CreationDate" : "2025-11-04T21:42:26.477-00:00",
 	"Sources" : 
 	[
 		{
@@ -8,11 +8,11 @@
 			[
 				{
 					"PackageIdentifier" : "CoreyButler.NVMforWindows",
-					"Version" : "1.1.12"
+					"Version" : "1.2.2"
 				},
 				{
 					"PackageIdentifier" : "7zip.7zip",
-					"Version" : "25.00"
+					"Version" : "25.01"
 				},
 				{
 					"PackageIdentifier" : "LianLi.LConnect3",
@@ -20,11 +20,11 @@
 				},
 				{
 					"PackageIdentifier" : "Audacity.Audacity",
-					"Version" : "3.7.4"
+					"Version" : "3.7.5"
 				},
 				{
 					"PackageIdentifier" : "Betterbird.Betterbird",
-					"Version" : "128.12.0"
+					"Version" : "140.4.0"
 				},
 				{
 					"PackageIdentifier" : "Ryochan7.DS4Windows",
@@ -32,55 +32,71 @@
 				},
 				{
 					"PackageIdentifier" : "Docker.DockerDesktop",
-					"Version" : "4.43.2"
+					"Version" : "4.49.0"
 				},
 				{
 					"PackageIdentifier" : "Git.Git",
-					"Version" : "2.50.1"
+					"Version" : "2.51.2"
 				},
 				{
 					"PackageIdentifier" : "REALiX.HWiNFO",
-					"Version" : "8.28"
+					"Version" : "8.32"
 				},
 				{
 					"PackageIdentifier" : "Logitech.UnifyingSoftware",
 					"Version" : "2.52.33"
 				},
 				{
+					"PackageIdentifier" : "Maxon.MaxonApp",
+					"Version" : "2026.0.0"
+				},
+				{
+					"PackageIdentifier" : "Maxon.Cinema4D.2025",
+					"Version" : "2025.3.3"
+				},
+				{
+					"PackageIdentifier" : "Maxon.Cinema4D.2024",
+					"Version" : "2024"
+				},
+				{
 					"PackageIdentifier" : "Mozilla.Firefox",
-					"Version" : "140.0.4"
+					"Version" : "144.0.2"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive",
-					"Version" : "25.122.0624.0004"
+					"Version" : "25.194.1005.0003"
+				},
+				{
+					"PackageIdentifier" : "namazso.PawnIO",
+					"Version" : "2.0.1.0"
 				},
 				{
 					"PackageIdentifier" : "Proton.ProtonMailBridge",
-					"Version" : "3.21.1"
+					"Version" : "3.21.2"
 				},
 				{
 					"PackageIdentifier" : "Proton.ProtonVPN",
-					"Version" : "4.2.0"
+					"Version" : "4.3.5"
 				},
 				{
 					"PackageIdentifier" : "RustDesk.RustDesk",
-					"Version" : "1.4.0"
+					"Version" : "1.4.1"
 				},
 				{
 					"PackageIdentifier" : "SteelSeries.GG",
-					"Version" : "90.0.0"
+					"Version" : "97.1.0"
 				},
 				{
 					"PackageIdentifier" : "LizardByte.Sunshine",
-					"Version" : "2025.122.141614"
+					"Version" : "2025.924.154138"
 				},
 				{
 					"PackageIdentifier" : "TeamViewer.TeamViewer",
-					"Version" : "15.67.5"
+					"Version" : "15.71.4"
 				},
 				{
 					"PackageIdentifier" : "Unity.UnityHub",
-					"Version" : "3.13.0"
+					"Version" : "3.14.3"
 				},
 				{
 					"PackageIdentifier" : "VideoLAN.VLC",
@@ -88,7 +104,7 @@
 				},
 				{
 					"PackageIdentifier" : "LedgerHQ.LedgerLive",
-					"Version" : "2.120.1"
+					"Version" : "2.131.1"
 				},
 				{
 					"PackageIdentifier" : "Nefarius.HidHide",
@@ -96,75 +112,67 @@
 				},
 				{
 					"PackageIdentifier" : "MiniTool.PartitionWizard.Free",
-					"Version" : "12.9"
+					"Version" : "13"
 				},
 				{
-					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh",
-					"Version" : "26.17.0"
+					"PackageIdentifier" : "BlenderFoundation.Blender",
+					"Version" : "4.5.4"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64",
 					"Version" : "10.0.40219"
 				},
 				{
-					"PackageIdentifier" : "Oracle.VirtualBox",
-					"Version" : "7.1.12"
-				},
-				{
 					"PackageIdentifier" : "Elgato.ControlCenter",
 					"Version" : "1.8.1.654"
 				},
 				{
-					"PackageIdentifier" : "Hashicorp.Vagrant",
-					"Version" : "2.4.7"
+					"PackageIdentifier" : "Oracle.JDK.21",
+					"Version" : "21.0.9.0"
 				},
 				{
 					"PackageIdentifier" : "Logitech.GHUB",
-					"Version" : "2025.4.719084"
+					"Version" : "2025.8.789376"
 				},
 				{
 					"PackageIdentifier" : "Apple.Bonjour",
 					"Version" : "3.1.0.1"
 				},
 				{
-					"PackageIdentifier" : "Oracle.JDK.21",
-					"Version" : "21.0.8.0"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64",
 					"Version" : "9.0.30729.6161"
 				},
 				{
-					"PackageIdentifier" : "Elgato.StreamDeck",
-					"Version" : "6.9.1.21711"
-				},
-				{
-					"PackageIdentifier" : "BlenderFoundation.Blender",
-					"Version" : "4.5.0"
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh",
+					"Version" : "27.4.3"
 				},
 				{
 					"PackageIdentifier" : "Xencelabs.Driver",
 					"Version" : "1.3.5-90"
 				},
 				{
+					"PackageIdentifier" : "Elgato.StreamDeck",
+					"Version" : "7.0.3.22071"
+				},
+				{
 					"PackageIdentifier" : "Logitech.OptionsPlus",
-					"Version" : "1.92.731496"
+					"Version" : "1.97.791262"
+				},
+				{
+					"PackageIdentifier" : "Hashicorp.Vagrant",
+					"Version" : "2.4.9"
 				},
 				{
 					"PackageIdentifier" : "Elgato.4KCaptureUtility",
 					"Version" : "1.7.15.10349"
 				},
 				{
-					"PackageIdentifier" : "Elgato.CameraHub",
-					"Version" : "2.0.0.5721"
-				},
-				{
 					"PackageIdentifier" : "ViGEm.ViGEmBus",
 					"Version" : "1.22.0"
 				},
 				{
-					"PackageIdentifier" : "Kitware.CMake",
-					"Version" : "4.0.3"
+					"PackageIdentifier" : "Elgato.CameraHub",
+					"Version" : "2.2.0.6839"
 				},
 				{
 					"PackageIdentifier" : "Corsair.iCUE.5",
@@ -172,23 +180,27 @@
 				},
 				{
 					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit",
-					"Version" : "25.001.20474"
+					"Version" : "25.001.20813"
 				},
 				{
 					"PackageIdentifier" : "Nvidia.PhysX",
 					"Version" : "9.23.1019"
 				},
 				{
+					"PackageIdentifier" : "Kitware.CMake",
+					"Version" : "4.1.2"
+				},
+				{
+					"PackageIdentifier" : "Oracle.VirtualBox",
+					"Version" : "7.2.4"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.WSL",
 					"Version" : "5.10.102.1"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerShell",
-					"Version" : "7.5.2.0"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community",
-					"Version" : "17.14.9"
+					"Version" : "17.14.19"
 				},
 				{
 					"PackageIdentifier" : "Guru3D.Afterburner",
@@ -196,7 +208,7 @@
 				},
 				{
 					"PackageIdentifier" : "Dropbox.Dropbox",
-					"Version" : "229.3.4976"
+					"Version" : "236.3.5865"
 				},
 				{
 					"PackageIdentifier" : "GnuPG.GnuPG",
@@ -208,23 +220,23 @@
 				},
 				{
 					"PackageIdentifier" : "HandBrake.HandBrake",
-					"Version" : "1.9.2"
+					"Version" : "1.10.2"
 				},
 				{
 					"PackageIdentifier" : "LibreWolf.LibreWolf",
-					"Version" : "140.0.4-1"
+					"Version" : "144.0.2-1"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge",
-					"Version" : "138.0.3351.95"
+					"Version" : "142.0.3595.53"
 				},
 				{
 					"PackageIdentifier" : "OBSProject.OBSStudio",
-					"Version" : "31.0.3"
+					"Version" : "32.0.1"
 				},
 				{
 					"PackageIdentifier" : "Guru3D.RTSS",
-					"Version" : "7.3.6"
+					"Version" : "7.3.7"
 				},
 				{
 					"PackageIdentifier" : "Valve.Steam",
@@ -232,11 +244,11 @@
 				},
 				{
 					"PackageIdentifier" : "Ultimaker.Cura",
-					"Version" : "5.10.1"
+					"Version" : "5.11.0"
 				},
 				{
 					"PackageIdentifier" : "WinSCP.WinSCP",
-					"Version" : "6.5.3"
+					"Version" : "6.5.4"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64",
@@ -252,11 +264,7 @@
 				},
 				{
 					"PackageIdentifier" : "Rem0o.FanControl",
-					"Version" : "228"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.AspNetCore.8",
-					"Version" : "8.0.18"
+					"Version" : "245"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.DotNet.Runtime.6",
@@ -271,20 +279,28 @@
 					"Version" : "11.0.61030.0"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8",
-					"Version" : "8.0.18"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.Runtime.8",
-					"Version" : "8.0.18"
+					"PackageIdentifier" : "Intel.IntelDriverAndSupportAssistant",
+					"Version" : "25.4.36.6"
 				},
 				{
 					"PackageIdentifier" : "Python.Launcher",
 					"Version" : "3.13.5"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8",
+					"Version" : "8.0.21"
+				},
+				{
 					"PackageIdentifier" : "Mojang.MinecraftLauncher",
 					"Version" : "2.0.0.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.Runtime.8",
+					"Version" : "8.0.21"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.AspNetCore.8",
+					"Version" : "8.0.21"
 				},
 				{
 					"PackageIdentifier" : "EpicGames.EpicGamesLauncher",
@@ -299,12 +315,8 @@
 					"Version" : "12.0.40664.0"
 				},
 				{
-					"PackageIdentifier" : "Intel.IntelDriverAndSupportAssistant",
-					"Version" : "25.3.24.7"
-				},
-				{
 					"PackageIdentifier" : "Futuremark.FuturemarkSystemInfo",
-					"Version" : "5.84.1372.0"
+					"Version" : "5.88.1377.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86",
@@ -315,24 +327,32 @@
 					"Version" : "6.1.5"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64",
+					"Version" : "11.0.61030.0"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64",
 					"Version" : "14.44.35211.0"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.PowerShell",
+					"Version" : "7.5.4.0"
+				},
+				{
 					"PackageIdentifier" : "AgileBits.1Password",
-					"Version" : "8.11.0"
+					"Version" : "8.11.16.35"
 				},
 				{
 					"PackageIdentifier" : "Notion.Notion",
-					"Version" : "4.15.3"
+					"Version" : "4.23.0"
 				},
 				{
 					"PackageIdentifier" : "OpenWhisperSystems.Signal",
-					"Version" : "7.62.0"
+					"Version" : "7.77.1"
 				},
 				{
 					"PackageIdentifier" : "Brave.Brave",
-					"Version" : "138.1.80.122"
+					"Version" : "142.1.84.132"
 				},
 				{
 					"PackageIdentifier" : "Discord.Discord",
@@ -340,11 +360,11 @@
 				},
 				{
 					"PackageIdentifier" : "Figma.Figma",
-					"Version" : "125.6.5"
+					"Version" : "125.9.10"
 				},
 				{
 					"PackageIdentifier" : "Figma.FigmaAgent",
-					"Version" : "125.5.6"
+					"Version" : "125.9.10"
 				},
 				{
 					"PackageIdentifier" : "FiloSottile.mkcert",
@@ -352,19 +372,19 @@
 				},
 				{
 					"PackageIdentifier" : "flux.flux",
-					"Version" : "4.137"
+					"Version" : "4.140"
 				},
 				{
 					"PackageIdentifier" : "Playnite.Playnite",
-					"Version" : "10.37"
+					"Version" : "10.42"
 				},
 				{
 					"PackageIdentifier" : "Postman.Postman",
-					"Version" : "11.55.0"
+					"Version" : "11.69.6"
 				},
 				{
 					"PackageIdentifier" : "Rufus.Rufus",
-					"Version" : "4.9"
+					"Version" : "4.11"
 				},
 				{
 					"PackageIdentifier" : "Rustlang.Rustup",
@@ -372,31 +392,31 @@
 				},
 				{
 					"PackageIdentifier" : "Spotify.Spotify",
-					"Version" : "1.2.68.528.g50f97d42"
+					"Version" : "1.2.76.274.g749ee04a"
 				},
 				{
 					"PackageIdentifier" : "JetBrains.Toolbox",
-					"Version" : "2.7.0.48109"
+					"Version" : "3.0.1.59888"
 				},
 				{
 					"PackageIdentifier" : "Ventoy.Ventoy",
-					"Version" : "1.1.05"
+					"Version" : "1.1.07"
 				},
 				{
 					"PackageIdentifier" : "Zoom.Zoom.EXE",
-					"Version" : "6.5.6 (9328)"
+					"Version" : "6.6.6 (19875)"
 				},
 				{
 					"PackageIdentifier" : "Balena.Etcher",
-					"Version" : "2.1.2"
+					"Version" : "2.1.4"
 				},
 				{
 					"PackageIdentifier" : "Levitsky.FontBase",
-					"Version" : "2.22.48"
+					"Version" : "2.23.1"
 				},
 				{
 					"PackageIdentifier" : "Axosoft.GitKraken",
-					"Version" : "11.2.1"
+					"Version" : "11.5.1"
 				},
 				{
 					"PackageIdentifier" : "ppy.osu",
@@ -404,7 +424,7 @@
 				},
 				{
 					"PackageIdentifier" : "SlackTechnologies.Slack",
-					"Version" : "4.44.65"
+					"Version" : "4.46.104"
 				},
 				{
 					"PackageIdentifier" : "LocalSend.LocalSend",
@@ -412,15 +432,15 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.PowerToys",
-					"Version" : "0.92.1"
+					"Version" : "0.95.0"
 				},
 				{
 					"PackageIdentifier" : "Telegram.TelegramDesktop",
-					"Version" : "5.16.4"
+					"Version" : "6.2.4"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode",
-					"Version" : "1.102.1"
+					"Version" : "1.105.1"
 				},
 				{
 					"PackageIdentifier" : "SomePythonThings.ElevenClock",
@@ -436,11 +456,11 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Teams",
-					"Version" : "25094.310.3616.953"
+					"Version" : "25275.2601.4002.2815"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller",
-					"Version" : "1.26.400.0"
+					"Version" : "1.27.350.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7",
@@ -456,7 +476,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal",
-					"Version" : "1.22.11751.0"
+					"Version" : "1.23.12811.0"
 				}
 			],
 			"SourceDetails" : 
@@ -472,19 +492,11 @@
 			[
 				{
 					"PackageIdentifier" : "XPDLPKWG9SW2WD",
-					"Version" : "6.7.0.278"
+					"Version" : "6.8.0.821"
 				},
 				{
 					"PackageIdentifier" : "9NKSQGP7F2NH",
-					"Version" : "2.2528.4.0"
-				},
-				{
-					"PackageIdentifier" : "9N2D0P16C80H",
-					"Version" : "206.3.3322.0"
-				},
-				{
-					"PackageIdentifier" : "9P8DVF1XW02V",
-					"Version" : "206.3.3322.0"
+					"Version" : "2.2543.1.0"
 				}
 			],
 			"SourceDetails" : 
@@ -496,5 +508,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.11.400"
+	"WinGetVersion" : "1.12.350"
 }
