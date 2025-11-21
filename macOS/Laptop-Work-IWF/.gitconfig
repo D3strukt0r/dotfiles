@@ -1,7 +1,8 @@
 [user]
-	email = dev@d3strukt0r.me
+	email = dev@d3strukt0r.dev
 	name = D3strukt0r
 	signingKey = C9E5AB85364CA764!
+	# Personal: C9E5AB85364CA764! | Work: 05521883ADA75D54!
 [gpg]
 	program = /usr/local/bin/gpg
 	format = openpgp
@@ -12,6 +13,10 @@
 	forceSignAnnotated = true
 [init]
 	defaultBranch = master
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
 [core]
 	excludesfile = ~/.gitignore_global
 [filter "lfs"]
@@ -22,3 +27,9 @@
 [gpg "ssh"]
 	program = ssh-keygen
 	allowedSignersFile = 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

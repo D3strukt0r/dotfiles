@@ -91,6 +91,7 @@ antigen update
 * (**Work**) Install [dev CLI tools](https://git.iwf.io/docker/iwf-local-dev) `pipx install git+ssh://git@git.iwf.io/docker/iwf-local-dev.git@main && iwf toolset install`
 * Finish installation of Paragon ExtFS with `open /opt/homebrew/Caskroom/paragon-extfs/12.1.27/FSInstaller.app`
 * Setup Docker Contexts `for i in {1..5}; do docker context create "iwf-test-$i" --docker "host=ssh://iwfsupport@test-worker-$i.web-solutions.io"; done`
+* Fix JDK `sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
 
 #### Manual System Settings Configuration
 

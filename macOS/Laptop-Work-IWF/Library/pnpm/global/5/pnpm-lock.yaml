@@ -11,6 +11,9 @@ importers:
       '@anthropic-ai/claude-code':
         specifier: ^2.0.37
         version: 2.0.37
+      '@github/copilot':
+        specifier: ^0.0.362
+        version: 0.0.362
       degit:
         specifier: ^2.8.4
         version: 2.8.4
@@ -76,6 +79,11 @@ packages:
 
   '@devexpress/error-stack-parser@2.0.6':
     resolution: {integrity: sha512-fneVypElGUH6Be39mlRZeAu00pccTlf4oVuzf9xPJD1cdEqI8NyAiQua/EW7lZdrbMUbgyXcJmfKPefhYius3A==}
+
+  '@github/copilot@0.0.362':
+    resolution: {integrity: sha512-oRsXkK0YltgXwdDCOlJTKyTnCvSaJ8hV99o57c8RbcDf5DrQj7BQJbONRqpmTaZQBJY/4UOCXpmTk2Sq4eusGQ==}
+    engines: {node: '>=22'}
+    hasBin: true
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -1474,6 +1482,8 @@ snapshots:
   '@devexpress/error-stack-parser@2.0.6':
     dependencies:
       stackframe: 1.3.4
+
+  '@github/copilot@0.0.362': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
