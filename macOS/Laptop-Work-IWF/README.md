@@ -92,6 +92,7 @@ antigen update
 * Finish installation of Paragon ExtFS with `open /opt/homebrew/Caskroom/paragon-extfs/12.1.27/FSInstaller.app`
 * Setup Docker Contexts `for i in {1..5}; do docker context create "iwf-test-$i" --docker "host=ssh://iwfsupport@test-worker-$i.web-solutions.io"; done`
 * Fix JDK `sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
+* Fix Librewolf `xattr -d com.apple.quarantine /Applications/LibreWolf.app`
 
 #### Manual System Settings Configuration
 
