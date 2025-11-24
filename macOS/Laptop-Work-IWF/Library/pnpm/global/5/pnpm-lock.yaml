@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@anthropic-ai/claude-code':
-        specifier: ^2.0.37
-        version: 2.0.37
+        specifier: ^2.0.50
+        version: 2.0.50
       '@github/copilot':
         specifier: ^0.0.362
         version: 0.0.362
@@ -35,8 +35,8 @@ importers:
 
 packages:
 
-  '@anthropic-ai/claude-code@2.0.37':
-    resolution: {integrity: sha512-8d4qRGY9/LGqEbYNfno00wg0tprDC0dPNBBZHk8CVvl5vlB8PX2HVwlI6kok3ZNFBMDL+Hqjbp26xXC1hTL6Hw==}
+  '@anthropic-ai/claude-code@2.0.50':
+    resolution: {integrity: sha512-zT4vSFr3wSY1XuQHTBbtMyxcv87Al25Icrv7ASnpJTgmXR2MoIcs3dyfoQGUzAHnnAymEVSSQxeX+DgnTvOUDg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1423,7 +1423,7 @@ packages:
 
 snapshots:
 
-  '@anthropic-ai/claude-code@2.0.37':
+  '@anthropic-ai/claude-code@2.0.50':
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
