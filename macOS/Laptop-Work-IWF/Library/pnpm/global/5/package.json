@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@anthropic-ai/claude-code": "^2.0.55",
+		"@anthropic-ai/claude-code": "^2.0.61",
 		"@github/copilot": "^0.0.365",
 		"degit": "^2.8.4",
 		"npm-check": "^6.0.1",
