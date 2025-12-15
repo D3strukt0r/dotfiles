@@ -12,8 +12,8 @@ importers:
         specifier: ^2.0.69
         version: 2.0.69
       '@github/copilot':
-        specifier: ^0.0.367
-        version: 0.0.367
+        specifier: ^0.0.369
+        version: 0.0.369
       degit:
         specifier: ^2.8.4
         version: 2.8.4
@@ -80,8 +80,8 @@ packages:
   '@devexpress/error-stack-parser@2.0.6':
     resolution: {integrity: sha512-fneVypElGUH6Be39mlRZeAu00pccTlf4oVuzf9xPJD1cdEqI8NyAiQua/EW7lZdrbMUbgyXcJmfKPefhYius3A==}
 
-  '@github/copilot@0.0.367':
-    resolution: {integrity: sha512-wuYvVos1uQPBrJMXu2KdBtkDJV0f6St9yj2ZCrzinjLfPOKbOSLaWrH11xUkjZHfCb5lBWb+MDlat2Obrwnv4g==}
+  '@github/copilot@0.0.369':
+    resolution: {integrity: sha512-uIjzFTYyRSoql/8LqZCUICOV24utytlRnYuu4LsEzRISox9FA7MGfuMmcVZrfuvZg4C7gT/o8Ilm7rNICXf7DA==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -1507,7 +1507,7 @@ snapshots:
     dependencies:
       stackframe: 1.3.4
 
-  '@github/copilot@0.0.367': {}
+  '@github/copilot@0.0.369': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
