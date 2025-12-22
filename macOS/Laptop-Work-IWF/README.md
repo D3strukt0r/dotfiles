@@ -93,6 +93,8 @@ antigen update
 * Setup Docker Contexts `for i in {1..5}; do docker context create "iwf-test-$i" --docker "host=ssh://iwfsupport@test-worker-$i.web-solutions.io"; done`
 * Fix JDK `sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
 * Fix Librewolf `xattr -d com.apple.quarantine /Applications/LibreWolf.app`
+* Manually Install Betterbird from [Download Page](https://betterbird.eu/downloads/) due to signing issues. Also fix quarantine with `xattr -r -d com.apple.quarantine /Applications/BetterBird.app`
+  * `wget -N --trust-server-names "https://www.betterbird.eu/downloads/get.php?os=win&lang=en-US&version=release"`
 
 #### Manual System Settings Configuration
 
