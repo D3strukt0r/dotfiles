@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@github/copilot':
-        specifier: ^0.0.372
-        version: 0.0.372
       degit:
         specifier: ^2.8.4
         version: 2.8.4
@@ -71,47 +68,6 @@ packages:
 
   '@devexpress/error-stack-parser@2.0.6':
     resolution: {integrity: sha512-fneVypElGUH6Be39mlRZeAu00pccTlf4oVuzf9xPJD1cdEqI8NyAiQua/EW7lZdrbMUbgyXcJmfKPefhYius3A==}
-
-  '@github/copilot-darwin-arm64@0.0.372':
-    resolution: {integrity: sha512-LHZgcGiP1YxUve4XNdYm917rz6KIFMafqsCfUmBCyYhXcfTkmtfvTkf0JmSY6qIGhKqj7K3kDfst+xYzCz1fgw==}
-    cpu: [arm64]
-    os: [darwin]
-    hasBin: true
-
-  '@github/copilot-darwin-x64@0.0.372':
-    resolution: {integrity: sha512-dow+jJj9tpTqM4N8B+edyuA0Dp9IjLA2mT3TRTLUR5GCumonyAoCYxyWL6wClk8yAkmzE1xEttVhQrVpHq4CSA==}
-    cpu: [x64]
-    os: [darwin]
-    hasBin: true
-
-  '@github/copilot-linux-arm64@0.0.372':
-    resolution: {integrity: sha512-4gSqkfobzXUtOJeDkYExD11dHH4kv5HnSElLYuduBM+FgC3uQlC6CfzUAAd0PSqFtVmAAMy+x6VQT3owmQ6eSw==}
-    cpu: [arm64]
-    os: [linux]
-    hasBin: true
-
-  '@github/copilot-linux-x64@0.0.372':
-    resolution: {integrity: sha512-fIVTM0tkzBxy7qk+P8SU/cmOyG+toT51FZbZtZxtIQnoIDrZ07owrhUJZnOahkW09JB756ywcAseeOwNiVtvRA==}
-    cpu: [x64]
-    os: [linux]
-    hasBin: true
-
-  '@github/copilot-win32-arm64@0.0.372':
-    resolution: {integrity: sha512-kB8DiOe6beWI1QWrFj3KEhqXrlN5T25A2grnyBxegokhk7LdweaDbNWGc8g+0FqoLqW+MsQC5092LOKK1IzZ8w==}
-    cpu: [arm64]
-    os: [win32]
-    hasBin: true
-
-  '@github/copilot-win32-x64@0.0.372':
-    resolution: {integrity: sha512-51HeCrthzCB9hbix/g48gIGE0dQgN+Eq4hzeyb12h2qJIwtlxjkvTpdPRs+0Vy9zRjlQNrHIMMnd8C+azFBfPA==}
-    cpu: [x64]
-    os: [win32]
-    hasBin: true
-
-  '@github/copilot@0.0.372':
-    resolution: {integrity: sha512-epuWLH4tPrAcTkVepW/0aYi24IJt0IpVyBeKTmM8WsctjLyiXmaWeVd9Y9mGlANWJe6OiGLeUPWbHeMtR/6P+w==}
-    engines: {node: '>=22'}
-    hasBin: true
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -1444,33 +1400,6 @@ snapshots:
   '@devexpress/error-stack-parser@2.0.6':
     dependencies:
       stackframe: 1.3.4
-
-  '@github/copilot-darwin-arm64@0.0.372':
-    optional: true
-
-  '@github/copilot-darwin-x64@0.0.372':
-    optional: true
-
-  '@github/copilot-linux-arm64@0.0.372':
-    optional: true
-
-  '@github/copilot-linux-x64@0.0.372':
-    optional: true
-
-  '@github/copilot-win32-arm64@0.0.372':
-    optional: true
-
-  '@github/copilot-win32-x64@0.0.372':
-    optional: true
-
-  '@github/copilot@0.0.372':
-    optionalDependencies:
-      '@github/copilot-darwin-arm64': 0.0.372
-      '@github/copilot-darwin-x64': 0.0.372
-      '@github/copilot-linux-arm64': 0.0.372
-      '@github/copilot-linux-x64': 0.0.372
-      '@github/copilot-win32-arm64': 0.0.372
-      '@github/copilot-win32-x64': 0.0.372
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:

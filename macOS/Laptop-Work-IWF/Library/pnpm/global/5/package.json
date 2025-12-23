@@ -1,6 +1,5 @@
 {
 	"dependencies": {
-		"@github/copilot": "^0.0.372",
 		"degit": "^2.8.4",
 		"npm-check": "^6.0.1",
 		"npm-check-updates": "^19.2.0",
