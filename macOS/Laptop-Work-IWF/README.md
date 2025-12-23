@@ -70,8 +70,8 @@ antigen update
 * Fix iTerm2 font for powerlevel10k with `p10k configure`
 * Install iTerm2 Shell Integration. Open `iTerm2` > Toolbar > `iTerm2` > `Instell Shell Integration`
 * Install [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
-* Install latest node `nvm install --lts`
-* Install pnpm `corepack enable pnpm` & `pnpm install --global`
+* Install latest node `nvm install stable && nvm use stable`
+* Install pnpm `npm -g install corepack && corepack enable pnpm` & `pnpm install --global`
 * Create link with `npmrc`, login with `npm login`, create new profile `npmrc -c work-iwf` and set new registry and login with `npm login --registry https://npm.iwf.io` (use LDAP username and GitLab Verdaccio Access Token) and set default registry `npm config set registry https://npm.iwf.io`
 * Install composer `sudo phive install --global composer`
 * Add GitHub Token to increased API rate limit `composer config --global github-oauth.github.com TOKEN`. Get `TOKEN` from password manager

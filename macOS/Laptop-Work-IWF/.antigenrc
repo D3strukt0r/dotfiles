@@ -1,8 +1,8 @@
-USE_GIT=true
-USE_PHP=true
-USE_CONTAINER=true
-USE_NODEJS=true
-USE_PYTHON=true
+USE_GIT=false
+USE_PHP=false
+USE_CONTAINER=false
+USE_NODEJS=false
+USE_PYTHON=false
 
 # Load various lib files
 antigen use oh-my-zsh
@@ -25,11 +25,11 @@ antigen theme romkatv/powerlevel10k
 #antigen bundle 1password
 
 # Helps finding aliases with "alias-finder "<command>"". "-l" for longer command, "-e" for exact match
-antigen bundle alias-finder
+#antigen bundle alias-finder
 
 # Find aliases with "acs <command>".
 # Requires Python
-antigen bundle aliases
+#antigen bundle aliases
 
 # Add colors to "man" pages
 antigen bundle colored-man-pages
@@ -42,16 +42,16 @@ antigen bundle colorize
 antigen bundle command-not-found
 
 # Adds common aliases
-antigen bundle common-aliases
+#antigen bundle common-aliases
 
 # Copy currently entered command in clipboard with "Ctrl + O"
-antigen bundle copybuffer
+#antigen bundle copybuffer
 
 # Copy current dir ($PWD) to clipboard by executing "copydir"
-antigen bundle copypath
+#antigen bundle copypath
 
 # Copy file contents to clipboard by executing "copyfile"
-antigen bundle copyfile
+#antigen bundle copyfile
 
 # Enter/Leave directories easily
 # Alt/Option + Left 	Go to previous directory
@@ -61,13 +61,13 @@ antigen bundle copyfile
 #antigen bundle dirhistory
 
 # Alias for encoding/decoding base64. "e64" and "d64"
-antigen bundle encode64
+#antigen bundle encode64
 
 # Easy extract compressed files. Use "extract <file>"
-antigen bundle extract
+#antigen bundle extract
 
 # Easy search for frontend tools. Use "frontend <context> <term>". "frontend is optional"
-antigen bundle frontend-search
+#antigen bundle frontend-search
 
 # Automatically expand glob patterns in the command line. Use "Ctrl + Space" for regular space
 #antigen bundle globalias
@@ -83,19 +83,19 @@ antigen bundle history
 #antigen bundle httpie
 
 # Autocompletion for ISO Date and function for common formats
-antigen bundle isodate
+#antigen bundle isodate
 
 # Functions for handlind JSON
-antigen bundle jsontools
+#antigen bundle jsontools
 
 # Automatically start keychain for GPG and SSH. Use together with 'gpg-agent'
 antigen bundle keychain
 
 # Shortcut for adding "man" to current buffer. "Esc + 'man'"
-antigen bundle man
+#antigen bundle man
 
 # Quickly fix permissions. 'set755' for directories, 'set644' for files. 'fixperms' is both
-antigen bundle perms
+#antigen bundle perms
 
 # Quickly jump to project. Use 'pj <project'
 antigen bundle pj
@@ -117,19 +117,19 @@ antigen bundle sudo
 #antigen bundle thefuck
 
 # Change Oh-My-Zsh theme using 'theme <theme_name>'. 'lsthemes' for list
-antigen bundle themes
+#antigen bundle themes
 
 # Compress in any format with 'ua <format> <files>'
-antigen bundle universalarchive
+#antigen bundle universalarchive
 
 # URL tools. 'urlencode' and 'urldecode'
-antigen bundle urltools
+#antigen bundle urltools
 
 # Aliases for VS Code
-antigen bundle vscode
+#antigen bundle vscode
 
 # Seach the internet using 'web_search <context> <term>'
-antigen bundle web-search
+#antigen bundle web-search
 
 # Add interactive tab-completion for 'cd'
 # Requires 'brew install fzf'

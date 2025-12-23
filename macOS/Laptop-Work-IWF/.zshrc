@@ -13,26 +13,28 @@ fi
 # Node Version Manager (nvm)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Load Homebrew installed tools first
 if which brew &> /dev/null; then
+  _BREW_PREFIX=$(brew --prefix)
   # Coreutils
-  if [ -d "$(brew --prefix)/opt/coreutils/libexec/gnubin" ]; then
-    export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+  if [ -d "$_BREW_PREFIX/opt/coreutils/libexec/gnubin" ]; then
+    export PATH="$_BREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
   fi
   # cURL
-  if [ -d "$(brew --prefix)/opt/curl/bin" ]; then
-    export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
+  if [ -d "$_BREW_PREFIX/opt/curl/bin" ]; then
+    export PATH="$_BREW_PREFIX/opt/curl/bin:$PATH"
   fi
   # OpenSSL
-  if [ -d "$(brew --prefix)/opt/openssl@3/bin" ]; then
-    export PATH="$(brew --prefix)/opt/openssl@3/bin:$PATH"
+  if [ -d "$_BREW_PREFIX/opt/openssl@3/bin" ]; then
+    export PATH="$_BREW_PREFIX/opt/openssl@3/bin:$PATH"
   fi
   # Make
-  if [ -d "$(brew --prefix)/opt/make/libexec/gnubin" ]; then
-    export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
+  if [ -d "$_BREW_PREFIX/opt/make/libexec/gnubin" ]; then
+    export PATH="$_BREW_PREFIX/opt/make/libexec/gnubin:$PATH"
   fi
   # Python
-  if [ -d "$(brew --prefix)/opt/python/libexec/bin" ]; then
-    export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+  if [ -d "$_BREW_PREFIX/opt/python/libexec/bin" ]; then
+    export PATH="$_BREW_PREFIX/opt/python/libexec/bin:$PATH"
   fi
 fi
 # Composer
@@ -45,16 +47,14 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# TODO: Why do i need this?
-export PATH="$HOME/Library/pnpm/global/5/node_modules/.bin:$PATH"
+if [ -d "$HOME/Library/pnpm/global/5/node_modules/.bin" ]; then
+  export PATH="$HOME/Library/pnpm/global/5/node_modules/.bin:$PATH"
+fi
 # Python (pyenv)
 if which pyenv &> /dev/null; then
   export PYENV_ROOT="$HOME/.pyenv"
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
-fi
-if [ -d "$HOME/.console-ninja/.bin" ]; then
-  PATH="$HOME/.console-ninja/.bin:$PATH"
 fi
 # Fix Google Cloud SDK does not support Python 3.12, link to 3.11
 # (ModuleNotFoundError: No module named 'imp')
@@ -62,7 +62,7 @@ fi
 export CLOUDSDK_PYTHON=$(which python3.11)
 # Enable iwf env through `iwf-enable` command
 iwf-enable() {
-  if [ -f ~/Projects-IWF/iwf-local-dev/.venv/bin/activate ]; then
+  if [ -f ~/Projects/iwf-local-dev/.venv/bin/activate ]; then
     cd ~/Projects-IWF/iwf-local-dev
     . .venv/bin/activate
     cd - > /dev/null
