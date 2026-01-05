@@ -3,7 +3,7 @@
 		"@anthropic-ai/claude-code": "^2.0.76",
 		"degit": "^2.8.4",
 		"npm-check": "^6.0.1",
-		"npm-check-updates": "^19.2.0",
+		"npm-check-updates": "^19.3.1",
 		"npmrc": "^1.1.1",
 		"svgo": "^4.0.0",
 		"typescript": "^5.9.3"
