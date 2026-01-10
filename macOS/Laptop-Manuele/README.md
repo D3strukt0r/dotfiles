@@ -94,6 +94,8 @@ antigen update
 * In LibreWolf, set `about:config` > `browser.download.start_downloads_in_tmp_dir` to `false` ([Reddit](https://www.reddit.com/r/LibreWolf/comments/1fqjumb/downloads/))
 * Setup Claude Code MCPs:
   * `claude mcp add context7 -- npx -y @upstash/context7-mcp --api-key <KEY>` (get `<KEY>` from password manager)
+* Manually Install Betterbird from [Download Page](https://betterbird.eu/downloads/) due to signing issues. Also fix quarantine with `xattr -r -d com.apple.quarantine /Applications/BetterBird.app`
+  * `wget -N --trust-server-names "https://www.betterbird.eu/downloads/get.php?os=win&lang=en-US&version=release"`
 * Install vagrant plugins `vagrant plugin install vagrant-hostsupdater vagrant-notify-forwarder vagrant-gatling-rsync vagrant-vbguest`
 * Fix Vagrant 2.4.1 for VirtualBox 7.1 `sudo nvim /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/plugins/providers/virtualbox/driver/meta.rb` and add `"7.1" => Version_7_0,` ([Issue](https://github.com/hashicorp/vagrant/issues/13501))
 * Allow starting/stopping vagrant without password by running `sudo visudo -f /private/etc/sudoers.d/vagrant` and adding the following lines:
