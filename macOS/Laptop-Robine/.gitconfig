@@ -1,5 +1,5 @@
 [user]
-	email = dev@d3strukt0r.me
+	email = dev@d3strukt0r.dev
 	name = D3strukt0r
 	signingKey = C9E5AB85364CA764!
 [gpg]
@@ -14,11 +14,3 @@
 	defaultBranch = master
 [core]
 	excludesfile = ~/.gitignore_global
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-[gpg "ssh"]
-	program = ssh-keygen
-	allowedSignersFile = ""

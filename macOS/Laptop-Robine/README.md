@@ -59,7 +59,7 @@ brew bundle cleanup
 * Add Time Machine Exclusions in `Systemeinstellungen` > `Time Machine` > `[Optionen ...]`
   * `~/Library/CloudStorage`
   * `/Applications`
-* Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Dock & Menüleiste` > `Uhr` > `Datum anzeigen` to `Immer`
+* Fix Vanilla Open state has empty space by switching `Systemeinstellungen` > `Kontrollzentrum` > `Uhr` > `Datum anzeigen` to `Immer`
 * Disable Tips Notification `Systemeinstellungen` > `Mitteilungen & Fokus` > `Tipps` > `Mitteilungen erlauben` > Aus
 * Add quick keyboard switcher in `Systemeinstellungen` > `Tastatur` > `Beim Drücker der fn-Taste` > `Eingabequellen wechseln`
 * Change Default window switching shortcut `Systemeinstellungen` > `Tastatur` > `Kurzbefehle` > `Tastatur` > `Fokus in nächstes Fenster` > `⌘ + (key left from y (QWERTZ) -> >,<)`
@@ -71,7 +71,7 @@ brew bundle cleanup
 #### Manual App Configuration
 
 * `iTerm2`
-  * `iTerm2` > `Preferences...` > `Profiles` > `<Profile Name: Default>` > `Keys` > `Key Mappings` > `(...) Presets...` > `Natural Text Editing`
+  * `iTerm2` > `Preferences...` > `Profiles` > `<Profile Name: Default>` > `Keys` > `Key Bindings` > `(...) Presets...` > `Natural Text Editing`
 * `Logitech G`
   * Add Macro to Mouse:
     * Back: `cmd + ö`

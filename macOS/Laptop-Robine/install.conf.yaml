@@ -11,6 +11,7 @@
     ~/.ssh/known_hosts:
         path: ../../General/.ssh/known_hosts
         create: true
+    ~/.antigenrc: .antigenrc
     ~/.gitconfig: .gitconfig
     ~/.gitignore_global: ../General/.gitignore_global
     ~/.gitmessage: ../General/.gitmessage
