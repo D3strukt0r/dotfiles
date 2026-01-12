@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@anthropic-ai/claude-code':
-        specifier: ^2.0.76
-        version: 2.0.76
+        specifier: ^2.1.5
+        version: 2.1.5
       degit:
         specifier: ^2.8.4
         version: 2.8.4
@@ -32,8 +32,8 @@ importers:
 
 packages:
 
-  '@anthropic-ai/claude-code@2.0.76':
-    resolution: {integrity: sha512-BVwPez7Pst729gxHZNb7iUdjrn4UAzO49zC+Bxlyf0fMe3SsutxEhKTT16VMs2qInE9xhEBCxajCCa888mFPBg==}
+  '@anthropic-ai/claude-code@2.1.5':
+    resolution: {integrity: sha512-OSd96R9W91JK9W+5AaF4bZ44l+PJqNYYXHSFDxSPifjeWd3Hu41n0XItvT/Fu3K87YXhQu0cjo4GE+/qouEHdg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -103,19 +103,16 @@ packages:
     resolution: {integrity: sha512-9B+taZ8DlyyqzZQnoeIvDVR/2F4EbMepXMc/NdVbkzsJbzkUjhXv/70GQJ7tdLA4YJgNP25zukcxpX2/SueNrA==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linux-arm@1.0.5':
     resolution: {integrity: sha512-gvcC4ACAOPRNATg/ov8/MnbxFDJqf/pDePbBnuBDcjsI8PssmjoKMAz4LtLaVi+OnSb5FK/yIOamqDwGmXW32g==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linux-x64@1.0.4':
     resolution: {integrity: sha512-MmWmQ3iPFZr0Iev+BAgVMb3ZyC4KeFc3jFxnNbEPas60e1cIfevbtuyf9nDGIzOaW9PdnDciJm+wFFaTlj5xYw==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linuxmusl-arm64@1.0.4':
     resolution: {integrity: sha512-9Ti+BbTYDcsbp4wfYib8Ctm1ilkugkA/uscUn6UXK1ldpC1JjiXbLfFZtRlBhjPZ5o1NCLiDbg8fhUPKStHoTA==}
@@ -1444,7 +1441,7 @@ packages:
 
 snapshots:
 
-  '@anthropic-ai/claude-code@2.0.76':
+  '@anthropic-ai/claude-code@2.1.5':
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
