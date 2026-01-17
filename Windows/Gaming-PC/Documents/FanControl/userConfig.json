@@ -1,5 +1,27 @@
 {
-  "__VERSION__": "241",
+  "__VERSION__": "250",
+  "Sensors": {
+    "AdlxWrapperSettings": {
+      "Enabled": false
+    },
+    "DisabledPlugins": [],
+    "DisableStorageSensors": false,
+    "LibreHardwareMonitorSettings": {
+      "Controller": false,
+      "CPU": true,
+      "EmbeddedEC": true,
+      "GPU": true,
+      "Memory": true,
+      "Motherboard": true,
+      "PSU": false,
+      "Storage": true,
+      "ZeroRPMOverride": false
+    },
+    "NvAPIWrapperSettings": {
+      "Enabled": true,
+      "ZeroRPMOverride": false
+    }
+  },
   "Main": {
     "Controls": [
       {
@@ -383,27 +405,5 @@
     "TemperatureSensors": [],
     "TrayIconColor": null,
     "TrayIcons": []
-  },
-  "Sensors": {
-    "AdlxWrapperSettings": {
-      "Enabled": false
-    },
-    "DisabledPlugins": [],
-    "DisableStorageSensors": false,
-    "LibreHardwareMonitorSettings": {
-      "Controller": false,
-      "CPU": true,
-      "EmbeddedEC": true,
-      "GPU": true,
-      "Memory": true,
-      "Motherboard": true,
-      "PSU": false,
-      "Storage": true,
-      "ZeroRPMOverride": false
-    },
-    "NvAPIWrapperSettings": {
-      "Enabled": true,
-      "ZeroRPMOverride": false
-    }
   }
 }
