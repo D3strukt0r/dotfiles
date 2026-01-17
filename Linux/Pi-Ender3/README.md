@@ -58,6 +58,34 @@ Including Plugins (18):
 - toptemp
 - touchui
 
+Add self-signed certificate for OctoPrint access over HTTPS
+
+https://community.octoprint.org/t/setup-a-new-self-signed-ssl-certificate-on-octoprint-enable-https/30256
+
+```shell
+# Generate private key
+sudo openssl genrsa -out /etc/ssl/octopi.key 2048
+
+# Generate certificate (replace STATIC_IP)
+sudo openssl req -new -x509 -sha256 -days 365 \
+  -key /etc/ssl/octopi.key \
+  -out /etc/ssl/octopi.cer \
+  -subj "/CN=ender3-octopi.local" \
+  -addext "subjectAltName=DNS:ender3-octopi.local,DNS:ender3-octopi"
+
+# Combine into .pem
+sudo bash -c 'cat /etc/ssl/octopi.key /etc/ssl/octopi.cer > /etc/ssl/octopi.pem'
+
+# Change certificate path from snakeoil.pem to octopi.pem
+sudo sed -i 's|/etc/ssl/snakeoil.pem|/etc/ssl/octopi.pem|g' /etc/haproxy/haproxy.cfg
+
+# Add HTTPS redirect
+sudo sed -i '/option forwardfor except 127.0.0.1/a\        redirect scheme https if !{ hdr(Host) -i 127.0.0.1 } !{ ssl_fc }' /etc/haproxy/haproxy.cfg
+
+# Restart HAProxy
+sudo systemctl restart haproxy
+```
+
 ## Non-functional upgrade to Trixie (Debian 13)
 
 https://forums.raspberrypi.com/viewtopic.php?t=392376
