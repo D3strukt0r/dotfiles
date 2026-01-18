@@ -1,0 +1,448 @@
+# ===================================================================
+# IKEA BILRESA Scroll Wheel (Matter)
+# Blueprint Template v1.0.0
+#
+# Internal Versioning:
+#   schema_version: 1.0.0
+#   last_updated: 2026-01-18
+#
+# Changelog:
+#   v1.0.0: Initial release for BILRESA scroll wheel with 3 profiles
+#
+# Power-User Notes:
+#   - This device exposes 9 event entities (3 per profile)
+#   - Each profile has: Left turn, Right turn, Click
+#   - Left/Right turn: single action only
+#   - Click: supports single, double, triple, hold, hold+release
+#   - Entity naming: event.bilresa_scroll_wheel_taste_{1-9}
+# ===================================================================
+
+blueprint:
+  name: IKEA BILRESA Scroll Wheel (Matter)
+  author: Custom
+  description: >
+    Full-featured automation for the IKEA BILRESA Scroll Wheel Matter device.
+    Supports all 3 profiles with:
+
+    - Left turn (Taste 1/4/7): Single action
+    - Right turn (Taste 2/5/8): Single action
+    - Click (Taste 3/6/9): Single, double, triple press, hold, and hold+release
+
+    Uses event entities exposed by Home Assistant for Matter devices.
+  domain: automation
+  source_url: https://github.com/custom/bilresa-scroll-wheel
+  homeassistant:
+    min_version: 2025.12.1
+
+  input:
+    # ---------------------------------------------------------------
+    # DEVICE SELECTION
+    # ---------------------------------------------------------------
+    target_device:
+      name: BILRESA Scroll Wheel Device
+      description: Select the IKEA BILRESA scroll wheel device.
+      selector:
+        device:
+          filter:
+            - manufacturer: IKEA of Sweden
+
+    # ---------------------------------------------------------------
+    # PROFILE 1 - Event Entities
+    # ---------------------------------------------------------------
+    profile1_left_event:
+      name: "Profile 1 – Left Turn (Taste 1)"
+      description: "Select event.bilresa_scroll_wheel_taste_1"
+      selector:
+        entity:
+          domain: event
+
+    profile1_right_event:
+      name: "Profile 1 – Right Turn (Taste 2)"
+      description: "Select event.bilresa_scroll_wheel_taste_2"
+      selector:
+        entity:
+          domain: event
+
+    profile1_click_event:
+      name: "Profile 1 – Click (Taste 3)"
+      description: "Select event.bilresa_scroll_wheel_taste_3"
+      selector:
+        entity:
+          domain: event
+
+    # ---------------------------------------------------------------
+    # PROFILE 2 - Event Entities
+    # ---------------------------------------------------------------
+    profile2_left_event:
+      name: "Profile 2 – Left Turn (Taste 4)"
+      description: "Select event.bilresa_scroll_wheel_taste_4"
+      selector:
+        entity:
+          domain: event
+
+    profile2_right_event:
+      name: "Profile 2 – Right Turn (Taste 5)"
+      description: "Select event.bilresa_scroll_wheel_taste_5"
+      selector:
+        entity:
+          domain: event
+
+    profile2_click_event:
+      name: "Profile 2 – Click (Taste 6)"
+      description: "Select event.bilresa_scroll_wheel_taste_6"
+      selector:
+        entity:
+          domain: event
+
+    # ---------------------------------------------------------------
+    # PROFILE 3 - Event Entities
+    # ---------------------------------------------------------------
+    profile3_left_event:
+      name: "Profile 3 – Left Turn (Taste 7)"
+      description: "Select event.bilresa_scroll_wheel_taste_7"
+      selector:
+        entity:
+          domain: event
+
+    profile3_right_event:
+      name: "Profile 3 – Right Turn (Taste 8)"
+      description: "Select event.bilresa_scroll_wheel_taste_8"
+      selector:
+        entity:
+          domain: event
+
+    profile3_click_event:
+      name: "Profile 3 – Click (Taste 9)"
+      description: "Select event.bilresa_scroll_wheel_taste_9"
+      selector:
+        entity:
+          domain: event
+
+    # ---------------------------------------------------------------
+    # PROFILE 1 - Actions
+    # ---------------------------------------------------------------
+    profile1_left:
+      name: "Profile 1 – Left Turn"
+      description: "Action when turning left in profile 1"
+      default: []
+      selector:
+        action: {}
+
+    profile1_right:
+      name: "Profile 1 – Right Turn"
+      description: "Action when turning right in profile 1"
+      default: []
+      selector:
+        action: {}
+
+    profile1_click_single:
+      name: "Profile 1 – Click (Single)"
+      default: []
+      selector:
+        action: {}
+
+    profile1_click_double:
+      name: "Profile 1 – Click (Double)"
+      default: []
+      selector:
+        action: {}
+
+    profile1_click_triple:
+      name: "Profile 1 – Click (Triple)"
+      default: []
+      selector:
+        action: {}
+
+    profile1_click_hold:
+      name: "Profile 1 – Click (Hold)"
+      description: "Triggered when hold starts"
+      default: []
+      selector:
+        action: {}
+
+    profile1_click_hold_release:
+      name: "Profile 1 – Click (Hold + Release)"
+      description: "Triggered when hold ends"
+      default: []
+      selector:
+        action: {}
+
+    # ---------------------------------------------------------------
+    # PROFILE 2 - Actions
+    # ---------------------------------------------------------------
+    profile2_left:
+      name: "Profile 2 – Left Turn"
+      description: "Action when turning left in profile 2"
+      default: []
+      selector:
+        action: {}
+
+    profile2_right:
+      name: "Profile 2 – Right Turn"
+      description: "Action when turning right in profile 2"
+      default: []
+      selector:
+        action: {}
+
+    profile2_click_single:
+      name: "Profile 2 – Click (Single)"
+      default: []
+      selector:
+        action: {}
+
+    profile2_click_double:
+      name: "Profile 2 – Click (Double)"
+      default: []
+      selector:
+        action: {}
+
+    profile2_click_triple:
+      name: "Profile 2 – Click (Triple)"
+      default: []
+      selector:
+        action: {}
+
+    profile2_click_hold:
+      name: "Profile 2 – Click (Hold)"
+      description: "Triggered when hold starts"
+      default: []
+      selector:
+        action: {}
+
+    profile2_click_hold_release:
+      name: "Profile 2 – Click (Hold + Release)"
+      description: "Triggered when hold ends"
+      default: []
+      selector:
+        action: {}
+
+    # ---------------------------------------------------------------
+    # PROFILE 3 - Actions
+    # ---------------------------------------------------------------
+    profile3_left:
+      name: "Profile 3 – Left Turn"
+      description: "Action when turning left in profile 3"
+      default: []
+      selector:
+        action: {}
+
+    profile3_right:
+      name: "Profile 3 – Right Turn"
+      description: "Action when turning right in profile 3"
+      default: []
+      selector:
+        action: {}
+
+    profile3_click_single:
+      name: "Profile 3 – Click (Single)"
+      default: []
+      selector:
+        action: {}
+
+    profile3_click_double:
+      name: "Profile 3 – Click (Double)"
+      default: []
+      selector:
+        action: {}
+
+    profile3_click_triple:
+      name: "Profile 3 – Click (Triple)"
+      default: []
+      selector:
+        action: {}
+
+    profile3_click_hold:
+      name: "Profile 3 – Click (Hold)"
+      description: "Triggered when hold starts"
+      default: []
+      selector:
+        action: {}
+
+    profile3_click_hold_release:
+      name: "Profile 3 – Click (Hold + Release)"
+      description: "Triggered when hold ends"
+      default: []
+      selector:
+        action: {}
+
+# ===================================================================
+# TRIGGERS
+# ===================================================================
+
+trigger:
+  # Profile 1
+  - platform: state
+    entity_id: !input profile1_left_event
+    id: p1_left
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  - platform: state
+    entity_id: !input profile1_right_event
+    id: p1_right
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  - platform: state
+    entity_id: !input profile1_click_event
+    id: p1_click
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  # Profile 2
+  - platform: state
+    entity_id: !input profile2_left_event
+    id: p2_left
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  - platform: state
+    entity_id: !input profile2_right_event
+    id: p2_right
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  - platform: state
+    entity_id: !input profile2_click_event
+    id: p2_click
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  # Profile 3
+  - platform: state
+    entity_id: !input profile3_left_event
+    id: p3_left
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  - platform: state
+    entity_id: !input profile3_right_event
+    id: p3_right
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+  - platform: state
+    entity_id: !input profile3_click_event
+    id: p3_click
+    not_from: 'unavailable'
+    not_to: 'unavailable'
+
+condition: []
+
+# ===================================================================
+# ACTIONS
+# ===================================================================
+
+action:
+  - variables:
+      press_type: "{{ trigger.to_state.attributes.event_type }}"
+      trigger_id: "{{ trigger.id }}"
+
+  - choose:
+      # ---------------------------------------------------------------
+      # PROFILE 1
+      # ---------------------------------------------------------------
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p1_left' }}"
+        sequence: !input profile1_left
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p1_right' }}"
+        sequence: !input profile1_right
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p1_click' and press_type == 'multi_press_1' }}"
+        sequence: !input profile1_click_single
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p1_click' and press_type == 'multi_press_2' }}"
+        sequence: !input profile1_click_double
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p1_click' and press_type == 'multi_press_3' }}"
+        sequence: !input profile1_click_triple
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p1_click' and press_type == 'long_press' }}"
+        sequence: !input profile1_click_hold
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p1_click' and press_type == 'long_release' }}"
+        sequence: !input profile1_click_hold_release
+
+      # ---------------------------------------------------------------
+      # PROFILE 2
+      # ---------------------------------------------------------------
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p2_left' }}"
+        sequence: !input profile2_left
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p2_right' }}"
+        sequence: !input profile2_right
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p2_click' and press_type == 'multi_press_1' }}"
+        sequence: !input profile2_click_single
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p2_click' and press_type == 'multi_press_2' }}"
+        sequence: !input profile2_click_double
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p2_click' and press_type == 'multi_press_3' }}"
+        sequence: !input profile2_click_triple
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p2_click' and press_type == 'long_press' }}"
+        sequence: !input profile2_click_hold
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p2_click' and press_type == 'long_release' }}"
+        sequence: !input profile2_click_hold_release
+
+      # ---------------------------------------------------------------
+      # PROFILE 3
+      # ---------------------------------------------------------------
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p3_left' }}"
+        sequence: !input profile3_left
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p3_right' }}"
+        sequence: !input profile3_right
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p3_click' and press_type == 'multi_press_1' }}"
+        sequence: !input profile3_click_single
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p3_click' and press_type == 'multi_press_2' }}"
+        sequence: !input profile3_click_double
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p3_click' and press_type == 'multi_press_3' }}"
+        sequence: !input profile3_click_triple
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p3_click' and press_type == 'long_press' }}"
+        sequence: !input profile3_click_hold
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger_id == 'p3_click' and press_type == 'long_release' }}"
+        sequence: !input profile3_click_hold_release
+
+mode: restart

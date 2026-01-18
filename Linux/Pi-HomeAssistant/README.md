@@ -14,3 +14,11 @@ https://github.com/home-assistant/addons/issues/3620
    ```
    enable_uart=1
    ```
+
+## Adding blueprints
+
+```shell
+ssh d3strukt0r@homeassistant.local
+mkdir -p /config/blueprints/automation/d3strukt0r
+nano /config/blueprints/automation/d3strukt0r/ikea-bilresa-e2490-matter-smart-wheel.yaml
+```
