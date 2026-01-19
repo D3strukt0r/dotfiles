@@ -3,10 +3,12 @@
 # Blueprint Template v1.0.0
 #
 # Internal Versioning:
-#   schema_version: 1.0.0
+#   schema_version: 1.2.0
 #   last_updated: 2026-01-18
 #
 # Changelog:
+#   v1.2.0: Added scroll_transition and brightness_step inputs for smooth dimming
+#   v1.1.0: Continuous scroll support - brightness changes per tick using TotalNumberOfPressesCounted
 #   v1.0.0: Initial release for BILRESA scroll wheel with 3 profiles
 #
 # Power-User Notes:
@@ -19,15 +21,16 @@
 
 blueprint:
   name: IKEA BILRESA Scroll Wheel (Matter)
-  author: Custom
+  author: D3strukt0r
   description: >
     Full-featured automation for the IKEA BILRESA Scroll Wheel Matter device.
     Supports all 3 profiles with:
 
-    - Left turn (Taste 1/4/7): Single action
-    - Right turn (Taste 2/5/8): Single action
+    - Left turn (Taste 1/4/7): Single action (continuous per tick)
+    - Right turn (Taste 2/5/8): Single action (continuous per tick)
     - Click (Taste 3/6/9): Single, double, triple press, hold, and hold+release
 
+    Features configurable transition time and brightness step for smooth dimming.
     Uses event entities exposed by Home Assistant for Matter devices.
   domain: automation
   source_url: https://github.com/custom/bilresa-scroll-wheel
@@ -45,6 +48,38 @@ blueprint:
         device:
           filter:
             - manufacturer: IKEA of Sweden
+
+    # ---------------------------------------------------------------
+    # SCROLL SETTINGS
+    # ---------------------------------------------------------------
+    scroll_transition:
+      name: Scroll Transition Time
+      description: >
+        Transition time (in seconds) for brightness changes when scrolling.
+        Use 0 for instant changes, or small values like 0.1-0.3 for smooth transitions.
+        Reference this in your action with: transition: !input scroll_transition
+      default: 0.1
+      selector:
+        number:
+          min: 0
+          max: 2
+          step: 0.1
+          unit_of_measurement: seconds
+          mode: slider
+
+    brightness_step:
+      name: Brightness Step
+      description: >
+        Percentage to change brightness per scroll tick.
+        Reference this in your action with: brightness_step_pct: !input brightness_step
+      default: 10
+      selector:
+        number:
+          min: 1
+          max: 25
+          step: 1
+          unit_of_measurement: "%"
+          mode: slider
 
     # ---------------------------------------------------------------
     # PROFILE 1 - Event Entities
@@ -329,6 +364,7 @@ action:
   - variables:
       press_type: "{{ trigger.to_state.attributes.event_type }}"
       trigger_id: "{{ trigger.id }}"
+      tick_count: "{{ trigger.to_state.attributes.TotalNumberOfPressesCounted | default(1) | int }}"
 
   - choose:
       # ---------------------------------------------------------------
@@ -337,12 +373,18 @@ action:
       - conditions:
           - condition: template
             value_template: "{{ trigger_id == 'p1_left' }}"
-        sequence: !input profile1_left
+        sequence:
+          - repeat:
+              count: "{{ tick_count }}"
+              sequence: !input profile1_left
 
       - conditions:
           - condition: template
             value_template: "{{ trigger_id == 'p1_right' }}"
-        sequence: !input profile1_right
+        sequence:
+          - repeat:
+              count: "{{ tick_count }}"
+              sequence: !input profile1_right
 
       - conditions:
           - condition: template
@@ -375,12 +417,18 @@ action:
       - conditions:
           - condition: template
             value_template: "{{ trigger_id == 'p2_left' }}"
-        sequence: !input profile2_left
+        sequence:
+          - repeat:
+              count: "{{ tick_count }}"
+              sequence: !input profile2_left
 
       - conditions:
           - condition: template
             value_template: "{{ trigger_id == 'p2_right' }}"
-        sequence: !input profile2_right
+        sequence:
+          - repeat:
+              count: "{{ tick_count }}"
+              sequence: !input profile2_right
 
       - conditions:
           - condition: template
@@ -413,12 +461,18 @@ action:
       - conditions:
           - condition: template
             value_template: "{{ trigger_id == 'p3_left' }}"
-        sequence: !input profile3_left
+        sequence:
+          - repeat:
+              count: "{{ tick_count }}"
+              sequence: !input profile3_left
 
       - conditions:
           - condition: template
             value_template: "{{ trigger_id == 'p3_right' }}"
-        sequence: !input profile3_right
+        sequence:
+          - repeat:
+              count: "{{ tick_count }}"
+              sequence: !input profile3_right
 
       - conditions:
           - condition: template
