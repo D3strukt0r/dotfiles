@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@anthropic-ai/claude-code": "^2.1.5",
+		"@anthropic-ai/claude-code": "^2.1.12",
 		"degit": "^2.8.4",
 		"npm-check": "^6.0.1",
 		"npm-check-updates": "^19.3.1",
