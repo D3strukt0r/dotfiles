@@ -55,22 +55,6 @@
 					"Version" : "2025.3.3"
 				},
 				{
-					"PackageIdentifier" : "Maxon.Cinema4D.2024",
-					"Version" : "2024"
-				},
-				{
-					"PackageIdentifier" : "Mozilla.Firefox",
-					"Version" : "146.0.1"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.OneDrive",
-					"Version" : "25.238.1204.0001"
-				},
-				{
-					"PackageIdentifier" : "namazso.PawnIO",
-					"Version" : "2.0.1.0"
-				},
-				{
 					"PackageIdentifier" : "Proton.ProtonMailBridge",
 					"Version" : "3.21.2"
 				},
@@ -91,10 +75,6 @@
 					"Version" : "2025.924.154138"
 				},
 				{
-					"PackageIdentifier" : "TeamViewer.TeamViewer",
-					"Version" : "15.73.5"
-				},
-				{
 					"PackageIdentifier" : "Unity.UnityHub",
 					"Version" : "3.15.2"
 				},
@@ -105,26 +85,6 @@
 				{
 					"PackageIdentifier" : "LedgerHQ.LedgerLive",
 					"Version" : "2.133.0"
-				},
-				{
-					"PackageIdentifier" : "Nefarius.HidHide",
-					"Version" : "1.5.230"
-				},
-				{
-					"PackageIdentifier" : "MiniTool.PartitionWizard.Free",
-					"Version" : "13.5"
-				},
-				{
-					"PackageIdentifier" : "Elgato.CameraHub",
-					"Version" : "2.2.1.6945"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64",
-					"Version" : "10.0.40219"
-				},
-				{
-					"PackageIdentifier" : "Oracle.JDK.21",
-					"Version" : "21.0.9.0"
 				},
 				{
 					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh",
@@ -139,20 +99,12 @@
 					"Version" : "v2.0.3"
 				},
 				{
-					"PackageIdentifier" : "Kitware.CMake",
-					"Version" : "4.2.0"
-				},
-				{
 					"PackageIdentifier" : "Logitech.GHUB",
 					"Version" : "2025.9.814157"
 				},
 				{
 					"PackageIdentifier" : "Apple.Bonjour",
 					"Version" : "3.1.0.1"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64",
-					"Version" : "9.0.30729.6161"
 				},
 				{
 					"PackageIdentifier" : "Xencelabs.Driver",
@@ -175,14 +127,6 @@
 					"Version" : "2.4.9"
 				},
 				{
-					"PackageIdentifier" : "Elgato.4KCaptureUtility",
-					"Version" : "1.7.16.10414"
-				},
-				{
-					"PackageIdentifier" : "ViGEm.ViGEmBus",
-					"Version" : "1.22.0"
-				},
-				{
 					"PackageIdentifier" : "Corsair.iCUE.5",
 					"Version" : "Unknown"
 				},
@@ -199,16 +143,8 @@
 					"Version" : "5.10.102.1"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community",
-					"Version" : "17.14.21 (November 2025)"
-				},
-				{
 					"PackageIdentifier" : "Guru3D.Afterburner",
 					"Version" : "4.6.6"
-				},
-				{
-					"PackageIdentifier" : "Dropbox.Dropbox",
-					"Version" : "239.4.8301"
 				},
 				{
 					"PackageIdentifier" : "GnuPG.GnuPG",
@@ -225,10 +161,6 @@
 				{
 					"PackageIdentifier" : "LibreWolf.LibreWolf",
 					"Version" : "145.0.1-2"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Edge",
-					"Version" : "144.0.3719.82"
 				},
 				{
 					"PackageIdentifier" : "OBSProject.OBSStudio",
@@ -251,44 +183,16 @@
 					"Version" : "6.5.5"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64",
-					"Version" : "12.0.40664.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6",
-					"Version" : "6.0.36"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86",
-					"Version" : "14.50.35719.0"
-				},
-				{
 					"PackageIdentifier" : "Rem0o.FanControl",
 					"Version" : "250"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.Runtime.6",
-					"Version" : "6.0.36"
 				},
 				{
 					"PackageIdentifier" : "Skillbrains.Lightshot",
 					"Version" : "5.5.0.7"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86",
-					"Version" : "11.0.61030.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.AspNetCore.8",
-					"Version" : "8.0.23"
-				},
-				{
 					"PackageIdentifier" : "Intel.IntelDriverAndSupportAssistant",
 					"Version" : "25.4.36.6"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.10",
-					"Version" : "10.0.2"
 				},
 				{
 					"PackageIdentifier" : "Python.Launcher",
@@ -299,44 +203,16 @@
 					"Version" : "2.0.0.0"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64",
-					"Version" : "14.50.35719.0"
-				},
-				{
 					"PackageIdentifier" : "EpicGames.EpicGamesLauncher",
 					"Version" : "1.3.93.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86",
-					"Version" : "9.0.30729.6161"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86",
-					"Version" : "12.0.40664.0"
 				},
 				{
 					"PackageIdentifier" : "Futuremark.FuturemarkSystemInfo",
 					"Version" : "5.88.1377.0"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86",
-					"Version" : "10.0.40219"
-				},
-				{
-					"PackageIdentifier" : "Paragon.LinuxFileSystems",
-					"Version" : "6.1.5"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8",
 					"Version" : "8.0.23"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.Runtime.8",
-					"Version" : "8.0.23"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64",
-					"Version" : "11.0.61030.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.PowerShell",
@@ -423,10 +299,6 @@
 					"Version" : "2.1.4"
 				},
 				{
-					"PackageIdentifier" : "Levitsky.FontBase",
-					"Version" : "2.23.1"
-				},
-				{
 					"PackageIdentifier" : "Axosoft.GitKraken",
 					"Version" : "11.8.0"
 				},
@@ -459,8 +331,7 @@
 					"Version" : "4.4.1.1"
 				},
 				{
-					"PackageIdentifier" : "Python.Python.3.12",
-					"Version" : "3.12.10"
+					"PackageIdentifier" : "Python.Python.3.13"
 				},
 				{
 					"PackageIdentifier" : "File-New-Project.EarTrumpet",
@@ -469,34 +340,6 @@
 				{
 					"PackageIdentifier" : "AgileBits.1Password",
 					"Version" : "8.11.23.1"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Teams",
-					"Version" : "25332.1210.4188.1171"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.AppInstaller",
-					"Version" : "1.27.350.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7",
-					"Version" : "7.2409.9001.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.UI.Xaml.2.8",
-					"Version" : "8.2501.31001.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14",
-					"Version" : "14.0.33728.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal",
-					"Version" : "1.23.13503.0"
-				},
-				{
-					"PackageIdentifier" : "Debian.Debian",
-					"Version" : "1.23.0.0"
 				}
 			],
 			"SourceDetails" : 
