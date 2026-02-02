@@ -2,7 +2,7 @@
 	"dependencies": {
 		"degit": "^2.8.4",
 		"npm-check": "^6.0.1",
-		"npm-check-updates": "^19.3.1",
+		"npm-check-updates": "^19.3.2",
 		"npmrc": "^1.1.1",
 		"svgo": "^4.0.0",
 		"typescript": "^5.9.3"
