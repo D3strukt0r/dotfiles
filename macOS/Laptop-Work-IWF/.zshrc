@@ -13,6 +13,7 @@ fi
 # Node Version Manager (nvm)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Load Homebrew installed tools first
 if which brew &> /dev/null; then
   _BREW_PREFIX=$(brew --prefix)

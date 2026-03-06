@@ -1,8 +1,8 @@
-USE_GIT=false
-USE_PHP=false
-USE_CONTAINER=false
-USE_NODEJS=false
-USE_PYTHON=false
+USE_GIT=true
+USE_PHP=true
+USE_CONTAINER=true
+USE_NODEJS=true
+USE_PYTHON=true
 
 # Load various lib files
 antigen use oh-my-zsh

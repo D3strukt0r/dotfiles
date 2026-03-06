@@ -12,7 +12,7 @@
 [tag]
 	forceSignAnnotated = true
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [push]
 	autoSetupRemote = true
 [rerere]
@@ -27,9 +27,18 @@
 [gpg "ssh"]
 	program = ssh-keygen
 	allowedSignersFile = 
+[diff]
+	tool = beyondcompare
+[difftool "beyondcompare"]
+	cmd = \"/Applications/Beyond Compare.app/Contents/MacOS/bcomp\" \"$LOCAL\" \"$REMOTE\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
+[merge]
+	tool = beyondcompare
+[mergetool "beyondcompare"]
+	cmd = \"/Applications/Beyond Compare.app/Contents/MacOS/bcomp\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

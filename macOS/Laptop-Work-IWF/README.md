@@ -95,6 +95,7 @@ antigen update
 * Fix Librewolf `xattr -d com.apple.quarantine /Applications/LibreWolf.app`
 * Manually Install Betterbird from [Download Page](https://betterbird.eu/downloads/) due to signing issues. Also fix quarantine with `xattr -r -d com.apple.quarantine /Applications/BetterBird.app`
   * `wget -N --trust-server-names "https://www.betterbird.eu/downloads/get.php?os=win&lang=en-US&version=release"`
+* Improve Claude with [ccstatusline](https://github.com/sirmalloc/ccstatusline) - `npx ccstatusline@latest`
 
 #### Manual System Settings Configuration
 
