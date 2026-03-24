@@ -58,6 +58,11 @@ if which pyenv &> /dev/null; then
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
+# PhpEnv
+if [ -d "$HOME/.phpenv/bin" ]; then
+  export PATH="$HOME/.phpenv/bin:$PATH"
+  eval "$(phpenv init -)"
+fi
 # Fix Google Cloud SDK does not support Python 3.12, link to 3.11
 # (ModuleNotFoundError: No module named 'imp')
 # https://stackoverflow.com/questions/77316716/gcloud-modulenotfounderror-no-module-named-imp
