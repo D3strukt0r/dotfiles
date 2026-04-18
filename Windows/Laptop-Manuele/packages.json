@@ -1,0 +1,200 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2026-01-10T16:51:48.341-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "7zip.7zip",
+					"Version" : "24.09"
+				},
+				{
+					"PackageIdentifier" : "Betterbird.Betterbird",
+					"Version" : "128.11.0"
+				},
+				{
+					"PackageIdentifier" : "Git.Git",
+					"Version" : "2.50.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive",
+					"Version" : "25.222.1112.0002"
+				},
+				{
+					"PackageIdentifier" : "Proton.ProtonMailBridge",
+					"Version" : "3.21.1"
+				},
+				{
+					"PackageIdentifier" : "Proton.ProtonVPN",
+					"Version" : "4.2.0"
+				},
+				{
+					"PackageIdentifier" : "Unity.UnityHub",
+					"Version" : "< 3.15.2"
+				},
+				{
+					"PackageIdentifier" : "VideoLAN.VLC",
+					"Version" : "3.0.21"
+				},
+				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh",
+					"Version" : "26.12.0"
+				},
+				{
+					"PackageIdentifier" : "Hashicorp.Vagrant",
+					"Version" : "2.4.7"
+				},
+				{
+					"PackageIdentifier" : "Logitech.GHUB",
+					"Version" : "2025.4.719084"
+				},
+				{
+					"PackageIdentifier" : "Oracle.VirtualBox",
+					"Version" : "7.1.10"
+				},
+				{
+					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit",
+					"Version" : "25.001.20531"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell",
+					"Version" : "7.5.2.0"
+				},
+				{
+					"PackageIdentifier" : "Adobe.CreativeCloud",
+					"Version" : "6.7.0.278"
+				},
+				{
+					"PackageIdentifier" : "GnuPG.GnuPG",
+					"Version" : "2.4.8"
+				},
+				{
+					"PackageIdentifier" : "GnuPG.Gpg4win",
+					"Version" : "4.4.1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge",
+					"Version" : "138.0.3351.55"
+				},
+				{
+					"PackageIdentifier" : "Valve.Steam",
+					"Version" : "2.10.91.91"
+				},
+				{
+					"PackageIdentifier" : "QPDF.QPDF",
+					"Version" : "12.2.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86",
+					"Version" : "14.44.35211.0"
+				},
+				{
+					"PackageIdentifier" : "Skillbrains.Lightshot",
+					"Version" : "5.5.0.7"
+				},
+				{
+					"PackageIdentifier" : "EpicGames.EpicGamesLauncher",
+					"Version" : "1.3.142.0"
+				},
+				{
+					"PackageIdentifier" : "Python.Launcher",
+					"Version" : "3.12.10"
+				},
+				{
+					"PackageIdentifier" : "Apple.AppleSoftwareUpdate",
+					"Version" : "2.7.0.3"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64",
+					"Version" : "14.44.35211.0"
+				},
+				{
+					"PackageIdentifier" : "AgileBits.1Password",
+					"Version" : "< 8.11.4.27"
+				},
+				{
+					"PackageIdentifier" : "Notion.Notion",
+					"Version" : "4.14.0"
+				},
+				{
+					"PackageIdentifier" : "OpenWhisperSystems.Signal",
+					"Version" : "7.59.0"
+				},
+				{
+					"PackageIdentifier" : "Brave.Brave",
+					"Version" : "138.1.80.113"
+				},
+				{
+					"PackageIdentifier" : "FiloSottile.mkcert",
+					"Version" : "1.4.4"
+				},
+				{
+					"PackageIdentifier" : "flux.flux",
+					"Version" : "4.134"
+				},
+				{
+					"PackageIdentifier" : "JetBrains.Toolbox",
+					"Version" : "2.6.3.43718"
+				},
+				{
+					"PackageIdentifier" : "Axosoft.GitKraken",
+					"Version" : "9.10.0"
+				},
+				{
+					"PackageIdentifier" : "WinSCP.WinSCP",
+					"Version" : "6.3.7"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys",
+					"Version" : "0.91.1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode",
+					"Version" : "1.101.2"
+				},
+				{
+					"PackageIdentifier" : "SomePythonThings.ElevenClock",
+					"Version" : "4.4.1.1"
+				},
+				{
+					"PackageIdentifier" : "Python.Python.3.12",
+					"Version" : "3.12.10"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.AppInstaller",
+					"Version" : "1.26.400.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7",
+					"Version" : "7.2409.9001.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UI.Xaml.2.8",
+					"Version" : "8.2501.31001.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14",
+					"Version" : "14.0.33728.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal",
+					"Version" : "1.22.11751.0"
+				},
+				{
+					"PackageIdentifier" : "Threema.Threema.2",
+					"Version" : "2.0.53.0"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion" : "1.11.400"
+}
