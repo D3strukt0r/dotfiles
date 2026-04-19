@@ -14,6 +14,7 @@ Function Add-PathVariable {
   }
 }
 
+# https://github.com/ThePoShWolf/Utilities/blob/master/Misc/Set-PathVariable.ps1
 # https://gist.github.com/mikepruett3/7ca6518051383ee14f9cf8ae63ba18a7
 function Install-ScoopApp {
   param (

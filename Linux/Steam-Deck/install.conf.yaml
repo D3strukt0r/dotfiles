@@ -1,3 +1,6 @@
+- plugins:
+    - ../../dotbot-plugins/
+
 - defaults:
     link:
       relink: true

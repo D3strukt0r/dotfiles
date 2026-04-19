@@ -1,5 +1,7 @@
 import subprocess, dotbot
 
+# https://github.com/DrDynamic/dotbot-flatpak
+
 class Flatpak(dotbot.Plugin):
     _directive = 'flatpak'
 

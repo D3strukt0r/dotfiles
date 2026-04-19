@@ -1,11 +1,17 @@
+- plugins:
+    - ../../dotbot-plugins/
+
 - defaults:
     link:
       relink: true
+    crossplatform-link:
+      relink: true
+      create: true
 
-#- clean: ['~']
-
-#- link:
-#    ~/.gitconfig: .gitconfig
+- crossplatform-link:
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: ../General/.gitignore_global
+    ~/.ssh/config: .ssh/config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

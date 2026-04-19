@@ -22,6 +22,8 @@ winget install --id Microsoft.PowerShell --exact --source winget
 
 ### Installing
 
+> **Run PowerShell as Administrator.** Creating symlinks on Windows requires either an elevated shell or Developer Mode; `install.ps1` uses `dotbot` + `dotbot-crossplatform` to symlink `~/.gitconfig`, `~/.gitignore_global` and `~/.ssh/config`, which will fail without elevation.
+
 For first-time setup
 
 ```powershell
@@ -80,19 +82,7 @@ Then reload the profile
 . $PROFILE
 ```
 
-Link the Git config
-
-```powershell
-Remove-Item -Recurse -Path "$HOME\.gitconfig"
-New-Item -ItemType SymbolicLink -Path "$HOME\.gitconfig" -Target "$HOME\.dotfiles\Windows\Laptop-Manuele\.gitconfig"
-```
-
-Link the ssh config
-
-```powershell
-Remove-Item -Recurse -Path "$HOME\.ssh\config"
-New-Item -ItemType SymbolicLink -Path "$HOME\.ssh\config" -Target "$HOME\.dotfiles\Windows\Laptop-Manuele\.ssh\config"
-```
+`.\install.ps1` links `~/.gitconfig`, `~/.gitignore_global` (from `Windows/General/`) and `~/.ssh/config` automatically via dotbot + dotbot-crossplatform.
 
 To ignore hash not matching run ([StackOverflow](https://stackoverflow.com/questions/75647313/winget-install-my-app-receives-installer-hash-does-not-match))
 
