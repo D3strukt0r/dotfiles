@@ -1,0 +1,44 @@
+[user]
+	email = dev@d3strukt0r.dev
+	name = D3strukt0r
+	signingKey = C9E5AB85364CA764!
+	# Personal: C9E5AB85364CA764! | Work: 05521883ADA75D54!
+[gpg]
+	program = /usr/local/bin/gpg
+	format = openpgp
+[commit]
+	gpgSign = true
+	template = /Users/manuelevaccari/.gitmessage
+[tag]
+	forceSignAnnotated = true
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[core]
+	excludesfile = ~/.gitignore_global
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg "ssh"]
+	program = ssh-keygen
+	allowedSignersFile = 
+[diff]
+	tool = beyondcompare
+[difftool "beyondcompare"]
+	cmd = \"/Applications/Beyond Compare.app/Contents/MacOS/bcomp\" \"$LOCAL\" \"$REMOTE\"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[merge]
+	tool = beyondcompare
+[mergetool "beyondcompare"]
+	cmd = \"/Applications/Beyond Compare.app/Contents/MacOS/bcomp\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

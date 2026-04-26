@@ -1,0 +1,20 @@
+- plugins:
+    - ../../dotbot-plugins/
+
+- defaults:
+    link:
+      relink: true
+    crossplatform-link:
+      relink: true
+      create: true
+
+- crossplatform-link:
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: ../General/.gitignore_global
+    ~/.ssh/config: .ssh/config
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+# curl -s https://raw.githubusercontent.com/basherpm/basher/master/install.sh | bash
+# basher install pforret/bashew

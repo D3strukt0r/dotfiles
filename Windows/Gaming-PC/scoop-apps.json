@@ -1,0 +1,25 @@
+{
+    "buckets": [
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2023-01-04T21:25:55+01:00",
+            "Manifests": 1754
+        },
+        {
+            "Name": "main",
+            "Source": "~\\scoop\\buckets\\main",
+            "Updated": "2023-01-04T22:11:15.0539857+01:00",
+            "Manifests": 1137
+        }
+    ],
+    "apps": [
+        {
+            "Version": "140",
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2023-01-04T22:12:18.4374842+01:00",
+            "Name": "fancontrol"
+        }
+    ]
+}

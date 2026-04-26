@@ -1,0 +1,17 @@
+{
+    "require": {
+        "rector/rector": "^2.0",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-doctrine": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpstan/phpstan-symfony": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.75"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}

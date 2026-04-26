@@ -1,0 +1,401 @@
+{
+  "__VERSION__": "265",
+  "FanControl": {
+    "Controls": [
+      {
+        "NickName": "CHA_FAN?",
+        "Identifier": "/lpc/nct6798d/control/1",
+        "IsHidden": true,
+        "Enable": true,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/1"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 40,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "CHA_FAN?",
+        "Identifier": "/lpc/nct6798d/control/6",
+        "IsHidden": true,
+        "Enable": true,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/6"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 50,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "CHA_FAN?",
+        "Identifier": "/lpc/nct6798d/control/0",
+        "IsHidden": true,
+        "Enable": true,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/0"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 12,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "Case (Front) (CHA_FAN4)",
+        "Identifier": "/lpc/nct6798d/control/4",
+        "IsHidden": false,
+        "Enable": true,
+        "SelectedFanCurve": {
+          "Name": "Case (20% - 100%)"
+        },
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/4"
+        },
+        "SelectedStart": 12,
+        "SelectedStop": 12,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 50,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "Pump (CHA_FAN2)",
+        "Identifier": "/lpc/nct6798d/control/2",
+        "IsHidden": false,
+        "Enable": true,
+        "SelectedFanCurve": {
+          "Name": "Pump (50% - 90%)"
+        },
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/2"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 50,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "GPU (Inner)",
+        "Identifier": "NVApiWrapper/0-GA102-A/control/1",
+        "IsHidden": false,
+        "Enable": true,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "NVApiWrapper/0-GA102-A/fan/1"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 0,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "CHA_FAN?",
+        "Identifier": "/lpc/nct6798d/control/5",
+        "IsHidden": true,
+        "Enable": true,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/5"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 50,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "CHA_FAN?",
+        "Identifier": "/lpc/nct6798d/control/3",
+        "IsHidden": true,
+        "Enable": true,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "/lpc/nct6798d/fan/3"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 50,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      },
+      {
+        "NickName": "GPU (Outer)",
+        "Identifier": "NVApiWrapper/0-GA102-A/control/0",
+        "IsHidden": false,
+        "Enable": true,
+        "SelectedFanCurve": null,
+        "SelectedOffset": 0,
+        "PairedFanSensor": {
+          "Identifier": "NVApiWrapper/0-GA102-A/fan/0"
+        },
+        "SelectedStart": 0,
+        "SelectedStop": 0,
+        "MinimumPercent": 0,
+        "SelectedCommandStepUp": 8,
+        "SelectedCommandStepDown": 8,
+        "ManualControlValue": 25,
+        "ManualControl": false,
+        "ForceApply": false,
+        "Calibration": null
+      }
+    ],
+    "CustomSensors": [],
+    "FanCurves": [
+      {
+        "Name": "Min Fan Speed",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "Percent": 20
+      },
+      {
+        "Name": "Min Pump Speed",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "Percent": 50
+      },
+      {
+        "Name": "Max Pump Speed",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "Percent": 90
+      },
+      {
+        "Name": "CPU",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "SelectedTempSource": {
+          "Identifier": "/intelcpu/0/temperature/1"
+        },
+        "MaximumFanSpeed": 100,
+        "MaximumTemperature": 90,
+        "MinimumFanSpeed": 0,
+        "MinimumTemperature": 35,
+        "HysteresisConfig": {
+          "ResponseTimeUp": 3,
+          "ResponseTimeDown": 3,
+          "HysteresisValueUp": 3,
+          "HysteresisValueDown": 3,
+          "IgnoreHysteresisAtLimits": true
+        }
+      },
+      {
+        "Name": "GPU",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "SelectedTempSource": {
+          "Identifier": "NVApiWrapper/0-GA102-A/sensor/0"
+        },
+        "MaximumFanSpeed": 100,
+        "MaximumTemperature": 74,
+        "MinimumFanSpeed": 0,
+        "MinimumTemperature": 35,
+        "HysteresisConfig": {
+          "ResponseTimeUp": 3,
+          "ResponseTimeDown": 3,
+          "HysteresisValueUp": 3,
+          "HysteresisValueDown": 3,
+          "IgnoreHysteresisAtLimits": true
+        }
+      },
+      {
+        "Name": "Avg. Components",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "SelectedFanCurves": [
+          {
+            "Name": "CPU"
+          },
+          {
+            "Name": "GPU"
+          }
+        ],
+        "SelectedMixFunction": 2
+      },
+      {
+        "Name": "Case (20% - 100%)",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "SelectedFanCurves": [
+          {
+            "Name": "Min Fan Speed"
+          },
+          {
+            "Name": "Avg. Components"
+          }
+        ],
+        "SelectedMixFunction": 0
+      },
+      {
+        "Name": "Lower Limit Pump (50% - 100%)",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "SelectedFanCurves": [
+          {
+            "Name": "Min Pump Speed"
+          },
+          {
+            "Name": "CPU"
+          },
+          {
+            "Name": "GPU"
+          }
+        ],
+        "SelectedMixFunction": 0
+      },
+      {
+        "Name": "Pump (50% - 90%)",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "SelectedFanCurves": [
+          {
+            "Name": "Lower Limit Pump (50% - 100%)"
+          },
+          {
+            "Name": "Max Pump Speed"
+          }
+        ],
+        "SelectedMixFunction": 3
+      },
+      {
+        "Name": "Test Flat",
+        "IsHidden": false,
+        "CommandMode": 0,
+        "Percent": 100
+      }
+    ],
+    "FanSensors": [
+      {
+        "Identifier": "/lpc/nct6798d/fan/1",
+        "IsHidden": true,
+        "NickName": "CHA_FAN?"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/6",
+        "IsHidden": true,
+        "NickName": "CHA_FAN?"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/0",
+        "IsHidden": true,
+        "NickName": "CHA_FAN?"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/4",
+        "IsHidden": false,
+        "NickName": "Case (Front) (CHA_FAN4)"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/2",
+        "IsHidden": true,
+        "NickName": "Pump (CHA_FAN2)"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/5",
+        "IsHidden": true,
+        "NickName": "CHA_FAN?"
+      },
+      {
+        "Identifier": "/lpc/nct6798d/fan/3",
+        "IsHidden": true,
+        "NickName": "CHA_FAN?"
+      },
+      {
+        "Identifier": "NVApiWrapper/0-GA102-A/fan/0",
+        "IsHidden": true,
+        "NickName": "GPU (Outer)"
+      },
+      {
+        "Identifier": "NVApiWrapper/0-GA102-A/fan/1",
+        "IsHidden": true,
+        "NickName": "GPU (Inner)"
+      }
+    ],
+    "TemperatureSensors": []
+  },
+  "Sensors": {
+    "AdlxWrapperSettings": {
+      "Enabled": false
+    },
+    "DisabledPlugins": [],
+    "DisableStorageSensors": false,
+    "LibreHardwareMonitorSettings": {
+      "Controller": false,
+      "CPU": true,
+      "EmbeddedEC": true,
+      "GPU": true,
+      "Memory": true,
+      "Motherboard": true,
+      "PowerMonitor": false,
+      "PSU": false,
+      "Storage": true,
+      "StorageUpdateInterval": "00:01:00",
+      "ZeroRPMOverride": false
+    },
+    "NvAPIWrapperSettings": {
+      "Enabled": true,
+      "ZeroRPMOverride": false
+    }
+  },
+  "MainWindow": {
+    "Fahrenheit": false,
+    "HideCalibration": false,
+    "HideFanSpeedCards": true,
+    "HorizontalUIOrientation": false,
+    "PrimaryColor": "#FF910000",
+    "SecondaryColor": "#FFFFFFFF",
+    "SelectedTheme": "",
+    "ShowHiddenCards": false,
+    "SyncThemeWithWindows": true,
+    "SyncTrayIconColorWithWindows": true,
+    "TrayIconColor": null,
+    "TrayIcons": []
+  }
+}

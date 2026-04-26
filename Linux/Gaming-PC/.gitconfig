@@ -1,0 +1,15 @@
+[user]
+	email = dev@d3strukt0r.me
+	name = D3strukt0r
+	signingKey = C9E5AB85364CA764!
+[gpg]
+	format = openpgp
+[commit]
+	gpgSign = true
+	template = ~/.gitmessage
+[tag]
+	forceSignAnnotated = true
+[init]
+	defaultBranch = master
+[core]
+	excludesfile = ~/.gitignore_global
