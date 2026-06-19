@@ -98,6 +98,7 @@ antigen update
   * `wget -N --trust-server-names "https://www.betterbird.eu/downloads/get.php?os=win&lang=en-US&version=release"`
 * Improve Claude with [ccstatusline](https://github.com/sirmalloc/ccstatusline) - `npx ccstatusline@latest`
 * Setup serena `claude mcp add --scope user serena -- uvx --from git+https://github.com/oraios/serena serena start-mcp-server --context=claude-code --project-from-cwd`
+* Setup NetBird https://nbi.studio.work/peers
 
 #### Manual System Settings Configuration
 

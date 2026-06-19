@@ -43,3 +43,8 @@ core
 
 # https://oraios.github.io/serena/01-about/000_intro.html
 .serena
+
+.proxyai
+PROXYAI.md
+.opencode/
+opencode.json

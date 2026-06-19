@@ -52,12 +52,6 @@ esac
 if [ -d "$HOME/Library/pnpm/global/5/node_modules/.bin" ]; then
   export PATH="$HOME/Library/pnpm/global/5/node_modules/.bin:$PATH"
 fi
-# Python (pyenv)
-if which pyenv &> /dev/null; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
 # PhpEnv
 if [ -d "$HOME/.phpenv/bin" ]; then
   export PATH="$HOME/.phpenv/bin:$PATH"
@@ -152,3 +146,8 @@ if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
   autoload -Uz compinit && compinit
   eval "$(_IWF_COMPLETE=zsh_source iwf)"
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/manuelevaccari/.lmstudio/bin"
+# End of LM Studio CLI section
+
