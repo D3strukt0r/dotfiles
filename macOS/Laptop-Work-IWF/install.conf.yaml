@@ -31,6 +31,7 @@
         create: true
     ~/.antigenrc: .antigenrc
     ~/.gitconfig: .gitconfig
+    ~/.gitconfig-iwf: .gitconfig-iwf
     ~/.gitignore_global: ../General/.gitignore_global
     ~/.gitmessage: ../General/.gitmessage
     ~/.p10k.zsh: ../General/.p10k.zsh

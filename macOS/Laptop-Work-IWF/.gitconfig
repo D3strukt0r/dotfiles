@@ -42,3 +42,15 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
+# Auto-select the Work-IWF profile for any repo with a remote on git.iwf.io
+# (see .gitconfig-iwf). Everything else keeps the Personal default above.
+# Kept at the bottom so the include overrides the [user] section above.
+[includeIf "hasconfig:remote.*.url:git@git.iwf.io:*/**"]
+	path = ~/.gitconfig-iwf
+[includeIf "hasconfig:remote.*.url:git@git.iwf.io:*"]
+	path = ~/.gitconfig-iwf
+[includeIf "hasconfig:remote.*.url:ssh://git@git.iwf.io/**"]
+	path = ~/.gitconfig-iwf
+[includeIf "hasconfig:remote.*.url:https://git.iwf.io/**"]
+	path = ~/.gitconfig-iwf

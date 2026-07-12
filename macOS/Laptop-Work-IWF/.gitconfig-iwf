@@ -1,0 +1,7 @@
+# Work-IWF identity — pulled in automatically by the includeIf sections at the
+# bottom of .gitconfig whenever a repo has a remote pointing at git.iwf.io.
+# The default identity in .gitconfig stays Personal (D3strukt0r).
+[user]
+	name = Manuele Vaccari
+	email = m.vaccari@iwf.ch
+	signingKey = 05521883ADA75D54!
