@@ -57,6 +57,32 @@ if [ -d "$HOME/.phpenv/bin" ]; then
   export PATH="$HOME/.phpenv/bin:$PATH"
   eval "$(phpenv init -)"
 fi
+# Android
+if [ -d "$HOME/Library/Android/sdk" ]; then
+  export ANDROID_HOME="$HOME/Library/Android/sdk"
+  if [ -d "$ANDROID_HOME/platform-tools" ]; then
+    export PATH="$ANDROID_HOME/platform-tools:$PATH"
+  fi
+  # sdkmanager and avdmanager, for installing SDK packages without Android Studio.
+  if [ -d "$ANDROID_HOME/cmdline-tools/latest/bin" ]; then
+    export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+  fi
+  # build-tools holds apksigner, which nothing else provides and which is the only
+  # way to read an APK's v2 signature — keytool reads v1 only, and modern APKs are
+  # v2-only. Newest installed, resolved at shell start rather than pinned, so an SDK
+  # update cannot leave this pointing at a version that is gone. (/Nn) is
+  # directories-only, no-error-if-empty, numerically sorted — lexical would pick 9
+  # over 10.
+  _android_build_tools=("$ANDROID_HOME"/build-tools/*(/Nn))
+  if (( $#_android_build_tools )); then
+    export PATH="${_android_build_tools[-1]}:$PATH"
+  fi
+  unset _android_build_tools
+fi
+# Godot
+if [ -d "$HOME/Applications/godot-4.7/Godot.app/Contents/MacOS" ]; then
+  export PATH="$HOME/Applications/godot-4.7/Godot.app/Contents/MacOS:$PATH"
+fi
 # Fix Google Cloud SDK does not support Python 3.12, link to 3.11
 # (ModuleNotFoundError: No module named 'imp')
 # https://stackoverflow.com/questions/77316716/gcloud-modulenotfounderror-no-module-named-imp
@@ -70,6 +96,37 @@ iwf-enable() {
   else
     echo "No iwf-local-dev environment found in ~/Projects-IWF/iwf-local-dev"
   fi
+}
+
+questtime() {
+  local serial=$1
+  if [[ -z $serial ]]; then
+    print -u2 "usage: questtime <adb-serial>"
+    return 1
+  fi
+
+  local before before_epoch drift elapsed
+  before=$(adb -s "$serial" shell date | tr -d '\r')
+  before_epoch=$(adb -s "$serial" shell date +%s | tr -d '\r')
+  if [[ -z $before_epoch ]]; then
+    print -u2 "questtime: no answer from $serial — connected?"
+    return 1
+  fi
+  drift=$(( $(date +%s) - before_epoch ))
+  printf 'before: %s  (off by %+d s / %+.1f days)\n' "$before" "$drift" "$(( drift / 86400.0 ))"
+
+  elapsed=$(adb -s "$serial" shell cat /proc/uptime | awk '{printf "%d", $1*1000}')
+  if [[ -z $elapsed ]]; then
+    print -u2 "questtime: no /proc/uptime from $serial"
+    return 1
+  fi
+
+  adb -s "$serial" shell cmd time_detector set_time_state_for_tests \
+    --elapsed_realtime "$elapsed" \
+    --unix_epoch_time "$(( $(date +%s) * 1000 ))" \
+    --user_should_confirm_time false || return 1
+
+  printf 'after:  %s\nhost:   %s\n' "$(adb -s "$serial" shell date | tr -d '\r')" "$(date)"
 }
 
 # User configuration
