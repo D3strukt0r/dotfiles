@@ -4,7 +4,7 @@
 	signingKey = C9E5AB85364CA764!
 	# Personal: C9E5AB85364CA764! | Work: 05521883ADA75D54!
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 	format = openpgp
 [commit]
 	gpgSign = true

@@ -208,3 +208,11 @@ fi
 export PATH="$PATH:/Users/manuelevaccari/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# kubectl and kubectx merge all of these, so the personal prod cluster shows up alongside
+# the work contexts. Writes (use-context, kubectx) land in the first file, and a file that
+# does not exist yet is ignored.
+#
+# d3strukt0r-prod-admin is the break-glass credential: its certificate is O=system:masters,
+# which bypasses RBAC entirely. d3strukt0r-prod is reserved for a scoped identity.
+export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/d3strukt0r-prod.yaml:$HOME/.kube/d3strukt0r-prod-admin.yaml"
