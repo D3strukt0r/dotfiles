@@ -216,3 +216,6 @@ export PATH="$PATH:/Users/manuelevaccari/.lmstudio/bin"
 # d3strukt0r-prod-admin is the break-glass credential: its certificate is O=system:masters,
 # which bypasses RBAC entirely. d3strukt0r-prod is reserved for a scoped identity.
 export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/d3strukt0r-prod.yaml:$HOME/.kube/d3strukt0r-prod-admin.yaml"
+
+# OpenBao API endpoint for the `bao` CLI.
+export BAO_ADDR=https://openbao.d3strukt0r.dev
