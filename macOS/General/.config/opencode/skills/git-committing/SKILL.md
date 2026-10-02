@@ -30,13 +30,11 @@ description: Use when the user asks you to commit or prepare a commit — author
 - Commit messages: always Conventional Commits (`type: subject` — `feat`, `fix`, `chore`,
   `refactor`, `perf`, `docs`, `test`, `build`, `ci`, `style`), subject line ≤80 characters
   (ticket prefix included). Say **what** changed, not why; staying general is fine.
-  Each paragraph is one continuous line (no hard line breaks within a paragraph — the viewer
-  soft-wraps); prefer prose over `-`/`*` bullet lists.
+  Title only, never a body/description — if a title can't convey everything a commit contains,
+  the commit is too big: split it.
 - **IWF repos** (remote `git.iwf.io` or `github.com/iwf-web`): prefix the ticket nr. whenever one is
   available, before the conventional type — `VOP-249 | refactor: take number formatters from the ci
-  hooks`; no ticket → plain conventional commit (`chore: enable react compiler`). Title only, never
-  a body/description — a body is acceptable only in the rare case where an 80-char title genuinely
-  can't cover the changes.
+  hooks`; no ticket → plain conventional commit (`chore: enable react compiler`).
 - GitKraken stores its own copy of both identities (`~/.gitkraken/profiles/*/profile`) and ignores
   gitconfig for commits it creates. If an identity changes, it must be updated in `.gitconfig`,
   `.gitconfig-iwf`, AND both GitKraken profiles; GitKraken's "Keep my .gitconfig updated with my

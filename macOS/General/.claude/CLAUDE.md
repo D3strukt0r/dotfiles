@@ -4,13 +4,15 @@ Never modify git state unless I explicitly instruct you to — no commit, stage,
 Reading git (status, log, diff, show, blame, etc.) is always fine.
 
 I review your output by staging the files I've approved.
+You make every commit, never me — so never tell me to commit, only present the message. But commit only on my explicit go: staged files are not approval, even when everything is staged.
 Never stash — `git stash` (especially with untracked files) wipes out unstaged work in progress and I lose hours of progress that I cannot recover.
 If you ever think stashing is needed, stop and ask me instead.
 
 I stage, unstage and reset between turns, so a status from an earlier turn is stale.
 Immediately before a commit, check `git diff --cached --stat` in the same command; before a reset, check `git log`/`git reflog` and that HEAD is the commit you expect.
 
-In a staged build, a finished and applied step gets its commit before the next step starts: present the commit message and stop there, rather than researching or writing the next step while the finished one is uncommitted.
+Working on several repos at once is fine.
+A complex task with several phases goes one phase at a time: a finished and applied phase gets its commit before the next one starts — present the commit message and stop there, rather than researching or writing the next phase while the finished one is uncommitted.
 I lift this explicitly for a piece of work I want committed as one.
 
 Plan and roadmap files are scratch for surviving context compaction: never stage or commit them, and don't mention them in committed docs.
@@ -74,6 +76,8 @@ Doing a task directly is only OK when it's so small that spawning an agent would
 - Don't write obvious comments for every line when the code speaks for itself — comment complex logic or non-obvious decisions instead.
 - Don't write authorship/date metadata in doc comments (e.g. `@author`/`@since` in PHP, equivalent tags in other languages).
 - Before writing new code, check sibling and nearby files for something similar to reuse, and match the existing code style.
+- Another project's code (a spike, a sibling repo, a prototype) is inspiration, not a source: take its decisions — measurements, traps, ordering — and write the implementation fresh against this project's conventions, never `cp` or near-verbatim ports. Measured design values and exported artwork are facts and may be carried over as-is.
+- Small components, one responsibility each — I review by staging files, so file-level granularity is how I read a change.
 - Never hardcode user-facing strings — put them in the project's localization files and emit them through its translation mechanism (e.g. Symfony translator, i18next, gettext, resource bundles).
 - A config file holds only what differs from the tool's default. Look up the default before writing a line (e.g. `ansible-config list`, `helm show values`); restating it is noise and invites getting it subtly wrong. Where relying on a default deliberately is worth recording, say so in the README.
 - Committed files don't point at other repositories. Explain a setting by what it does and why, not by contrast with another repo ("Y, because <reason>", not "unlike X, we do Y"). Reading other repos for conventions is fine.
@@ -98,6 +102,12 @@ Doing a task directly is only OK when it's so small that spawning an agent would
 - I'm in Europe/Zurich: every clock time in chat is Zurich local time, without UTC labels or dual times. Where a command or manifest needs a UTC value, convert it yourself and hand over the finished value. Repo docs keep their own conventions.
 - Generated passwords are 20 characters of letters, digits and symbols (`op item create --generate-password='letters,digits,symbols,20'`), unless a system dictates a length (say so then).
 - For infrastructure and operations work: explain the concepts plainly and wait for my explicit go-ahead before writing or running anything — I want to understand each step before it happens.
+- Before editing code, say the goal and the planned change per file. Investigating needs no preamble, but the moment findings turn into edits the intent comes first; a mid-task discovery that widens the scope gets the same treatment.
+- Dangerous commands I run myself — deleting data, shutting down or restarting a server, anything hard to undo. Hand over the exact command, for `! <command>` here or a separate terminal; never run it.
+- "How do I X?" asks for instructions, not for it to be done: give the exact command with a short reason per flag, and run it only when I say "do it"/"run it" or it is a read-only check you need to answer.
+- What I report from a device — a screenshot, what the hardware actually did — outranks reasoning from specs or docs. If you think the spec contradicts my fix, say so in one sentence and build my version anyway, or build both and let the device decide; never spend more than one round defending a prediction against a screenshot. Change one variable per device round, so the result says which one mattered.
+- Before starting a dev server (Vite, Flutter, or anything else), check whether one is already running for the project — its port, `lsof -nP -iTCP -sTCP:LISTEN`, the process list — and use that one. If it doesn't answer, say so and ask rather than starting a second.
+- Text for Jira or Confluence is Markdown with no line breaks within a paragraph. When it fits in the terminal window, put it in the chat; when it is longer, write it to a `.md` file and give me the path — copying from the terminal garbles content taller than the window, so I paste those via TextEdit.
 
 # Keeping docs in sync
 
@@ -118,7 +128,7 @@ When you notice that OpenCode's result could have been better — a rule it was 
 Keep those additions general and in the file's existing style (it holds cross-project working agreements, not project-specific rules).
 Tell me what you added and why.
 
-Several rules are deliberately **mirrored** in both this file and `~/.config/opencode/AGENTS.md` (or its skills under `~/.config/opencode/skills/`): git safety + author profiles + GPG pre-check, containerized commands (`iwf` CLI), dependencies, comments/i18n, docs-sync, and commit-message style.
+Several rules are deliberately **mirrored** in both this file and `~/.config/opencode/AGENTS.md` (or its skills under `~/.config/opencode/skills/`): git safety + author profiles + GPG pre-check, containerized commands (`iwf` CLI), dependencies, comments/i18n, docs-sync, commit-message style, and working with me.
 When either copy of a mirrored rule changes, update the other file in the same change so they don't drift.
 
 # Running commands in containerized projects
@@ -139,12 +149,9 @@ For non-IWF containerized projects (no `.iwf.yml`), fall back to `docker compose
 - Always use Conventional Commits: `type: subject` (`feat`, `fix`, `chore`, `refactor`, `perf`, `docs`, `test`, `build`, `ci`, `style`).
 - Describe **what** changed, not why. Staying general is fine — the message doesn't need to enumerate every detail.
 - Keep the subject line ≤80 characters (ticket prefix included).
-- Never insert line breaks within a paragraph — each paragraph is one continuous line (soft-wrapped by the viewer, not hard-wrapped).
-- Avoid lists (`-` / `*`) where possible; prefer prose.
+- Title only — never a body/description. If a title can't convey everything a commit contains, the commit is too big: split it.
 
 ## IWF repos (remote `git.iwf.io` or `github.com/iwf-web`)
 
 - Always prefix the ticket nr. when one is available, before the conventional type: `VOP-249 | refactor: take number formatters from the ci hooks`.
   No ticket available → plain conventional commit (`chore: enable react compiler`).
-- Never add a body/description — title only.
-- A body is only acceptable in the rare case where an 80-char title genuinely can't cover the changes. Treat that as an exception, not a habit.

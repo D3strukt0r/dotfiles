@@ -23,18 +23,21 @@ The sections below expand these rules.
 
 ## Git & commits
 
-_Mirrored in `~/.claude/CLAUDE.md` — when a shared rule changes (git, containerized commands, dependencies, comments/i18n, docs-sync), update both files;
+_Mirrored in `~/.claude/CLAUDE.md` — when a shared rule changes (git, containerized commands, dependencies, comments/i18n, docs-sync, working with the user), update both files;
 the committing rules now live in the git-committing skill._
 
 - Never modify git state (commit, stage, reset, checkout, branch, push, stash, tag, rebase, or any other mutating command) unless explicitly told to.
   Reading git (status, log, diff, show, blame) is always fine.
+- The agent makes every commit, never the user — so never tell the user to commit, only present the message.
+  Commit only on the user's explicit go: staged files are not approval, even when everything is staged.
 - **Never `git stash`** — it can silently wipe uncommitted/untracked work in progress that can't be recovered.
   If you think a stash is needed, stop and ask instead.
 - Mutating git commands are also gated by permission prompts (and `git stash` is hard-denied).
   A denied command means the user declined — don't retry it or work around the gate.
 - The user stages, unstages and resets between turns, so a status from an earlier turn is stale.
   Immediately before a commit, check `git diff --cached --stat` in the same command; before a reset, check `git log`/`git reflog` and that HEAD is the expected commit.
-- In a staged build, commit a finished step before starting the next one: present the commit message and stop there, unless the user said the work is committed as one.
+- Working on several repos at once is fine.
+  A complex task with several phases goes one phase at a time: commit a finished phase before starting the next one — present the commit message and stop there, unless the user said the work is committed as one.
 - Plan and roadmap files are scratch: never stage or commit them, and don't mention them in committed docs.
 - Committing procedure (author profile check, GPG pre-check, message style) lives in the git-committing skill — invoke it before any commit.
 
@@ -104,10 +107,31 @@ the committing rules now live in the git-committing skill._
   ```
 - Match the surrounding code: naming, file layout, import ordering, error handling, and data/state patterns.
   Copy how sibling files do it instead of introducing a new style.
+- Another project's code (a spike, a sibling repo, a prototype) is inspiration, not a source.
+  Take its decisions — measurements, traps, ordering — and write the implementation fresh against this project's conventions; never `cp` it or port it near-verbatim.
+  Measured design values and exported artwork are facts and may be carried over as-is.
+- Small components, one responsibility each.
+  The user reviews by staging files, so file-level granularity is how a change is read.
 - Use the project's established patterns for cross-cutting concerns (data fetching, state, logging, auth, errors);
   don't hand-roll a one-off when a shared mechanism exists.
 - Keep changes minimal and on-scope.
   Don't refactor unrelated code or reformat files you're only lightly touching.
+
+## Working with the user
+
+- Before editing code, state the goal and the planned change per file.
+  Investigating needs no preamble, but the moment findings turn into edits the intent comes first; a mid-task discovery that widens the scope gets the same treatment.
+- Dangerous commands — deleting data, shutting down or restarting a server, anything hard to undo — the user runs themselves.
+  Hand over the exact command (for `! <command>` or a separate terminal); never run it.
+- "How do I X?" asks for instructions, not for it to be done.
+  Give the exact command with a short reason per flag; run it only when the user says "do it"/"run it" or it is a read-only check needed to answer.
+- What the user reports from a device — a screenshot, what the hardware actually did — outranks reasoning from specs or docs.
+  If the spec seems to contradict their fix, say so in one sentence and build their version anyway, or build both and let the device decide; never spend more than one round defending a prediction against a screenshot.
+  Change one variable per device round, so the result says which one mattered.
+- Before starting a dev server (Vite, Flutter, or anything else), check whether one is already running for the project (its port, `lsof -nP -iTCP -sTCP:LISTEN`, the process list) and use that one.
+  If it doesn't answer, say so and ask rather than starting a second.
+- Text for Jira or Confluence is Markdown with no line breaks within a paragraph.
+  When it fits in the terminal window, put it in the chat; when it is longer, write it to a `.md` file and give the path — copying from the terminal garbles content taller than the window.
 
 ## Ask when the direction is unclear
 
