@@ -1,0 +1,143 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Versions pinned deliberately (supply-chain hygiene: review before updating).
+  // dcp: settings in dcp.jsonc (autoUpdate off, compress asks first).
+  //   dcp fails to load silently on opencode 1.17.x (upstream issue #585); if
+  //   /dcp disappears after a cache wipe, reapply: npm install --prefix \
+  //   ~/.cache/opencode/packages/@tarquinen/opencode-dcp@3.1.14 \
+  //   @tarquinen/opencode-dcp@3.1.14 @opencode-ai/plugin@1.15.5
+  // notifier: settings in opencode-notifier.json — keep "node-notifier" there,
+  // the default osascript path has a command-injection bug (upstream issue #85).
+  "plugin": [
+    "@tarquinen/opencode-dcp@3.1.14",
+    "@mohak34/opencode-notifier@0.2.8"
+  ],
+  // Gate mutating git commands: the model may propose them, the user approves
+  // (enforces the "never modify git state unless told" rule mechanically).
+  // NOTE: precedence is JSON key order — the LAST matching rule wins, so the
+  // stash deny and the read-only re-allows must stay below the broad asks.
+  // Pattern quirk: "git commit *" (spaced star) matches with AND without args;
+  // "git commit*" would also match "git commitfoo".
+  "permission": {
+    "bash": {
+      "git add *": "ask",
+      "git commit *": "ask",
+      "git push *": "ask",
+      "git pull *": "ask",
+      "git merge *": "ask",
+      "git rebase *": "ask",
+      "git reset *": "ask",
+      "git checkout *": "ask",
+      "git switch *": "ask",
+      "git restore *": "ask",
+      "git branch *": "ask",
+      "git tag *": "ask",
+      "git cherry-pick *": "ask",
+      "git revert *": "ask",
+      "git clean *": "ask",
+      "git rm *": "ask",
+      "git mv *": "ask",
+      "git am *": "ask",
+      "git stash *": "deny",
+      // read-only forms caught by the broad rules above — re-allow (last wins)
+      "echo *": "allow",
+      "git log *": "allow",
+      "git branch": "allow",
+      "git branch --list *": "allow",
+      "git tag": "allow",
+      "git tag --list *": "allow",
+      "git tag -l *": "allow",
+      "git stash list": "allow",
+      "git stash show *": "allow"
+    }
+  },
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": {
+        "baseURL": "http://localhost:1234/v1"
+      },
+      "models": {
+        "ornith-1.0-35b": {
+          "name": "Ornith 1.0 35B",
+          // VLM — without these flags opencode blocks image parts client-side
+          // ("this model does not support image input") before LM Studio sees them
+          "attachment": true,
+          "modalities": {
+            // video input exists in the weights too (Qwen3-VL video tower) but is
+            // untested through LM Studio's OpenAI-compat endpoint — add if needed
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          // native tool calling (qwen3 xml style, parsed server-side) and
+          // <think> reasoning blocks (on by default; enable_thinking toggle)
+          "tool_call": true,
+          "reasoning": true,
+          "temperature": true,
+          // native context is 262144; 150000 matches the LM Studio load setting
+          "limit": {
+            "context": 150000,
+            "output": 32000
+          }
+        },
+        "qwen/qwen3.6-35b-a3b": {
+          "name": "Qwen3.6 35B A3B",
+          "limit": {
+            "context": 150000,
+            "output": 32000
+          }
+        },
+        "qwen2.5-coder-3b-instruct-mlx": {
+          "name": "Qwen2.5 Coder 3B Instruct"
+        }
+      }
+    }
+  },
+  "formatter": true,
+  "lsp": {
+    "php intelephense": {
+      "disabled": true
+    },
+    "php phpantom": {
+      "command": ["phpantom_lsp", "--stdio"],
+      "extensions": [".php"]
+    }
+  },
+  "mcp": {
+    "serena": {
+      "type": "local",
+      "command": ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context=claude-code", "--project-from-cwd", "--open-web-dashboard", "False"],
+      "enabled": true
+    },
+    "atlassian-iwf": {
+      "type": "local",
+      "command": ["npx", "mcp-remote", "https://mcp.atlassian.com/v1/mcp/authv2"],
+      "environment": { "MCP_REMOTE_CONFIG_DIR": "/Users/manuelevaccari/.mcp-auth/iwf" },
+      "enabled": true
+    },
+    "atlassian-publica": {
+      "type": "local",
+      "command": ["npx", "mcp-remote", "https://mcp.atlassian.com/v1/mcp/authv2"],
+      "environment": { "MCP_REMOTE_CONFIG_DIR": "/Users/manuelevaccari/.mcp-auth/publica" },
+      "enabled": true
+    },
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp", "--api-key", "{file:~/.config/opencode/context7-api-key}"],
+      "enabled": true
+    },
+    // phpstorm + chrome-devtools disabled by default — ~90 tool schemas saved from
+    // every prompt (small-model attention). Re-enable per session via /mcps (space toggles).
+    "phpstorm": {
+      "type": "remote",
+      "url": "http://127.0.0.1:64342/sse",
+      "enabled": false
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "chrome-devtools-mcp@latest"],
+      "enabled": false
+    }
+  }
+}

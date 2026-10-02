@@ -1,0 +1,9 @@
+{
+  "notificationSystem": "node-notifier",
+  "suppressWhenFocused": true,
+  "events": {
+    "permission": { "sound": true, "notification": true },
+    "complete": { "sound": true, "notification": true },
+    "error": { "sound": true, "notification": true }
+  }
+}

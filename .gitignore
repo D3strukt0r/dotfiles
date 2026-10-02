@@ -1,5 +1,5 @@
 .claude/settings.local.json
-CLAUDE.md
+/CLAUDE.md
 
 # Generated when chocolatey overwrites backup
 packages.config.backup

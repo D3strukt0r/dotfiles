@@ -99,6 +99,7 @@ antigen update
 * Improve Claude with [ccstatusline](https://github.com/sirmalloc/ccstatusline) - `npx ccstatusline@latest`
 * Setup serena `claude mcp add --scope user serena -- uvx --from git+https://github.com/oraios/serena serena start-mcp-server --context=claude-code --project-from-cwd`
 * Setup NetBird https://nbi.studio.work/peers
+* Store the Context7 API key for OpenCode (referenced from the linked `opencode.jsonc`): `printf '%s' 'KEY' > ~/.config/opencode/context7-api-key && chmod 600 ~/.config/opencode/context7-api-key`. Get `KEY` from password manager
 
 #### Manual System Settings Configuration
 

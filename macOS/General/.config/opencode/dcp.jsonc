@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Opencode-DCP/opencode-dynamic-context-pruning/master/dcp.schema.json",
+  // Pinned install (@3.1.14) already disables self-update; this makes it explicit.
+  "autoUpdate": false,
+  "compress": {
+    // Summaries are written by the local model — review them before they apply,
+    // small models risk garbage summaries / compress loops (upstream issue #573).
+    "permission": "ask",
+    // Defaults (50k/100k tokens) are tuned for big-context cloud models;
+    // percentages track the local model's actual window instead.
+    "minContextLimit": "25%",
+    "maxContextLimit": "60%"
+  }
+}

@@ -8,6 +8,33 @@
     ~/.config/nvim:
         path: ../General/.config/nvim
         create: true
+    ~/.claude/CLAUDE.md:
+        path: ../General/.claude/CLAUDE.md
+        create: true
+    ~/.claude/settings.json:
+        path: ../General/.claude/settings.json
+        create: true
+    ~/.config/opencode/AGENTS.md:
+        path: ../General/.config/opencode/AGENTS.md
+        create: true
+    ~/.config/opencode/opencode.jsonc:
+        path: ../General/.config/opencode/opencode.jsonc
+        create: true
+    ~/.config/opencode/dcp.jsonc:
+        path: ../General/.config/opencode/dcp.jsonc
+        create: true
+    ~/.config/opencode/opencode-notifier.json:
+        path: ../General/.config/opencode/opencode-notifier.json
+        create: true
+    ~/.config/opencode/commands:
+        path: ../General/.config/opencode/commands
+        create: true
+    ~/.config/opencode/skills:
+        path: ../General/.config/opencode/skills
+        create: true
+    ~/.config/opencode/plugins/iwf-guard.js:
+        path: ../General/.config/opencode/plugins/iwf-guard.js
+        create: true
     ~/.ssh/config:
         path: .ssh/config
         create: true

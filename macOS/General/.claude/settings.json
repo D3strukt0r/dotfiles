@@ -1,0 +1,222 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpx ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpx ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpx ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpx ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/manuelevaccari/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "/Users/manuelevaccari/.cargo/bin/cc-statusline '%[dim Model:] %model:cyan  %[dim Effort:] %effort  %[dim Context:] %ctx_usable  %[dim ΣTokens:] %tokens_total:bright_cyan' '%[dim Session:] %rate5h  %peak  %[dim Weekly:] %rate7d' '%[dim cwd:] %cwd %branch:yellow %diff %[dim Cost:] %cost:green %[dim Σd:] %cost_day:green %[dim Σm:] %cost_month:green %[dim Σ:] %cost_all:green  %[dim Speed:] %total_speed:bright_cyan'",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "caveman@caveman": true,
+    "cc-statusline@team-maro": true,
+    "figma@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "iwf-tools@iwf-marketplace": true,
+    "phpstorm-plugin@phpstorm-marketplace": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "sentrux@sentrux-marketplace": true,
+    "cc-plugin-you-should-know@builtin": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "iwf-marketplace": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/manuelevaccari/Projects/claude-plugins-iwf"
+      }
+    },
+    "phpstorm-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "jetbrains/phpstorm-claude-marketplace"
+      }
+    },
+    "sentrux-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "sentrux/sentrux"
+      }
+    },
+    "team-maro": {
+      "source": {
+        "source": "github",
+        "repo": "Team-MaRo/claude-plugins"
+      }
+    }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
+  "verbose": false,
+  "skipAutoPermissionPrompt": true,
+  "autoMode": {
+    "soft_deny": [
+      "$defaults",
+      "Bash(git stash:*) — stashing wipes unstaged work in progress (high-risk data loss)",
+      "Writes to config/secrets/prod/** or any other prod secrets path — treat as a sensitive prod-namespace write"
+    ],
+    "environment": [
+      "### Org-wide",
+      "**Source control**: personal repos on GitHub (public unless the repo says otherwise); IWF work repos on git.iwf.io (internal, assume private) and github.com/iwf-web",
+      "**Internal sharing / snippet hosting**: none — treat public paste/gist services as outside the trust boundary",
+      "**Sensitive data locations**: .env* files (except *.dist), config/secrets/**, *.private.php, private keys",
+      "**Sensitive remote targets**: any namespace/host/container with `prod`/`production` as a whole segment",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development",
+      "**Trusted repo**: the repo in the current working directory and its origin remote",
+      "**IWF repos** (remote on git.iwf.io or github.com/iwf-web, or a `.iwf.yml` in the project root): the `iwf` CLI is the containerized command runner; running project commands through it is routine"
+    ]
+  },
+  "voiceEnabled": true
+}
