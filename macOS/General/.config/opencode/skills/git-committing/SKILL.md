@@ -34,7 +34,12 @@ description: Use when the user asks you to commit or prepare a commit — author
   the commit is too big: split it.
 - **IWF repos** (remote `git.iwf.io` or `github.com/iwf-web`): prefix the ticket nr. whenever one is
   available, before the conventional type — `VOP-249 | refactor: take number formatters from the ci
-  hooks`; no ticket → plain conventional commit (`chore: enable react compiler`).
+  hooks`; no ticket → plain conventional commit (`chore: enable react compiler`). A shared library's
+  commit gets the prefix too when it implements part of that ticket; only unticketed maintenance goes
+  without.
+- "Commit to branch" means: branch off the current branch, named per the repo's convention (IWF:
+  `feature/<TICKET>_<kebab-slug>`), and commit there. A plain "commit" commits on the current branch
+  as it is, even `develop` — never branch off on your own.
 - GitKraken stores its own copy of both identities (`~/.gitkraken/profiles/*/profile`) and ignores
   gitconfig for commits it creates. If an identity changes, it must be updated in `.gitconfig`,
   `.gitconfig-iwf`, AND both GitKraken profiles; GitKraken's "Keep my .gitconfig updated with my

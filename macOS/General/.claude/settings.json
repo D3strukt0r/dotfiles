@@ -149,23 +149,18 @@
     "cc-statusline@team-maro": true,
     "figma@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
-    "iwf-tools@iwf-marketplace": true,
     "phpstorm-plugin@phpstorm-marketplace": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "sentrux@sentrux-marketplace": true,
-    "cc-plugin-you-should-know@builtin": true
+    "cc-plugin-you-should-know@builtin": true,
+    "iwf-tools@iwf-marketplace": true,
+    "mattpocock-skills@mattpocock": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
-      }
-    },
-    "iwf-marketplace": {
-      "source": {
-        "source": "directory",
-        "path": "/Users/manuelevaccari/Projects/claude-plugins-iwf"
       }
     },
     "phpstorm-marketplace": {
@@ -185,6 +180,18 @@
         "source": "github",
         "repo": "Team-MaRo/claude-plugins"
       }
+    },
+    "iwf-marketplace": {
+      "source": {
+        "source": "git",
+        "url": "git@git.iwf.io:contracts/claude-plugins.git"
+      }
+    },
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      }
     }
   },
   "alwaysThinkingEnabled": true,
@@ -198,6 +205,8 @@
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
   "verbose": false,
+  "idleCompaction": false,
+  "switchModelsOnFlag": false,
   "skipAutoPermissionPrompt": true,
   "autoMode": {
     "soft_deny": [

@@ -11,6 +11,9 @@ If you ever think stashing is needed, stop and ask me instead.
 I stage, unstage and reset between turns, so a status from an earlier turn is stale.
 Immediately before a commit, check `git diff --cached --stat` in the same command; before a reset, check `git log`/`git reflog` and that HEAD is the commit you expect.
 
+"Commit to branch" means: branch off the current branch, named per the repo's convention (IWF: `feature/<TICKET>_<kebab-slug>`), and commit there.
+A plain "commit" commits on the current branch as it is, even `develop` — never branch off on your own.
+
 Working on several repos at once is fine.
 A complex task with several phases goes one phase at a time: a finished and applied phase gets its commit before the next one starts — present the commit message and stop there, rather than researching or writing the next phase while the finished one is uncommitted.
 I lift this explicitly for a piece of work I want committed as one.
@@ -73,7 +76,7 @@ Doing a task directly is only OK when it's so small that spawning an agent would
 
 # Code style
 
-- Don't write obvious comments for every line when the code speaks for itself — comment complex logic or non-obvious decisions instead.
+- Default to no comment. Write one only for code that stays confusing after reading it — a workaround for library behaviour, a non-obvious ordering constraint, a spec quirk. The reasoning behind a decision goes into the commit message, not above the code.
 - Don't write authorship/date metadata in doc comments (e.g. `@author`/`@since` in PHP, equivalent tags in other languages).
 - Before writing new code, check sibling and nearby files for something similar to reuse, and match the existing code style.
 - Another project's code (a spike, a sibling repo, a prototype) is inspiration, not a source: take its decisions — measurements, traps, ordering — and write the implementation fresh against this project's conventions, never `cp` or near-verbatim ports. Measured design values and exported artwork are facts and may be carried over as-is.
@@ -87,6 +90,7 @@ Doing a task directly is only OK when it's so small that spawning an agent would
 - Whenever a file edit is made by a script or shell command (`python`, `sed`, `awk`, `perl`, a heredoc, …) rather than the editing tools, end that turn's edits with `git diff --stat` followed by `git diff` and show the output.
   The point is that the diff, not the script, is the reviewable artefact: the edit path may change freely, but the result must never be invisible to me.
 - For files git doesn't track yet, `git add -N <path>` first so they appear in the diff.
+- After a scripted edit, re-read the affected lines before the next `Edit`, and anchor `old_string` on ASCII-only text — never on a line holding U+00A0, U+202F or curly quotes.
 
 # Dependencies
 
@@ -98,6 +102,11 @@ Doing a task directly is only OK when it's so small that spawning an agent would
 
 # Working with me
 
+- Reply in English, even when tickets, UI, screenshots or domain terms are German. German stays only where it is literal content: quoted text, translation values, identifiers.
+- Never run a build (`yarn build`, `pnpm build`, `vite build`, …). Verify frontend changes with lint, the type check and tests; I keep dev servers running in my own tabs, and a build overwrites what they serve.
+- A proposed edit to an existing document (Confluence, a wiki page) shows the before and the after of the passage verbatim, says where it is (section, table, row, column) and what changed. Confluence's markdown export flattens line breaks inside table cells, so ask for a screenshot or the HTML view before replacing a whole cell, and prefer appending a paragraph over replacing the cell.
+- On a visual issue or a comparison with a reference (Storybook, a screenshot, a design), open the Chrome DevTools MCP right away: load the pages, take screenshots, read computed styles.
+- When I send a plan to Ultraplan, stop after writing the plan file: no ExitPlanMode, no approval question. Resume when the refined plan comes back.
 - When I have to run something, spell out the complete commands every time, in order, including port-forwards — even if they were given earlier. A reference to earlier steps is only extra explanation, never a substitute.
 - I'm in Europe/Zurich: every clock time in chat is Zurich local time, without UTC labels or dual times. Where a command or manifest needs a UTC value, convert it yourself and hand over the finished value. Repo docs keep their own conventions.
 - Generated passwords are 20 characters of letters, digits and symbols (`op item create --generate-password='letters,digits,symbols,20'`), unless a system dictates a length (say so then).
@@ -155,3 +164,4 @@ For non-IWF containerized projects (no `.iwf.yml`), fall back to `docker compose
 
 - Always prefix the ticket nr. when one is available, before the conventional type: `VOP-249 | refactor: take number formatters from the ci hooks`.
   No ticket available → plain conventional commit (`chore: enable react compiler`).
+  A shared library's commit gets the prefix too when it implements part of that ticket; only unticketed maintenance goes without.

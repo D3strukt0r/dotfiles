@@ -88,7 +88,7 @@ the committing rules now live in the git-committing skill._
 
 ## Verify your work (every time, not optionally)
 
-- After changing code, run the project's checks — typecheck, linter, build, and tests as applicable — and fix everything you introduced.
+- After changing code, run the project's checks — typecheck, linter and tests as applicable, never a build (see Working with the user) — and fix everything you introduced.
   A clean check is the floor.
 - Distinguish a pre-existing baseline failure from one you introduced.
   Fix yours; never report green when the baseline is red — state it instead.
@@ -130,6 +130,13 @@ the committing rules now live in the git-committing skill._
   Change one variable per device round, so the result says which one mattered.
 - Before starting a dev server (Vite, Flutter, or anything else), check whether one is already running for the project (its port, `lsof -nP -iTCP -sTCP:LISTEN`, the process list) and use that one.
   If it doesn't answer, say so and ask rather than starting a second.
+- Reply in English, even when tickets, UI, screenshots or domain terms are German.
+  German stays only where it is literal content: quoted text, translation values, identifiers.
+- Never run a build (`yarn build`, `pnpm build`, `vite build`, …).
+  Verify frontend changes with lint, the type check and tests; the user keeps dev servers running in their own tabs, and a build overwrites what they serve.
+- A proposed edit to an existing document (Confluence, a wiki page) shows the before and the after of the passage verbatim, says where it is (section, table, row, column) and what changed.
+  Confluence's markdown export flattens line breaks inside table cells, so ask for a screenshot or the HTML view before replacing a whole cell, and prefer appending a paragraph over replacing the cell.
+- On a visual issue or a comparison with a reference (Storybook, a screenshot, a design), open the browser DevTools MCP right away: load the pages, take screenshots, read computed styles.
 - Text for Jira or Confluence is Markdown with no line breaks within a paragraph.
   When it fits in the terminal window, put it in the chat; when it is longer, write it to a `.md` file and give the path — copying from the terminal garbles content taller than the window.
 
@@ -184,7 +191,8 @@ and you've stated clearly what was verified and what (if anything) is still unve
 
 ## Comments & strings
 
-- Comment non-obvious logic and decisions, not the obvious.
+- Default to no comment. Write one only for code that stays confusing after reading it — a workaround for library behaviour, a non-obvious ordering constraint, a spec quirk.
+  The reasoning behind a decision goes into the commit message, not above the code.
   Skip boilerplate metadata tags (authorship/date) — version control already tracks that.
 - No hardcoded user-facing strings in apps that have an i18n/translation layer — route them through it.
 
