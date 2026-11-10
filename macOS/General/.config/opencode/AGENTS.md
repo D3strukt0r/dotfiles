@@ -39,7 +39,7 @@ the committing rules now live in the git-committing skill._
 - Working on several repos at once is fine.
   A complex task with several phases goes one phase at a time: commit a finished phase before starting the next one — present the commit message and stop there, unless the user said the work is committed as one.
 - Plan and roadmap files are scratch: never stage or commit them, and don't mention them in committed docs.
-- Committing procedure (author profile check, GPG pre-check, message style) lives in the git-committing skill — invoke it before any commit.
+- Committing procedure (author profile check, GPG signing, message style) lives in the git-committing skill — invoke it before any commit.
 
 ## Containerized projects
 

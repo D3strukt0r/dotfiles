@@ -46,21 +46,14 @@ If the current profile doesn't match the one this repo should use, do NOT commit
 A mismatch now most likely means a repo-local override (`git config --show-origin user.email` reveals the source) or a remote URL shape the includeIf patterns don't cover.
 Only commit when the current author matches the repo's established/destination-appropriate author (or the repo has no prior commits to infer from).
 
-## GPG passphrase pre-check before committing (Work-IWF only)
+## GPG signing (Work-IWF only)
 
-The Work-IWF key (`Manuele Vaccari <m.vaccari@iwf.ch>`) is passphrase-protected, and the Claude Code TUI can't render gpg's pinentry prompt — so a signed commit needing the passphrase fails with `signing failed: No passphrase given` and I can't type it in.
-This only affects the Work-IWF profile.
+The Work-IWF key (`Manuele Vaccari <m.vaccari@iwf.ch>`) is passphrase-protected.
+`~/.gnupg/gpg-agent.conf` points the agent at GPG Suite's `pinentry-mac`, which takes the passphrase from the macOS Keychain without asking, or opens a macOS dialog — both work from the Claude Code TUI.
+So commit directly, without probing the cache first: a probe with `--pinentry-mode error` can't reach the Keychain and reports "not cached" even when signing would work.
 
-So, when about to commit as Work-IWF and `git config --get commit.gpgsign` is `true`, first probe whether the passphrase is already cached (no side effects — throwaway detached signature to /dev/null):
-
-```sh
-echo probe | "$(git config --get gpg.program || echo gpg)" --pinentry-mode error --local-user "$(git config --get user.signingkey)" --detach-sign -o /dev/null 2>/dev/null; echo $?
-```
-
-Exit `0` = cached → the commit will succeed, go ahead.
-Non-zero = gpg would prompt → do NOT run the commit (it would fail mid-way).
-Instead tell me to cache the passphrase myself by doing a throwaway sign/commit in my own terminal (outside the TUI), then I'll tell you to commit again.
-(`--pinentry-mode error` needs gpg ≥2.1; assumes openpgp signing.)
+If a commit still fails with `signing failed` (e.g. I dismissed the dialog), don't retry it and never disable signing (`--no-gpg-sign`, `-c commit.gpgsign=false`).
+Tell me instead; I'll sign once in my own terminal, then tell you to commit again.
 
 # Caveman mode
 
@@ -137,7 +130,7 @@ When you notice that OpenCode's result could have been better — a rule it was 
 Keep those additions general and in the file's existing style (it holds cross-project working agreements, not project-specific rules).
 Tell me what you added and why.
 
-Several rules are deliberately **mirrored** in both this file and `~/.config/opencode/AGENTS.md` (or its skills under `~/.config/opencode/skills/`): git safety + author profiles + GPG pre-check, containerized commands (`iwf` CLI), dependencies, comments/i18n, docs-sync, commit-message style, and working with me.
+Several rules are deliberately **mirrored** in both this file and `~/.config/opencode/AGENTS.md` (or its skills under `~/.config/opencode/skills/`): git safety + author profiles + GPG signing, containerized commands (`iwf` CLI), dependencies, comments/i18n, docs-sync, commit-message style, and working with me.
 When either copy of a mirrored rule changes, update the other file in the same change so they don't drift.
 
 # Running commands in containerized projects

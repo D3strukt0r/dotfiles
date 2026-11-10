@@ -1,6 +1,6 @@
 ---
 name: git-committing
-description: Use when the user asks you to commit or prepare a commit — author profile check, GPG pre-check, commit message style
+description: Use when the user asks you to commit or prepare a commit — author profile check, GPG signing, commit message style
 ---
 
 # Committing
@@ -15,18 +15,13 @@ description: Use when the user asks you to commit or prepare a commit — author
   must match the repo's history (`git log --format='%an <%ae>'`) and push destination
   (`git remote -v` as tiebreaker). If it doesn't match, stop and say so — likely a repo-local
   override (`git config --show-origin user.email`) or an unmatched remote URL shape.
-- **GPG pre-check (Work-IWF profile only):** the `m.vaccari@iwf.ch` key is passphrase-protected and
-  the TUI can't render gpg's pinentry prompt, so a signed commit fails with
-  `signing failed: No passphrase given`. When about to commit as Work-IWF and
-  `git config --get commit.gpgsign` is `true`, first probe whether the passphrase is cached
-  (no side effects — throwaway detached signature to /dev/null):
-
-  ```sh
-  echo probe | "$(git config --get gpg.program || echo gpg)" --pinentry-mode error --local-user "$(git config --get user.signingkey)" --detach-sign -o /dev/null 2>/dev/null; echo $?
-  ```
-
-  Exit `0` = cached → commit will succeed. Non-zero = do NOT commit; tell the user to cache the
-  passphrase with a throwaway sign in their own terminal first.
+- **GPG signing (Work-IWF profile only):** the `m.vaccari@iwf.ch` key is passphrase-protected.
+  `~/.gnupg/gpg-agent.conf` points the agent at GPG Suite's `pinentry-mac`, which takes the
+  passphrase from the macOS Keychain without asking or opens a macOS dialog — both work from the
+  TUI, so commit directly without probing the cache (a probe with `--pinentry-mode error` can't
+  reach the Keychain and reports "not cached" falsely). If a commit still fails with
+  `signing failed`, don't retry and never disable signing (`--no-gpg-sign`,
+  `-c commit.gpgsign=false`); tell the user, they sign once in their own terminal and ask again.
 - Commit messages: always Conventional Commits (`type: subject` — `feat`, `fix`, `chore`,
   `refactor`, `perf`, `docs`, `test`, `build`, `ci`, `style`), subject line ≤80 characters
   (ticket prefix included). Say **what** changed, not why; staying general is fine.
